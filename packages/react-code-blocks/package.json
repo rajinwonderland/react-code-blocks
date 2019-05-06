@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Modified Atlaskit's Code Block to support more languages (i.e graphql, reasonml, etc) and theme (i.e railscast, darcula, monokai, etc) code snippets!",
   "author": "rajinwonderland",
-  "main": "build/index.js",
+  "main": "build",
   "keywords": [
     "code-snippets",
     "code-blocks",
@@ -13,14 +13,11 @@
     "react-syntax-highlighting"
   ],
   "dependencies": {
-    "@atlaskit/theme": "9.0.0",
-    "copy-to-clipboard": "^3.2.0",
+    "babel-plugin-styled-components": "^1.10.0",
     "fbjs": "1.0.0",
     "hoist-non-react-statics": "3.3.0",
     "react-syntax-highlighter": "10.2.1",
-    "react-tooltip": "^3.10.0",
-    "styled-components": "4.2.0",
-    "webpack": "^4.30.0"
+    "styled-components": "4.2.0"
   },
   "peerDependencies": {
     "react": "^16.8.6",
@@ -30,11 +27,11 @@
     "clean": "rm -rf build",
     "prettier": "prettier \"{src,test,examples}/**/*.js\" --write",
     "prepare": "yarn build",
-    "prerelease": "yarn prettier && yarn test:coverage && yarn build",
-    "release": "npm publish",
+    "prerelease": "yarn prettier && yarn build",
+    "release": "yarn publish",
     "start": "webpack --watch",
-    "build": "webpack",
-    "size": "npx bundlesize"
+    "build": "webpack -p --progress",
+    "size": "npx bundlesize >> coverage/bundlesize.log"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -43,13 +40,17 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-env": "^1.7.0",
+    "compression-webpack-plugin": "^2.0.0",
     "prettier": "^1.17.0",
+    "rollup-plugin-replace": "^2.2.0",
+    "uglifyjs-webpack-plugin": "^2.1.2",
+    "webpack": "^4.30.0",
+    "webpack-bundle-analyzer": "^3.3.2",
     "webpack-cli": "^3.0.4"
   },
   "bundlesize": [
     {
-      "path": "./build/index.js",
-      "maxSize": "3 kB"
+      "path": "./build/index.js"
     }
   ]
 }

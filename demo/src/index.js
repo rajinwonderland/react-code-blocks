@@ -17,7 +17,7 @@ function App() {
 				select={{
 					value: name,
 					onChange: (e) => {
-						const theme = require(`react-code-blocks`)[e.target.value];
+						const theme = require(`react-code-blocks/${e.target.value}`);
 						return changeTheme({
 							name: themes[e.target.value],
 							theme

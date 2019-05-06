@@ -1,189 +1,145 @@
-import { colors, themed } from "@atlaskit/theme";
-import memoizeOne from "memoize-one";
+import themed from '../utils/themed'
+import memoizeOne from 'memoize-one'
 export var defaultColors = memoizeOne(function(theme) {
   var akTheme = {
-    theme: theme
-  };
+    theme: theme,
+  }
   return {
     lineNumberColor: themed({
-      light: colors.N90,
-      dark: colors.DN90,
-      dracula: "#6272a4"
+      light: '#383a42',
+      dark: '#abb2bf',
     })(akTheme),
     lineNumberBgColor: themed({
-      light: colors.N30,
-      dark: colors.DN20,
-      dracula: "#282a36"
+      light: '#fafafa',
+      dark: '#282c34',
     })(akTheme),
     backgroundColor: themed({
-      light: colors.N20,
-      dark: colors.DN50,
-      dracula: "#282a36"
+      light: '#fafafa',
+      dark: '#282c34',
     })(akTheme),
     textColor: themed({
-      light: "colors.N800",
-      dark: colors.DN800,
-      dracula: "#f8f8f2"
+      light: '#383a42',
+      dark: '#abb2bf',
     })(akTheme),
     substringColor: themed({
-      light: "colors.N400",
-      dark: colors.DN400,
-      dracula: "#f1fa8c"
+      light: '#e45649',
+      dark: '#e06c75',
     })(akTheme),
     keywordColor: themed({
-      light: colors.B400,
-      dark: colors.B100,
-      dracula: "#ff79c6"
+      light: '#a626a4',
+      dark: '#c678dd',
     })(akTheme),
     attributeColor: themed({
-      light: colors.T300,
-      dark: colors.T200,
-      dracula: "#50fa7b"
-    })(akTheme),
-    selectorTagColor: themed({
-      light: colors.B400,
-      dark: colors.B100,
-      dracula: "#8be9fd"
-    })(akTheme),
-    docTagColor: themed({
-      light: colors.Y300,
-      dark: colors.Y300,
-      dracula: "#f1fa8c"
-    })(akTheme),
-    nameColor: themed({
-      light: colors.B400,
-      dark: colors.B100,
-      dracula: "#66d9ef"
-    })(akTheme),
-    builtInColor: themed({
-      light: colors.B400,
-      dark: colors.B100,
-      dracula: "#50fa7b"
-    })(akTheme),
-    literalColor: themed({
-      light: colors.B400,
-      dark: colors.B100,
-      dracula: "#FF79C6"
-    })(akTheme),
-    bulletColor: themed({
-      light: colors.B400,
-      dark: colors.B100,
-      dracula: "#8BE9FD"
-    })(akTheme),
-    codeColor: themed({
-      light: colors.B400,
-      dark: colors.B100,
-      dracula: "#50FA7B"
-    })(akTheme),
-    additionColor: themed({
-      light: colors.B400,
-      dark: colors.B100,
-      dracula: "#f1fa8c"
-    })(akTheme),
-    regexpColor: themed({
-      light: colors.T300,
-      dark: colors.T200,
-      dracula: "#F1FA8C"
-    })(akTheme),
-    symbolColor: themed({
-      light: colors.T300,
-      dark: colors.T200,
-      dracula: "#F1FA8C"
-    })(akTheme),
-    variableColor: themed({
-      light: colors.T300,
-      dark: colors.T200,
-      dracula: "#F8F8F2"
-    })(akTheme),
-    templateVariableColor: themed({
-      light: colors.T300,
-      dark: colors.T200,
-      dracula: "#FF79C6"
-    })(akTheme),
-    linkColor: themed({
-      light: colors.P300,
-      dark: colors.P100,
-      dracula: "#00bcd4"
+      light: '#50a14f',
+      dark: '#98c379',
     })(akTheme),
     selectorAttributeColor: themed({
-      light: colors.T300,
-      dark: colors.T200,
-      dracula: "#FF79C6"
+      light: '#e45649',
+      dark: '#e06c75',
     })(akTheme),
-    selectorPseudoColor: themed({
-      light: colors.T300,
-      dark: colors.T200,
-      dracula: "#FF79C6"
+    docTagColor: themed({
+      light: '#a626a4',
+      dark: '#c678dd',
     })(akTheme),
-    typeColor: themed({
-      light: colors.T500,
-      dark: colors.T300,
-      dracula: "#8BE9FD"
+    nameColor: themed({
+      light: '#e45649',
+      dark: '#e06c75',
     })(akTheme),
-    stringColor: themed({
-      light: colors.G300,
-      dark: colors.G300,
-      dracula: "#F1FA8C"
+    builtInColor: themed({
+      light: '#c18401',
+      dark: '#e6c07b',
     })(akTheme),
-    selectorIdColor: themed({
-      light: colors.T500,
-      dark: colors.T300,
-      dracula: "#50FA7B"
+    literalColor: themed({
+      light: '#0184bb',
+      dark: '#56b6c2',
+    })(akTheme),
+    bulletColor: themed({
+      light: '#4078f2',
+      dark: '#61aeee',
+    })(akTheme),
+    codeColor: themed({
+      light: '#383a42',
+      dark: '#abb2bf',
+    })(akTheme),
+    additionColor: themed({
+      light: '#50a14f',
+      dark: '#98c379',
+    })(akTheme),
+    regexpColor: themed({
+      light: '#50a14f',
+      dark: '#98c379',
+    })(akTheme),
+    symbolColor: themed({
+      light: '#4078f2',
+      dark: '#61aeee',
+    })(akTheme),
+    variableColor: themed({
+      light: '#986801',
+      dark: '#d19a66',
+    })(akTheme),
+    templateVariableColor: themed({
+      light: '#986801',
+      dark: '#d19a66',
+    })(akTheme),
+    linkColor: themed({
+      light: '#4078f2',
+      dark: '#61aeee',
     })(akTheme),
     selectorClassColor: themed({
-      light: colors.T500,
-      dark: colors.T300,
-      dracula: "#50FA7B"
+      light: '#986801',
+      dark: '#d19a66',
+    })(akTheme),
+    typeColor: themed({
+      light: '#986801',
+      dark: '#d19a66',
+    })(akTheme),
+    stringColor: themed({
+      light: '#50a14f',
+      dark: '#98c379',
+    })(akTheme),
+    selectorIdColor: themed({
+      light: '#4078f2',
+      dark: '#61aeee',
     })(akTheme),
     quoteColor: themed({
-      light: colors.T500,
-      dark: colors.T300,
-      dracula: "#E9F284"
+      light: '#a0a1a7',
+      dark: '#5c6370',
     })(akTheme),
     templateTagColor: themed({
-      light: colors.T500,
-      dark: colors.T300,
-      dracula: "#FF79C6"
+      light: '#383a42',
+      dark: '#abb2bf',
     })(akTheme),
     deletionColor: themed({
-      light: colors.T500,
-      dark: colors.T300,
-      dracula: "#FF79C6"
+      light: '#e45649',
+      dark: '#e06c75',
     })(akTheme),
     titleColor: themed({
-      light: colors.P300,
-      dark: colors.P100,
-      dracula: "#ff555580"
+      light: '#4078f2',
+      dark: '#61aeee',
     })(akTheme),
     sectionColor: themed({
-      light: colors.P300,
-      dark: colors.P100,
-      dracula: "#F8F8F2"
+      light: '#e45649',
+      dark: '#e06c75',
     })(akTheme),
     commentColor: themed({
-      light: colors.N400,
-      dark: colors.DN400,
-      dracula: "#6272A4"
+      light: '#a0a1a7',
+      dark: '#5c6370',
     })(akTheme),
     metaKeywordColor: themed({
-      light: colors.G300,
-      dark: colors.G300,
-      dracula: "#50FA7B"
+      light: '#383a42',
+      dark: '#abb2bf',
     })(akTheme),
     metaColor: themed({
-      light: colors.N400,
-      dark: colors.DN400,
-      dracula: "#50FA7B"
+      light: '#4078f2',
+      dark: '#61aeee',
     })(akTheme),
     functionColor: themed({
-      light: colors.N800,
-      dark: colors.DN800,
-      dracula: "#50FA7B"
+      light: '#383a42',
+      dark: '#abb2bf',
     })(akTheme),
     numberColor: themed({
-      light: colors.B400,
-      dark: colors.B100,
-      dracula: "#bd93f9"
-    })(akTheme)
-  };
-});
+      light: '#986801',
+      dark: '#d19a66',
+    })(akTheme),
+  }
+})
