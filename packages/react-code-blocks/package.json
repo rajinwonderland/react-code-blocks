@@ -19,7 +19,8 @@
     "hoist-non-react-statics": "3.3.0",
     "react-syntax-highlighter": "10.2.1",
     "react-tooltip": "^3.10.0",
-    "styled-components": "4.2.0"
+    "styled-components": "4.2.0",
+    "webpack": "^4.30.0"
   },
   "peerDependencies": {
     "react": "^16.8.6",
@@ -27,49 +28,28 @@
   },
   "scripts": {
     "clean": "rm -rf build",
-    "dev": "run-p build:watch start",
-    "build": "rollup -c",
-    "build:watch": "rollup -c -w",
-    "test": "jest",
-    "test:coverage": "jest --coverage --forceExit --colors",
     "prettier": "prettier \"{src,test,examples}/**/*.js\" --write",
     "prepare": "yarn build",
     "prerelease": "yarn prettier && yarn test:coverage && yarn build",
     "release": "npm publish",
-    "start:webpack": "webpack --watch",
-    "build:webpack": "webpack"
+    "start": "webpack --watch",
+    "build": "webpack",
+    "size": "npx bundlesize"
   },
   "devDependencies": {
-    "@babel/core": "^7.4.4",
-    "@babel/plugin-proposal-class-properties": "^7.4.4",
-    "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
-    "@babel/plugin-proposal-optional-chaining": "^7.2.0",
-    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
-    "@babel/preset-env": "^7.4.4",
-    "@babel/preset-react": "^7.0.0",
-    "@svgr/rollup": "^4.2.0",
     "babel-cli": "^6.26.0",
-    "babel-jest": "^24.8.0",
+    "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
-    "enzyme": "^3.9.0",
-    "jest": "^24.8.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
     "prettier": "^1.17.0",
-    "react-test-renderer": "^16.8.6",
-    "rollup": "^1.11.3",
-    "rollup-plugin-babel": "^4.3.2",
-    "rollup-plugin-babel-minify": "^8.0.0",
-    "rollup-plugin-commonjs": "^9.3.4",
-    "rollup-plugin-json": "^4.0.0",
-    "rollup-plugin-node-resolve": "^4.2.3",
-    "rollup-plugin-peer-deps-external": "^2.2.0",
-    "rollup-plugin-postcss": "^2.0.3",
-    "rollup-plugin-terser": "^4.0.4",
-    "rollup-plugin-url": "^2.2.1",
-    "rollup-plugin-visualizer": "^1.1.1",
     "webpack-cli": "^3.0.4"
   },
-  "jest": {
-    "coverageDirectory": "./coverage/",
-    "collectCoverage": true
-  }
+  "bundlesize": [
+    {
+      "path": "./build/index.js",
+      "maxSize": "3 kB"
+    }
+  ]
 }

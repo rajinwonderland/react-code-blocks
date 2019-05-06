@@ -1,21 +1,4 @@
 {
-  "presets": [
-    [
-      "@babel/preset-env",
-      {
-        "modules": false
-      }
-    ],
-    "@babel/preset-react"
-  ],
-  "env": {
-    "test": {
-      "presets": [["react-app"]]
-    }
-  },
-  "plugins": [
-    "@babel/plugin-proposal-object-rest-spread",
-    "@babel/plugin-proposal-optional-chaining",
-    "@babel/plugin-syntax-dynamic-import"
-  ]
+  "presets": ["env"],
+  "plugins": ["transform-object-rest-spread", "transform-react-jsx"]
 }
