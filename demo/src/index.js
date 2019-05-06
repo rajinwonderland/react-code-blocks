@@ -1,33 +1,26 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import Code from 'react-code-blocks/Code';
-import CodeBlock from 'react-code-blocks/CodeBlock';
-import dracula from 'react-code-blocks/dracula';
+import { Code, CodeBlock, dracula } from 'react-code-blocks';
 import { themes, sample, TopBar } from './components';
 import './styles.css';
 
 function App() {
-	const [selected, changeTheme] = useState({
-		name: 'dracula',
-		theme: dracula
-	});
+	const [selectedTheme, changeTheme] = useState(dracula);
+	const [selectedName, changeName] = useState('dracula');
 	const [lineNumbers, toggleLineNumbers] = useState(true);
-	const { name, theme } = selected;
 	return (
 		<div className="container mx-auto p-4">
 			<TopBar
 				select={{
-					value: name,
+					value: selectedName,
 					onChange: (e) => {
-						const theme = require(`react-code-blocks/${e.target.value}`);
-						return changeTheme({
-							name: themes[e.target.value],
-							theme
-						});
+						const theme = require(`react-code-blocks`)[e.target.value];
+						changeTheme(theme);
+						return changeName(e.target.value);
 					},
-					children: Object.keys(themes).map((theme) => (
+					options: Object.keys(themes).map((theme) => (
 						<option key={theme} value={theme}>
-							{themes[theme]}
+							{theme}
 						</option>
 					))
 				}}
@@ -40,10 +33,18 @@ function App() {
 				language="jsx"
 				text={sample.react}
 				showLineNumbers={lineNumbers}
-				theme={theme}
+				theme={selectedTheme}
 			/>
 			<br />
-			<Code language="go" text={`v := Vertex{X: 1, Y: 2}`} theme={theme} />
+			<div
+				className="flex flex-wrap p-4 max-w-md m-auto"
+				style={{ background: selectedTheme.backgroundColor }}>
+				<Code
+					language="go"
+					text={`v := Vertex{X: 1, Y: 2}`}
+					theme={selectedTheme}
+				/>
+			</div>
 		</div>
 	);
 }

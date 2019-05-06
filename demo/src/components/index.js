@@ -37,7 +37,7 @@ export const themes = {
 	tomorrow: 'tomorrow',
 	vs2015: 'vs2015',
 	xt256: 'xt256',
-	zenbur: 'zenburn'
+	zenburn: 'zenburn'
 };
 
 export { default as sample } from './codeblocks';
