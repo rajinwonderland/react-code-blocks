@@ -1,0 +1,19 @@
+{
+	"name": "react-workspace",
+	"version": "1.0.0",
+	"description": "",
+	"author": "",
+	"private": true,
+	"dependencies": {},
+	"devDependencies": {},
+	"scripts": {
+		"start:demo": "yarn workspace demo start",
+		"demo": "yarn workspace demo",
+		"package": "yarn workspace react-code-blocks"
+	},
+	"workspaces": [
+		"packages/*",
+		"demo"
+	],
+	"license": "MIT"
+}
