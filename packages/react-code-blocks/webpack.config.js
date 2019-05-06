@@ -1,6 +1,7 @@
 var BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
   .BundleAnalyzerPlugin
 var CompressionPlugin = require('compression-webpack-plugin')
+
 var UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 var webpack = require('webpack')
 
@@ -55,9 +56,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: chunkData => {
-      return chunkData.chunk.name === 'index' ? '[name].js' : '[name]/[name].js'
-    },
+    filename: '[name].js',
     libraryTarget: 'commonjs2',
   },
   mode: 'production',

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import { Code, CodeBlock, dracula } from 'react-code-blocks';
+import Code from 'react-code-blocks/Code';
+import CodeBlock from 'react-code-blocks/CodeBlock';
+import dracula from 'react-code-blocks/dracula';
 import { themes, sample, TopBar } from './components';
 import './styles.css';
 
