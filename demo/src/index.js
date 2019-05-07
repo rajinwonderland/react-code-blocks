@@ -7,6 +7,8 @@ import './styles.css';
 function App() {
 	const [selectedTheme, changeTheme] = useState(dracula);
 	const [selectedName, changeName] = useState('dracula');
+	const [language, changeLanguage] = useState('javascript');
+	const [languageDemo, changeDemo] = useState(sample['javascript']);
 	const [lineNumbers, toggleLineNumbers] = useState(true);
 	return (
 		<div className="container mx-auto p-4">
@@ -24,14 +26,26 @@ function App() {
 						</option>
 					))
 				}}
+				language={{
+					value: language,
+					onChange: (e) => {
+						changeDemo(sample[e.target.value]);
+						return changeLanguage(e.target.value);
+					},
+					options: Object.keys(sample).map((lang) => (
+						<option key={lang} value={lang}>
+							{lang}
+						</option>
+					))
+				}}
 				toggle={{
 					checked: lineNumbers,
 					onChange: (e) => toggleLineNumbers(!lineNumbers)
 				}}
 			/>
 			<CodeBlock
-				language="jsx"
-				text={sample.react}
+				language={language}
+				text={languageDemo}
 				showLineNumbers={lineNumbers}
 				theme={selectedTheme}
 			/>

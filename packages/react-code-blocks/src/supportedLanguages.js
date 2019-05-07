@@ -249,6 +249,11 @@ export var SUPPORTED_LANGUAGE_ALIASES = Object.freeze([
     value: `rest`,
   },
   {
+    name: `Clojure`,
+    alias: [`clojure`],
+    value: `clojure`,
+  },
+  {
     name: `ObjectPascal`,
     alias: [`objectpascal`],
     value: `delphi`,

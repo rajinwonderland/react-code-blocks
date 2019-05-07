@@ -3,14 +3,14 @@ import { defaultColors } from './defaultTheme'
 const codeFontFamily = `'Fira Code', 'Hack', 'Inconsolata', 'Anonymous Pro ', Consolas, monospace`
 var codeContainerStyle = {
   fontFamily: codeFontFamily,
-  fontSize: `12px`,
+  fontSize: `1em`,
   lineHeight: 20 / 12,
   padding: 8,
 }
 
 var lineNumberContainerStyle = function lineNumberContainerStyle(theme) {
   return {
-    fontSize: `14px`,
+    fontSize: `1em`,
     lineHeight: 20 / 14,
     color: theme.lineNumberColor,
     backgroundColor: theme.lineNumberBgColor,
@@ -140,7 +140,7 @@ var sharedCodeStyle = function sharedCodeStyle(theme) {
 var codeStyle = function codeStyle(theme) {
   return {
     fontFamily: codeFontFamily,
-    fontSize: `12px`,
+    fontSize: `1em`,
     background: theme.backgroundColor,
     color: theme.textColor,
     borderRadius: 3,
