@@ -55,10 +55,6 @@ function App() {
 				language="go"
 				text={`v := Vertex{X: 1, Y: 2}`}
 				theme={selectedTheme}
-				codeStyle={{
-					borderRadius: 0,
-					fontFamily: 'sans-serif'
-				}}
 			/>
 		</div>
 	);
