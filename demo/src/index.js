@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import { Code, CodeBlock, dracula } from 'react-code-blocks';
-import { themes, sample, TopBar } from './components';
+import { CodeBlock, dracula } from 'react-code-blocks';
+import { themes, sample, TopBar, CopySnippet } from './components';
 import './styles.css';
 
 function App() {
@@ -42,15 +42,11 @@ function App() {
 				showLineNumbers={lineNumbers}
 			/>
 			<br />
-			<div
-				className="flex flex-wrap p-4 max-w-md m-auto"
-				style={{ background: selectedTheme.backgroundColor }}>
-				<Code
-					language="go"
-					text={`v := Vertex{X: 1, Y: 2}`}
-					theme={selectedTheme}
-				/>
-			</div>
+			<CopySnippet
+				language="go"
+				text={`v := Vertex{X: 1, Y: 2}`}
+				theme={selectedTheme}
+			/>
 		</div>
 	);
 }
