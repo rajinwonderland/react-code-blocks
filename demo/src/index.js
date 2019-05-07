@@ -36,12 +36,6 @@ function App() {
 				theme={selectedTheme}
 			/>
 			<br />
-			<CodeBlock
-				language="jsx"
-				text={sample.react}
-				showLineNumbers={lineNumbers}
-			/>
-			<br />
 			<CopySnippet
 				language="go"
 				text={`v := Vertex{X: 1, Y: 2}`}

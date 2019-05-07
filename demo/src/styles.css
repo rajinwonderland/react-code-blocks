@@ -6,9 +6,3 @@ body {
   font-family: -apple-system, Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
   line-height: 1.5;  
 }
-
-.tooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
-}
