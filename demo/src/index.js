@@ -36,6 +36,12 @@ function App() {
 				theme={selectedTheme}
 			/>
 			<br />
+			<CodeBlock
+				language="jsx"
+				text={sample.react}
+				showLineNumbers={lineNumbers}
+			/>
+			<br />
 			<div
 				className="flex flex-wrap p-4 max-w-md m-auto"
 				style={{ background: selectedTheme.backgroundColor }}>

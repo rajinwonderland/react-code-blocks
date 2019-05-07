@@ -12,12 +12,12 @@ function themedVariants(variantProp, variants) {
       }
     }
 
-    return ''
+    return ``
   }
 }
 
 export default function themed(modesOrVariant, variantModes) {
-  if (typeof modesOrVariant === 'string') {
+  if (typeof modesOrVariant === `string`) {
     return themedVariants(modesOrVariant, variantModes)
   }
 

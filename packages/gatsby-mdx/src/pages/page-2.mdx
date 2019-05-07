@@ -1,0 +1,70 @@
+import { Link } from 'gatsby';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+
+<SEO title="Code Snippets" />
+
+# Code Snippet Demo
+
+## Javascript
+
+```js theme=github showLineNumbers
+function greet({ name = 'Rauno' } = {}) {
+	console.log(`Hi ${name}!`);
+}
+
+greet(); // Hi Rauno!
+greet({ name: 'Larry' }); // Hi Larry!
+```
+
+## Kotlin
+
+```kotlin showLineNumbers
+fun callbackIfTrue(condition: Boolean, callback: () -> Unit) {
+    if (condition) {
+        callback()
+    }
+}
+
+callbackIfTrue(someBoolean) {
+    print("Condition was true")
+}
+```
+
+## Python
+
+```python showLineNumbers theme=monokai
+for item in ["a", "b", "c"]:
+for i in range(4):        # 0 to 3
+for i in range(4, 8):     # 4 to 7
+for i in range(1, 9, 2):  # 1, 3, 5, 7
+for key, val in dict.items():
+for index, item in enumerate(list):
+```
+
+## Ruby
+
+```ruby
+items = Model
+  .select(:id)
+  .select([:id, :name])
+  .group(:name)   # GROUP BY name
+  .group('name AS grouped_name, age')
+  .having('SUM(price) > 30')  # needs to be chained with .group
+  .includes(:user)
+  .includes(user: [:articles])
+  .references(:posts)
+  # aka: .where("posts.name = 'foo'").references(:posts)
+```
+
+<div
+	style={{
+		position: 'fixed',
+		background: 'white',
+		padding: '1rem',
+		bottom: 0,
+		left: 0,
+		width: '100vw'
+	}}>
+	<Link to="/">Go back to the homepage</Link>
+</div>

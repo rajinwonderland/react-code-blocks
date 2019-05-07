@@ -25,7 +25,7 @@ var Code =
 
     _createClass(Code, [
       {
-        key: 'render',
+        key: `render`,
         value: function render() {
           var _applyTheme = applyTheme(this.props.theme),
             inlineCodeStyle = _applyTheme.inlineCodeStyle
@@ -49,12 +49,12 @@ var Code =
     return Code
   })(PureComponent)
 
-_defineProperty(Code, 'defaultProps', {
+_defineProperty(Code, `defaultProps`, {
   theme: {},
   showLineNumbers: false,
   lineNumberContainerStyle: {},
   codeTagProps: {},
-  preTag: 'span',
+  preTag: `span`,
 })
 
 export { Code as default }

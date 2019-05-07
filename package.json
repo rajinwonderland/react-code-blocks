@@ -9,7 +9,8 @@
 	"scripts": {
 		"start:demo": "yarn workspace demo start",
 		"demo": "yarn workspace demo",
-		"package": "yarn workspace react-code-blocks"
+		"package": "yarn workspace react-code-blocks",
+		"test": "yarn workspace test"
 	},
 	"workspaces": [
 		"packages/*",

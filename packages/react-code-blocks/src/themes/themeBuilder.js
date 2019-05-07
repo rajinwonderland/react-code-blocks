@@ -1,24 +1,23 @@
 import _objectSpread from '@babel/runtime/helpers/objectSpread'
 import { defaultColors } from './defaultTheme'
-const codeFontFamily =
-  "'Fira Code', 'Hack', 'Inconsolata', 'Anonymous Pro ', Consolas, monospace"
+const codeFontFamily = `'Fira Code', 'Hack', 'Inconsolata', 'Anonymous Pro ', Consolas, monospace`
 var codeContainerStyle = {
   fontFamily: codeFontFamily,
-  fontSize: '12px',
+  fontSize: `12px`,
   lineHeight: 20 / 12,
   padding: 8,
 }
 
 var lineNumberContainerStyle = function lineNumberContainerStyle(theme) {
   return {
-    fontSize: '14px',
+    fontSize: `14px`,
     lineHeight: 20 / 14,
     color: theme.lineNumberColor,
     backgroundColor: theme.lineNumberBgColor,
     flexShrink: 0,
     padding: 8,
-    textAlign: 'right',
-    userSelect: 'none',
+    textAlign: `right`,
+    userSelect: `none`,
   }
 }
 
@@ -26,11 +25,11 @@ var sharedCodeStyle = function sharedCodeStyle(theme) {
   return {
     key: {
       color: theme.keywordColor,
-      fontWeight: 'bolder',
+      fontWeight: `bolder`,
     },
     keyword: {
       color: theme.keywordColor,
-      fontWeight: 'bolder',
+      fontWeight: `bolder`,
     },
     'attr-name': {
       color: theme.attributeColor,
@@ -41,12 +40,12 @@ var sharedCodeStyle = function sharedCodeStyle(theme) {
     comment: {
       color: theme.commentColor,
       fontFamily: codeFontFamily,
-      fontStyle: 'italic',
+      fontStyle: `italic`,
     },
     'block-comment': {
       color: theme.commentColor,
       fontFamily: codeFontFamily,
-      fontStyle: 'italic',
+      fontStyle: `italic`,
     },
     'function-name': {
       color: theme.sectionColor,
@@ -124,10 +123,10 @@ var sharedCodeStyle = function sharedCodeStyle(theme) {
       color: theme.metaColor,
     },
     italic: {
-      fontStyle: 'italic',
+      fontStyle: `italic`,
     },
     bold: {
-      fontWeight: 'bolder',
+      fontWeight: `bolder`,
     },
     function: {
       color: theme.functionColor,
@@ -141,14 +140,14 @@ var sharedCodeStyle = function sharedCodeStyle(theme) {
 var codeStyle = function codeStyle(theme) {
   return {
     fontFamily: codeFontFamily,
-    fontSize: '12px',
+    fontSize: `12px`,
     background: theme.backgroundColor,
     color: theme.textColor,
     borderRadius: 3,
-    display: 'flex',
+    display: `flex`,
     lineHeight: 20 / 12,
-    overflowX: 'auto',
-    whiteSpace: 'pre',
+    overflowX: `auto`,
+    whiteSpace: `pre`,
   }
 }
 
@@ -165,9 +164,9 @@ var inlineCodeStyle = function inlineCodeStyle(theme) {
   return _objectSpread(
     {
       'pre[class*="language-"]': _objectSpread({}, codeStyle(theme), {
-        padding: '2px 4px',
-        display: 'inline',
-        whiteSpace: 'pre-wrap',
+        padding: `2px 4px`,
+        display: `inline`,
+        whiteSpace: `pre-wrap`,
       }),
     },
     sharedCodeStyle(theme)
