@@ -6,7 +6,6 @@ import _assertThisInitialized from '@babel/runtime/helpers/assertThisInitialized
 import _inherits from '@babel/runtime/helpers/inherits'
 import _defineProperty from '@babel/runtime/helpers/defineProperty'
 import React, { PureComponent } from 'react'
-import { normalizeLanguage } from '../supportedLanguages'
 import { applyTheme } from '../themes/themeBuilder'
 import Code from './Code'
 var LANGUAGE_FALLBACK = `text`
@@ -73,9 +72,8 @@ var CodeBlock =
             codeContainerStyle = _applyTheme.codeContainerStyle
 
           var props = {
-            language: normalizeLanguage(
-              this.props.language || LANGUAGE_FALLBACK
-            ),
+            language: this.props.language || `text`,
+
             codeStyle: codeBlockStyle,
             showLineNumbers: this.props.showLineNumbers,
             codeTagProps: {
