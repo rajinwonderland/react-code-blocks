@@ -3,3 +3,4 @@ packages/**/node_modules
 demo/**/node_modules
 packages/**/build
 packages/**/coverage
+packages/**/dist
