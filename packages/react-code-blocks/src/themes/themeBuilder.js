@@ -1,16 +1,17 @@
 import _objectSpread from '@babel/runtime/helpers/objectSpread'
 import { defaultColors } from './defaultTheme'
 const codeFontFamily = `'Fira Code', 'Hack', 'Inconsolata', 'Anonymous Pro ', Consolas, monospace`
+const fontSize = `1rem`
 var codeContainerStyle = {
+  fontSize,
   fontFamily: codeFontFamily,
-  fontSize: `1em`,
   lineHeight: 20 / 12,
   padding: 8,
 }
 
 var lineNumberContainerStyle = function lineNumberContainerStyle(theme) {
   return {
-    fontSize: `1em`,
+    fontSize,
     lineHeight: 20 / 14,
     color: theme.lineNumberColor,
     backgroundColor: theme.lineNumberBgColor,
@@ -139,8 +140,8 @@ var sharedCodeStyle = function sharedCodeStyle(theme) {
 
 var codeStyle = function codeStyle(theme) {
   return {
+    fontSize,
     fontFamily: codeFontFamily,
-    fontSize: `1em`,
     background: theme.backgroundColor,
     color: theme.textColor,
     borderRadius: 3,
