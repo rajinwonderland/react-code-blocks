@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import { CodeBlock, dracula } from 'react-code-blocks';
-import { themes, sample, TopBar, CopySnippet } from './components';
+import { CodeBlock, dracula, CopySnippet } from 'react-code-blocks';
+import { themes, sample, TopBar } from './components';
 import './styles.css';
 
 function App() {
@@ -43,12 +43,13 @@ function App() {
 					onChange: (e) => toggleLineNumbers(!lineNumbers)
 				}}
 			/>
-			<CodeBlock
+			<CopySnippet
 				language={language}
 				text={languageDemo}
 				showLineNumbers={lineNumbers}
 				theme={selectedTheme}
 				wrapLines={true}
+				codeBlock
 			/>
 			<br />
 			<CopySnippet

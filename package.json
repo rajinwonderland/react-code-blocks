@@ -10,7 +10,8 @@
 		"start:demo": "yarn workspace demo start",
 		"demo": "yarn workspace demo",
 		"package": "yarn workspace react-code-blocks",
-		"test": "yarn workspace test"
+		"test": "yarn workspace test",
+		"nuke": "rm -rf node_modules"
 	},
 	"workspaces": [
 		"packages/*",

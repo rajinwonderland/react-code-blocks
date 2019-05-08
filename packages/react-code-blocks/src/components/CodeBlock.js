@@ -73,11 +73,13 @@ var CodeBlock =
 
           var props = {
             language: this.props.language || `text`,
-
-            codeStyle: codeBlockStyle,
+            codeStyle: { ...codeBlockStyle, ...this.props.codeStyle },
             showLineNumbers: this.props.showLineNumbers,
             codeTagProps: {
-              style: codeContainerStyle,
+              style: {
+                ...codeContainerStyle,
+                ...this.props.codeContainerStyle,
+              },
             },
             lineNumberContainerStyle: lineNumberContainerStyle,
             text: this.props.text.toString(),

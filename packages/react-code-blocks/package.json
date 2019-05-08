@@ -7,17 +7,20 @@
   "keywords": [
     "code-snippets",
     "code-blocks",
-    "code-snippet-components",
     "react-syntax-highlighter",
-    "mdx",
-    "react-syntax-highlighting"
+    "mdx"
   ],
+  "scripts": {
+    "clean": "rm -rf build",
+    "prettier": "prettier \"{src,test,examples}/**/*.js\" --write",
+    "prerelease": "yarn prettier && yarn eslint src && yarn build",
+    "release": "yarn publish",
+    "build": "yarn clean && babel --out-dir build src",
+    "size": "npx bundlesize"
+  },
   "dependencies": {
     "@babel/runtime": "^7.4.4",
-    "babel-plugin-styled-components": "^1.10.0",
-    "compression-webpack-plugin": "^2.0.0",
-    "fbjs": "1.0.0",
-    "hoist-non-react-statics": "3.3.0",
+    "clipboard": "^2.0.4",
     "react-syntax-highlighter": "10.2.1",
     "styled-components": "4.2.0"
   },
@@ -25,39 +28,24 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },
-  "scripts": {
-    "clean": "rm -rf build",
-    "prettier": "prettier \"{src,test,examples}/**/*.js\" --write",
-    "prepare": "yarn prettier && yarn eslint src && yarn build",
-    "prerelease": "yarn prettier && yarn build",
-    "release": "yarn publish",
-    "build": "yarn clean && babel --out-dir build src",
-    "start:webpack: ": "webpack --watch",
-    "build:webpack": "webpack  --config webpack.config.js -p --progress --mode production",
-    "size": "npx bundlesize >> coverage/bundlesize.log"
-  },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
+    "babel-plugin-styled-components": "^1.10.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-env": "^1.7.0",
+    "eslint": "5.12.0",
+    "eslint-config-google": "^0.12.0",
     "eslint-config-prettier": "^4.2.0",
     "eslint-plugin-filenames": "^1.3.2",
     "eslint-plugin-prettier": "^3.0.1",
-    "prettier": "^1.17.0",
-    "uglifyjs-webpack-plugin": "^2.1.2",
-    "webpack": "^4.30.0",
-    "webpack-bundle-analyzer": "^3.3.2",
-    "webpack-cli": "^3.0.4",
-    "webpack-node-externals": "^1.7.2",
-    "eslint": "5.12.0",
-    "eslint-config-google": "^0.12.0"
+    "prettier": "^1.17.0"
   },
   "bundlesize": [
     {
-      "path": "./build/index.js"
+      "path": "./build"
     }
   ],
   "engines": {

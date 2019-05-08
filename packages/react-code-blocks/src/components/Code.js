@@ -6,7 +6,6 @@ import _inherits from '@babel/runtime/helpers/inherits'
 import _defineProperty from '@babel/runtime/helpers/defineProperty'
 import React, { PureComponent } from 'react'
 import { PrismAsyncLight as SyntaxHighlighter } from 'react-syntax-highlighter'
-import { normalizeLanguage } from '../supportedLanguages'
 import { applyTheme } from '../themes/themeBuilder'
 
 var Code =
@@ -30,7 +29,7 @@ var Code =
           var _applyTheme = applyTheme(this.props.theme),
             inlineCodeStyle = _applyTheme.inlineCodeStyle
 
-          var language = normalizeLanguage(this.props.language)
+          var language = this.props.language || `text`
           var props = {
             language: language,
             PreTag: this.props.preTag,
