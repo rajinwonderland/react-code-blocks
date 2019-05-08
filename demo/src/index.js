@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import { CodeBlock, dracula, CopySnippet } from 'react-code-blocks';
+import { CodeBlock, dracula, CopyBlock } from 'react-code-blocks';
 import { themes, sample, TopBar } from './components';
 import './styles.css';
 
@@ -43,7 +43,7 @@ function App() {
 					onChange: (e) => toggleLineNumbers(!lineNumbers)
 				}}
 			/>
-			<CopySnippet
+			<CopyBlock
 				language={language}
 				text={languageDemo}
 				showLineNumbers={lineNumbers}
@@ -52,7 +52,7 @@ function App() {
 				codeBlock
 			/>
 			<br />
-			<CopySnippet
+			<CopyBlock
 				language="go"
 				text={`v := Vertex{X: 1, Y: 2}`}
 				theme={selectedTheme}

@@ -213,3 +213,37 @@ Fruits+=('Watermelon')
 unset Fruits[2]  
 lines=('cat "logfile"')`
 };
+
+const codeSnippets = [
+	{
+		language: 'c',
+		name: 'C (ANSI)',
+		snippet: `
+    int main(void)
+    {
+      puts("Hello World!");
+      return EXIT_SUCCESS;
+    }
+    `
+	},
+	{
+		language: 'clojure',
+		name: 'Clojure',
+		snippet: `  
+    (defn hello []
+      (println "Hello world!"))
+
+    (hello)
+    `
+	},
+	{
+		language: 'fsharp',
+		name: 'F#',
+		snippet: `
+    printf "Hello World!\n"
+    `
+	},
+	{
+		language: ''
+	}
+];

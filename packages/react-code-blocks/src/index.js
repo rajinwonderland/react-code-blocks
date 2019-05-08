@@ -1,6 +1,6 @@
 export { default as Code } from './ThemedCode'
 export { default as CodeBlock } from './ThemedCodeBlock'
-export { default as CopySnippet } from './components/CopySnippet'
+export { default as CopyBlock } from './components/CopyBlock'
 export { default as a11yDark } from './themes/a11y-dark'
 export { default as a11yLight } from './themes/a11y-light'
 export { default as anOldHope } from './themes/an-old-hope'
