@@ -1,6 +1,5 @@
 import themed from '../utils/themed'
-import memoizeOne from 'memoize-one'
-export var defaultColors = memoizeOne(function(theme) {
+export var defaultColors = function(theme) {
   var akTheme = {
     theme: theme,
   }
@@ -142,4 +141,4 @@ export var defaultColors = memoizeOne(function(theme) {
       dark: `#d19a66`,
     })(akTheme),
   }
-})
+}

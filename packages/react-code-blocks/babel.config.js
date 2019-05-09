@@ -1,5 +1,15 @@
 module.exports = {
   plugins: [
+    [
+      `babel-plugin-styled-components`,
+      {
+        ssr: true,
+        displayName: true,
+        minify: true,
+        pure: true,
+        transpileTemplateLiterals: true,
+      },
+    ],
     `@babel/plugin-proposal-class-properties`,
     `@babel/plugin-proposal-object-rest-spread`,
     `@babel/syntax-dynamic-import`,
@@ -8,11 +18,36 @@ module.exports = {
   presets: [`@babel/react`, `@babel/env`],
   env: {
     cjs: {
-      plugins: [`@babel/transform-runtime`, `transform-dynamic-import`],
+      plugins: [
+        [
+          `babel-plugin-styled-components`,
+          {
+            ssr: true,
+            displayName: true,
+            minify: true,
+            pure: true,
+            transpileTemplateLiterals: true,
+          },
+        ],
+        `@babel/transform-runtime`,
+        `transform-dynamic-import`,
+      ],
       presets: [[`@babel/env`]],
     },
     esm: {
-      plugins: [`@babel/transform-runtime`],
+      plugins: [
+        [
+          `babel-plugin-styled-components`,
+          {
+            ssr: true,
+            displayName: true,
+            minify: true,
+            pure: true,
+            transpileTemplateLiterals: true,
+          },
+        ],
+        `@babel/transform-runtime`,
+      ],
       presets: [
         [
           `@babel/env`,

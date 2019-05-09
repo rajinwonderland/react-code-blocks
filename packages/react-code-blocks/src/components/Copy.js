@@ -6,11 +6,11 @@ const ClipboardListIcon = ({ size, color, ...props }) => (
   </svg>
 )
 
-ClipboardListIcon.displayName = 'ClipboardListIcon'
+ClipboardListIcon.displayName = `ClipboardListIcon`
 
 ClipboardListIcon.defaultProps = {
   size: 24,
-  color: 'currentcolor',
+  color: `currentcolor`,
 }
 
 const ClipboardCheckIcon = ({ size, color, ...props }) => (
@@ -19,11 +19,11 @@ const ClipboardCheckIcon = ({ size, color, ...props }) => (
   </svg>
 )
 
-ClipboardCheckIcon.displayName = 'ClipboardCheckIcon'
+ClipboardCheckIcon.displayName = `ClipboardCheckIcon`
 
 ClipboardCheckIcon.defaultProps = {
   size: 24,
-  color: 'currentcolor',
+  color: `currentcolor`,
 }
 export default function({ size, color, copied, ...props }) {
   if (copied) {

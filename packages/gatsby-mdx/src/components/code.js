@@ -1,29 +1,18 @@
 import React from 'react';
-import CodeBlock from 'react-code-blocks/build/ThemedCodeBlock';
-import dracula from 'react-code-blocks/build/themes/dracula';
+import dracula from 'react-code-blocks/build/esm/themes/dracula';
+import CopyBlock from 'react-code-blocks/build/esm/ThemedCopyBlock';
+function getTheme(theme) {
+	return require(`react-code-blocks`)[`${theme}`];
+}
 
 const Code = ({ codeString, language, ...props }) => {
-	if (props['theme']) {
-		const theme = require(`react-code-blocks`)[`${props['theme']}`];
-		return (
-			<>
-				<CodeBlock
-					text={codeString}
-					language={language}
-					showLineNumbers={props['showLineNumbers'] || false}
-					theme={theme}
-				/>
-				<br />
-			</>
-		);
-	}
 	return (
 		<>
-			<CodeBlock
+			<CopyBlock
 				text={codeString}
 				language={language}
 				showLineNumbers={props['showLineNumbers'] || false}
-				theme={dracula}
+				theme={props['theme'] ? getTheme(props['theme']) : dracula}
 			/>
 			<br />
 		</>

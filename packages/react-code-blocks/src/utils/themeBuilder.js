@@ -1,6 +1,6 @@
 import _objectSpread from '@babel/runtime/helpers/objectSpread'
-import { defaultColors } from './defaultTheme'
-const codeFontFamily = `'Fira Code', 'Hack', 'Inconsolata', 'Anonymous Pro ', Consolas, monospace`
+import { defaultColors } from '../themes/defaultTheme'
+const codeFontFamily = `inherit`
 const fontSize = `1rem`
 var codeContainerStyle = {
   fontSize,

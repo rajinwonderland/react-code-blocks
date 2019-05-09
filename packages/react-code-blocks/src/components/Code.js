@@ -6,7 +6,7 @@ import _inherits from '@babel/runtime/helpers/inherits'
 import _defineProperty from '@babel/runtime/helpers/defineProperty'
 import React, { PureComponent } from 'react'
 import { PrismAsyncLight as SyntaxHighlighter } from 'react-syntax-highlighter'
-import { applyTheme } from '../themes/themeBuilder'
+import { applyTheme } from '../utils/themeBuilder'
 
 var Code =
   /*#__PURE__*/

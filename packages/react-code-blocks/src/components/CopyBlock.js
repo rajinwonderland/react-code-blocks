@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
-import Code from '../ThemedCode'
-import CodeBlock from '../ThemedCodeBlock'
+import Code from './Code'
+import CodeBlock from './CodeBlock'
 import Copy from './Copy'
 import Clipboard from 'clipboard'
-import styled from 'styled-components'
-import GlobalStyle from './GlobalStyle.js'
+import styled, { createGlobalStyle } from 'styled-components'
+
+const GlobalStyle = createGlobalStyle`
+  @import url(https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css);
+`
 
 const Button = styled.button`
   background: ${p => p.theme.backgroundColor};
@@ -29,7 +32,7 @@ const Snippet = styled.div`
 
 const uniqueId = require(`lodash.uniqueid`)
 
-export default function({ theme, text, language, codeBlock, ...rest }) {
+export default function({ theme, text, codeBlock, ...rest }) {
   const [copied, toggleCopy] = useState(false)
   const uid = uniqueId(`copy_`)
   const clip = new Clipboard(`#${uid}`)
@@ -50,9 +53,9 @@ export default function({ theme, text, language, codeBlock, ...rest }) {
         theme={theme}
       >
         {codeBlock ? (
-          <CodeBlock language={language} text={text} theme={theme} {...rest} />
+          <CodeBlock text={text} theme={theme} {...rest} />
         ) : (
-          <Code language={language} text={text} theme={theme} {...rest} />
+          <Code text={text} theme={theme} {...rest} />
         )}
         <Button
           id={uid}
