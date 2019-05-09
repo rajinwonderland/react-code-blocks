@@ -7,8 +7,8 @@ import './styles.css';
 function App() {
 	const [selectedTheme, changeTheme] = useState(dracula);
 	const [selectedName, changeName] = useState('dracula');
-	const [language, changeLanguage] = useState('javascript');
-	const [languageDemo, changeDemo] = useState(sample['javascript']);
+	const [language, changeLanguage] = useState('jsx');
+	const [languageDemo, changeDemo] = useState(sample['jsx']);
 	const [lineNumbers, toggleLineNumbers] = useState(true);
 	return (
 		<div className="container mx-auto p-4">

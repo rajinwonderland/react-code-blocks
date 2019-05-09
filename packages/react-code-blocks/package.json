@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "description": "Modified Atlaskit's Code Block to support more languages (i.e graphql, reasonml, etc) and theme (i.e railscast, darcula, monokai, etc) code snippets!",
   "author": "rajinwonderland",
-  "main": "build/index.js",
+  "main": "build/cjs/index.js",
+  "module": "build/esm/index.js",
   "keywords": [
     "code-snippets",
     "code-blocks",
@@ -11,15 +12,16 @@
     "mdx"
   ],
   "scripts": {
+    "build": "yarn clean && yarn build:cjs && yarn build:esm",
+    "build:cjs": "BABEL_ENV=cjs babel src --out-dir ./build/cjs",
+    "build:esm": "BABEL_ENV=esm babel src --out-dir ./build/esm",
     "clean": "rm -rf build",
     "prettier": "prettier \"{src,test,examples}/**/*.js\" --write",
     "prerelease": "yarn prettier && yarn eslint src && yarn build",
     "release": "yarn publish",
-    "build": "yarn clean && babel --out-dir build src",
     "size": "npx bundlesize"
   },
   "dependencies": {
-    "@babel/runtime": "^7.4.4",
     "clipboard": "^2.0.4",
     "lodash.uniqueid": "^4.0.1",
     "react-syntax-highlighter": "10.2.1",
@@ -30,13 +32,18 @@
     "react-dom": "^16.8.6"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.4",
-    "babel-plugin-styled-components": "^1.10.0",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-plugin-transform-react-jsx": "^6.24.1",
-    "babel-preset-env": "^1.7.0",
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/runtime": "^7.4.4",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-transform-dynamic-import": "^2.1.0",
     "eslint": "5.12.0",
     "eslint-config-google": "^0.12.0",
     "eslint-config-prettier": "^4.2.0",
@@ -46,7 +53,10 @@
   },
   "bundlesize": [
     {
-      "path": "./build"
+      "path": "./build/esm/index.js"
+    },
+    {
+      "path": "./build/cjs/index.js"
     }
   ],
   "engines": {

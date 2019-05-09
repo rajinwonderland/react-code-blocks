@@ -5,7 +5,7 @@ const fontSize = `1rem`
 var codeContainerStyle = {
   fontSize,
   fontFamily: codeFontFamily,
-  lineHeight: 20 / 12,
+  lineHeight: 20 / 14,
   padding: 8,
 }
 
@@ -146,7 +146,7 @@ var codeStyle = function codeStyle(theme) {
     color: theme.textColor,
     borderRadius: 3,
     display: `flex`,
-    lineHeight: 20 / 12,
+    lineHeight: 20 / 14,
     overflowX: `auto`,
     whiteSpace: `pre`,
   }
