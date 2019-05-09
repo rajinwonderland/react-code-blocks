@@ -64,7 +64,6 @@ func main() {
 }
 `,
 	groovy: `println "Hello World"`,
-	hack: `echo "Hello World";`,
 	haskell: `main = putStrLn "Hello World"`,
 	html: `<html>
 <!-- Hello World in HTML -->
