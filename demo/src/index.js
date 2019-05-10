@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import { CodeBlock, dracula, CopyBlock } from 'react-code-blocks';
+import { dracula, CopyBlock } from 'react-code-blocks';
 import { themes, sample, TopBar } from './components';
 import './styles.css';
 
@@ -43,20 +43,22 @@ function App() {
 					onChange: (e) => toggleLineNumbers(!lineNumbers)
 				}}
 			/>
-			<CopyBlock
-				language={language}
-				text={languageDemo}
-				showLineNumbers={lineNumbers}
-				theme={selectedTheme}
-				wrapLines={true}
-				codeBlock
-			/>
-			<br />
-			<CopyBlock
-				language="go"
-				text={`v := Vertex{X: 1, Y: 2}`}
-				theme={selectedTheme}
-			/>
+			<div className="demo">
+				<CopyBlock
+					language={language}
+					text={languageDemo}
+					showLineNumbers={lineNumbers}
+					theme={selectedTheme}
+					wrapLines={true}
+					codeBlock
+				/>
+				<br />
+				<CopyBlock
+					language="go"
+					text={`v := Vertex{X: 1, Y: 2}`}
+					theme={selectedTheme}
+				/>
+			</div>
 		</div>
 	);
 }

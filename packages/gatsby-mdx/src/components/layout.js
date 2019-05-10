@@ -17,7 +17,7 @@ const Layout = ({ children }) => (
 			}
 		`}
 		render={(data) => (
-			<>
+			<div className="container mx-auto max-w-lg px-4">
 				<Header siteTitle={data.site.siteMetadata.title} />
 				<div
 					style={{
@@ -28,7 +28,7 @@ const Layout = ({ children }) => (
 					}}>
 					{children}
 				</div>
-			</>
+			</div>
 		)}
 	/>
 );

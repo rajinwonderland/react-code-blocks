@@ -6,3 +6,7 @@ body {
   font-family: -apple-system, Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
   line-height: 1.5;  
 }
+
+.demo {
+  font-family: 'Fira Code', monospace;
+}
