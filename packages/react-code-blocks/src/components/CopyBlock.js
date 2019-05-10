@@ -47,12 +47,14 @@ const uniqueId = require(`lodash.uniqueid`)
 export default function({ theme, text, codeBlock, ...rest }) {
   const [copied, toggleCopy] = useState(false)
   const uid = uniqueId(`copy_`)
-  const clip = new Clipboard(`#${uid}`)
-  clip.on(`success`, () => {
-    toggleCopy(true)
-    return setTimeout(() => toggleCopy(false), 1000)
-  })
-  clip.on(`error`, err => console.error(err))
+  if (typeof document !== `undefined`) {
+    const clip = new Clipboard(`#${uid}`)
+    clip.on(`success`, () => {
+      toggleCopy(true)
+      return setTimeout(() => toggleCopy(false), 1000)
+    })
+    clip.on(`error`, err => console.error(err))
+  }
   return (
     <Snippet {...{ codeBlock }} theme={theme}>
       {codeBlock ? (
