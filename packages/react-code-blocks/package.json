@@ -1,6 +1,6 @@
 {
   "name": "react-code-blocks",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Modified Atlaskit's Code Block to support more languages (i.e graphql, reasonml, etc) and theme (i.e railscast, darcula, monokai, etc) code snippets!",
   "author": "rajinwonderland",
   "main": "build/cjs/index.js",
