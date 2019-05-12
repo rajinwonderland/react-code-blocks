@@ -53,6 +53,11 @@
     "eslint-plugin-prettier": "^3.0.1",
     "prettier": "^1.17.0"
   },
+  "homepage": "https://react-code-blocks.netlify.com/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rajinwonderland/react-code-blocks"
+  },
   "bundlesize": [
     {
       "path": "./build/esm/index.js"
