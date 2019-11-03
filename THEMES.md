@@ -2,7 +2,7 @@
 <p align="center"><img src="https://i.imgflip.com/3f4gcn.jpg" title="made at imgflip.com" width="300px"/></p>
 
 | Theme Name | Name in Package | Demo Name |
-| ---------- | --------------- | --------- ||
+| ---------- | --------------- | --------- |
 | A11y Dark               | a11yDark              | a11y-dark               |
 | A11y Light              | a11yLight             | a11y-light              |
 | An Old Hope             | anOldHope             | an-old-hope             |
