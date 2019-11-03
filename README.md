@@ -140,10 +140,10 @@ For a list of supported languages, check out the [list here](LANGUAGES.md)
 
 
 ## Author
-
+<div style="display:grid">
 <img src="https://avatars3.githubusercontent.com/u/15880596?s=460&v=4" width="175px"/>
 <img src="packages/assets/rajinwonderland.png" height="175px" />
-
+</div>
 
 
 * Website: https://novvum.io
