@@ -18,6 +18,10 @@
 		"packages/*",
 		"demo"
 	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/rajinwonderland/react-code-blocks"
+	},
 	"resolutions": {
 		"**/**/react": "^16.11.0",
 		"**/react": "^16.11.0",
