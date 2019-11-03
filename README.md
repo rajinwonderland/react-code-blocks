@@ -167,7 +167,7 @@ If you're looking for some more maintained solutions, I'd suggest the following:
 - [x] Highlighting line feature
 - [x] Supported Themes documentation
 - [x] Supported Languages documentation
-- [ ] Add a License
+- [x] Add a License
 - [ ] Docs for usage with GatsbyJS
 - [ ] Docs for usage with `MDX`
 - [ ] Contributor guide for development
