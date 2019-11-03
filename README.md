@@ -1,4 +1,4 @@
-<p align="center"><img src="packages/assets/react-code-blocks.svg" width="100%"></p>
+<p align="center"><img src="packages/assets/react-code-blocks.svg" width="100%" height="250px"></p>
 <h1 align="center">Welcome to <code>react-code-blocks</code> 👋👋👋</h1>
 <p>
   <a href="https://www.npmjs.com/package/react-code-blocks" target="_blank">
