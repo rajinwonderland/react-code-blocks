@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import { dracula, CopyBlock } from 'react-code-blocks';
 import { themes, sample, TopBar } from './components';
+import Logo from './components/Logo';
 import './styles.css';
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
 	const [lineNumbers, toggleLineNumbers] = useState(true);
 	return (
 		<div className="container mx-auto p-4">
+			<Logo height="150px" width="100%" />
 			<TopBar
 				select={{
 					value: selectedName,

@@ -18,5 +18,11 @@
 		"packages/*",
 		"demo"
 	],
+	"resolutions": {
+		"**/**/react": "^16.11.0",
+		"**/react": "^16.11.0",
+		"**/**/react-dom": "^16.11.0",
+		"**/react-dom": "^16.11.0"
+	},
 	"license": "MIT"
 }

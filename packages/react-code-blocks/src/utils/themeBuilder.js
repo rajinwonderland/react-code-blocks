@@ -2,14 +2,14 @@ import _objectSpread from '@babel/runtime/helpers/objectSpread'
 import { defaultColors } from '../themes/defaultTheme'
 const codeFontFamily = `inherit`
 const fontSize = `inherit`
-var codeContainerStyle = {
+const codeContainerStyle = {
   fontSize,
   fontFamily: codeFontFamily,
   lineHeight: 20 / 14,
   padding: 8,
 }
 
-var lineNumberContainerStyle = function lineNumberContainerStyle(theme) {
+const lineNumberContainerStyle = theme => {
   return {
     fontSize,
     lineHeight: 20 / 14,
@@ -22,7 +22,7 @@ var lineNumberContainerStyle = function lineNumberContainerStyle(theme) {
   }
 }
 
-var sharedCodeStyle = function sharedCodeStyle(theme) {
+const sharedCodeStyle = theme => {
   return {
     key: {
       color: theme.keywordColor,
@@ -138,7 +138,7 @@ var sharedCodeStyle = function sharedCodeStyle(theme) {
   }
 }
 
-var codeStyle = function codeStyle(theme) {
+const codeStyle = theme => {
   return {
     fontSize,
     fontFamily: codeFontFamily,
@@ -152,7 +152,7 @@ var codeStyle = function codeStyle(theme) {
   }
 }
 
-var codeBlockStyle = function codeBlockStyle(theme) {
+const codeBlockStyle = theme => {
   return _objectSpread(
     {
       'pre[class*="language-"]': codeStyle(theme),
@@ -161,7 +161,7 @@ var codeBlockStyle = function codeBlockStyle(theme) {
   )
 }
 
-var inlineCodeStyle = function inlineCodeStyle(theme) {
+const inlineCodeStyle = theme => {
   return _objectSpread(
     {
       'pre[class*="language-"]': _objectSpread({}, codeStyle(theme), {

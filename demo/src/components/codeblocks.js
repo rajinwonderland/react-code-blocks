@@ -98,10 +98,17 @@ sys.puts("Hello World");
 }
 
 ReactDOM.render(
-  <HelloMessage name="Taylor" />, 
-  mountNode 
+  <HelloMessage name="Taylor" />,
+  mountNode
 );`,
-	julia: `println("Hello, World!")`,
+	julia: `println("Hello, World!")
+
+  for i=1:9001
+    if i > 9000
+      println("It's over 9000!!")
+    end
+  end
+  # this will eventually print "It's over 9000!" `,
 	kotlin: `fun main(args : Array<String>) {
   println("Hello, world!")
 }

@@ -1,59 +1,84 @@
-import _classCallCheck from '@babel/runtime/helpers/classCallCheck'
-import _createClass from '@babel/runtime/helpers/createClass'
-import _possibleConstructorReturn from '@babel/runtime/helpers/possibleConstructorReturn'
-import _getPrototypeOf from '@babel/runtime/helpers/getPrototypeOf'
-import _inherits from '@babel/runtime/helpers/inherits'
-import _defineProperty from '@babel/runtime/helpers/defineProperty'
 import React, { PureComponent } from 'react'
 import { PrismAsyncLight as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { applyTheme } from '../utils/themeBuilder'
 
-var Code =
-  /*#__PURE__*/
-  (function(_PureComponent) {
-    _inherits(Code, _PureComponent)
+export default class Code extends PureComponent {
+  static defaultProps = {
+    theme: {},
+    showLineNumbers: false,
+    lineNumberContainerStyle: {},
+    codeTagProps: {},
+    preTag: 'span',
+    highlight: '',
+  }
 
-    function Code() {
-      _classCallCheck(this, Code)
-
-      return _possibleConstructorReturn(
-        this,
-        _getPrototypeOf(Code).apply(this, arguments)
-      )
+  getLineOpacity(lineNumber) {
+    if (!this.props.highlight) {
+      return 1
     }
 
-    _createClass(Code, [
-      {
-        key: `render`,
-        value: function render() {
-          var _applyTheme = applyTheme(this.props.theme),
-            inlineCodeStyle = _applyTheme.inlineCodeStyle
+    const highlight = this.props.highlight
+      .split(',')
+      .map(num => {
+        if (num.indexOf('-') > 0) {
+          // We found a line group, e.g. 1-3
+          const [from, to] = num
+            .split('-')
+            .map(Number)
+            .sort()
+          return Array(to + 1)
+            .fill(undefined)
+            .map((_, index) => index)
+            .slice(from, to + 1)
+        }
 
-          var language = this.props.language || `text`
-          var props = {
-            language: language,
-            PreTag: this.props.preTag,
-            style:
-              { ...inlineCodeStyle, ...this.props.codeStyle } ||
-              inlineCodeStyle,
-            showLineNumbers: this.props.showLineNumbers,
-            lineNumberContainerStyle: this.props.lineNumberContainerStyle,
-            codeTagProps: this.props.codeTagProps,
-          }
-          return React.createElement(SyntaxHighlighter, props, this.props.text)
-        },
-      },
-    ])
+        return Number(num)
+      })
+      .reduce((acc, val) => acc.concat(val), [])
 
-    return Code
-  })(PureComponent)
+    if (highlight.length === 0) {
+      return 1
+    }
 
-_defineProperty(Code, `defaultProps`, {
-  theme: {},
-  showLineNumbers: false,
-  lineNumberContainerStyle: {},
-  codeTagProps: {},
-  preTag: `span`,
-})
+    if (highlight.includes(lineNumber)) {
+      return 1
+    }
 
-export { Code as default }
+    return 0.3
+  }
+
+  render() {
+    const { inlineCodeStyle } = applyTheme(this.props.theme)
+    const language = this.props.language
+
+    const props = {
+      language,
+      PreTag: this.props.preTag,
+      style: this.props.codeStyle || inlineCodeStyle,
+      showLineNumbers: this.props.showLineNumbers,
+      lineNumberContainerStyle: this.props.lineNumberContainerStyle,
+      codeTagProps: this.props.codeTagProps,
+    }
+
+    return (
+      <SyntaxHighlighter
+        {...props}
+        // Wrap lines is needed to set styles on the line.
+        // We use this to set opacity if highlight specific lines.
+        wrapLines={this.props.highlight.length > 0}
+        lineNumberStyle={lineNumber => ({
+          opacity: this.getLineOpacity(lineNumber),
+        })}
+        // Types are incorrect.
+        // @ts-ignore
+        lineProps={lineNumber => ({
+          style: {
+            opacity: this.getLineOpacity(lineNumber),
+          },
+        })}
+      >
+        {this.props.text}
+      </SyntaxHighlighter>
+    )
+  }
+}

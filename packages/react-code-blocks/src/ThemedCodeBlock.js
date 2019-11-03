@@ -1,14 +1,13 @@
 import React from 'react'
 import { withTheme, ThemeProvider } from 'styled-components'
 import CodeBlock from './components/CodeBlock'
-var CodeBlockWithTheme = withTheme(CodeBlock)
-var emptyTheme = {}
+const CodeBlockWithTheme = withTheme(CodeBlock)
+const emptyTheme = {}
+
 export default function(props) {
-  return React.createElement(
-    ThemeProvider,
-    {
-      theme: emptyTheme,
-    },
-    React.createElement(CodeBlockWithTheme, props)
+  return (
+    <ThemeProvider theme={emptyTheme}>
+      <CodeBlockWithTheme {...props} />
+    </ThemeProvider>
   )
 }
