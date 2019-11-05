@@ -126,8 +126,9 @@ function MyCoolCodeBlock({code, language, showLineNumbers}){
 
 #### Props
 Same as the `CodeBlock`'s component with the exception of one!
-| name        | type      | default | description                                                                                          |
-| ----------- | --------- | ------- | ---------------------------------------------------------------------------------------------------- |
+
+| name | type      | default | description    
+| ----------- | --------- | ------- | --- 
 | `codeBlock` | `boolean` | `false` | Indicates whether to render the `CopyBlock` as an inline `Code` component or a `CodeBlock` component |
 
 
