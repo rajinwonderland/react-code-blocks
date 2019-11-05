@@ -137,18 +137,6 @@ For a list of supported themes, check out the [list here](THEMES.md)
 ## Supported Languages
 For a list of supported languages, check out the [list here](LANGUAGES.md)
 
-
-## Author
-<div style="display:grid">
-<img src="https://avatars3.githubusercontent.com/u/15880596?s=460&v=4" width="175px"/>
-<img src="packages/assets/rajinwonderland.png" height="175px" />
-</div>
-
-
-* Website: https://novvum.io
-* Twitter: [@rajinwonderland](https://twitter.com/rajinwonderland)
-* Github: [@rajinwonderland](https://github.com/rajinwonderland)
-
 ## Alternatives
 If you're looking for some more maintained solutions, I'd suggest the following:
 - [`react-syntax-highlighter`](https://github.com/conorhastings/react-syntax-highlighter): syntax highlighting component for react with `prismjs` or `highlightjs` `ast` using inline styles by @conorhastings.
@@ -184,3 +172,14 @@ Give a ⭐️ if this project helped you!
 ***
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
 
+
+## Author
+<div style="display:grid">
+<img src="https://avatars3.githubusercontent.com/u/15880596?s=460&v=4" width="175px"/>
+<img src="packages/assets/rajinwonderland.png" height="175px" />
+</div>
+
+
+* Website: https://novvum.io
+* Twitter: [@rajinwonderland](https://twitter.com/rajinwonderland)
+* Github: [@rajinwonderland](https://github.com/rajinwonderland)
