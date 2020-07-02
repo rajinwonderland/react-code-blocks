@@ -1,11 +1,21 @@
-import React, { useState } from 'react'
-import Code from './Code'
-import CodeBlock from './CodeBlock'
-import Copy from './Copy'
-import Clipboard from 'clipboard'
-import styled from 'styled-components'
+import React, { useState } from 'react';
+import Code from './Code';
+import CodeBlock from './CodeBlock';
+import Copy from './CopyIcon';
+import styled from 'styled-components';
+import { Theme, SupportedLanguages } from 'types';
+import useClipboard from 'hooks/use-clipboard';
 
-const Button = styled.button`
+export interface Props {
+  theme: Theme;
+  text: string;
+  codeBlock: boolean;
+  copied: boolean;
+  language: SupportedLanguages | string;
+  [x: string]: any;
+}
+
+const Button = styled.button<Props>`
   position: absolute;
   top: 0;
   right: 0;
@@ -31,30 +41,25 @@ const Button = styled.button`
     width: 1rem;
     height: 1rem;
   }
-`
+`;
 
-const Snippet = styled.div`
+const Snippet = styled.div<Props>`
   display: flex;
   flex-wrap: wrap;
   position: relative;
   background: ${p => p.theme.backgroundColor};
   border-radius: 0.25rem;
   padding: ${p => (p.codeBlock ? `0.25rem 0.5rem 0.25rem 0.25rem` : `0.25rem`)};
-`
+`;
 
-const uniqueId = require(`lodash.uniqueid`)
+export default function({ theme, text, codeBlock = false, ...rest }: Props) {
+  const [copied, toggleCopy] = useState(false);
+  const { copy } = useClipboard();
+  const handler = () => {
+    copy(text);
+    toggleCopy(!copied);
+  };
 
-export default function({ theme, text, codeBlock, ...rest }) {
-  const [copied, toggleCopy] = useState(false)
-  const uid = uniqueId(`copy_`)
-  if (typeof document !== `undefined`) {
-    const clip = new Clipboard(`#${uid}`)
-    clip.on(`success`, () => {
-      toggleCopy(true)
-      return setTimeout(() => toggleCopy(false), 1000)
-    })
-    clip.on(`error`, err => console.error(err))
-  }
   return (
     <Snippet {...{ codeBlock }} theme={theme}>
       {codeBlock ? (
@@ -62,18 +67,14 @@ export default function({ theme, text, codeBlock, ...rest }) {
       ) : (
         <Code text={text} theme={theme} {...rest} />
       )}
-      <Button
-        id={uid}
-        {...{ theme, copied }}
-        data-clipboard-text={text}
-        disabled={copied}
-      >
+      <Button onClick={handler} {...{ theme, copied }}>
         <Copy
           color={copied ? theme.stringColor : theme.textColor}
           copied={copied}
           className="icon"
+          size="16pt"
         />
       </Button>
     </Snippet>
-  )
+  );
 }

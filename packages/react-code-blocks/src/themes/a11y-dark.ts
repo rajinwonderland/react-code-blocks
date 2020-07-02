@@ -33,4 +33,4 @@ export default {
   metaColor: `#f5ab35`,
   functionColor: `#f8f8f2`,
   numberColor: `#f5ab35`,
-}
+};

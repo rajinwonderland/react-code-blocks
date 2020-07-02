@@ -1,15 +1,16 @@
-import _objectSpread from '@babel/runtime/helpers/objectSpread'
-import { defaultColors } from '../themes/defaultTheme'
-const codeFontFamily = `inherit`
-const fontSize = `inherit`
+import { defaultColors } from '../themes/defaultTheme';
+import { Theme } from 'types';
+
+const codeFontFamily = `inherit`;
+const fontSize = `inherit`;
 const codeContainerStyle = {
   fontSize,
   fontFamily: codeFontFamily,
-  lineHeight: 20 / 14,
+  lineHeight: 20 / 12,
   padding: 8,
-}
+};
 
-const lineNumberContainerStyle = theme => {
+const lineNumberContainerStyle = (theme: Theme) => {
   return {
     fontSize,
     lineHeight: 20 / 14,
@@ -19,10 +20,10 @@ const lineNumberContainerStyle = theme => {
     padding: 8,
     textAlign: `right`,
     userSelect: `none`,
-  }
-}
+  };
+};
 
-const sharedCodeStyle = theme => {
+const sharedCodeStyle = (theme: Theme) => {
   return {
     key: {
       color: theme.keywordColor,
@@ -135,10 +136,10 @@ const sharedCodeStyle = theme => {
     number: {
       color: theme.numberColor,
     },
-  }
-}
+  };
+};
 
-const codeStyle = theme => {
+const codeStyle = (theme: Theme) => {
   return {
     fontSize,
     fontFamily: codeFontFamily,
@@ -149,41 +150,34 @@ const codeStyle = theme => {
     lineHeight: 20 / 14,
     overflowX: `auto`,
     whiteSpace: `pre`,
+  };
+};
+
+const codeBlockStyle = (theme: Theme) => ({
+  'pre[class*="language-"]': codeStyle(theme),
+  ...sharedCodeStyle(theme),
+});
+
+const inlineCodeStyle = (theme: Theme) => ({
+  'pre[class*="language-"]': {
+    ...codeStyle(theme),
+    padding: '2px 4px',
+    display: 'inline',
+    whiteSpace: 'pre-wrap',
+  },
+  ...sharedCodeStyle(theme),
+});
+
+export function applyTheme(
+  theme: Theme = {
+    mode: 'light',
   }
-}
-
-const codeBlockStyle = theme => {
-  return _objectSpread(
-    {
-      'pre[class*="language-"]': codeStyle(theme),
-    },
-    sharedCodeStyle(theme)
-  )
-}
-
-const inlineCodeStyle = theme => {
-  return _objectSpread(
-    {
-      'pre[class*="language-"]': _objectSpread({}, codeStyle(theme), {
-        padding: `2px 4px`,
-        display: `inline`,
-        whiteSpace: `pre-wrap`,
-      }),
-    },
-    sharedCodeStyle(theme)
-  )
-}
-
-export function applyTheme() {
-  var theme =
-    arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {}
-
-  var newTheme = _objectSpread({}, defaultColors(theme), theme)
-
+) {
+  const newTheme = { ...defaultColors(theme), ...theme };
   return {
     lineNumberContainerStyle: lineNumberContainerStyle(newTheme),
     codeBlockStyle: codeBlockStyle(newTheme),
     inlineCodeStyle: inlineCodeStyle(newTheme),
-    codeContainerStyle: codeContainerStyle,
-  }
+    codeContainerStyle,
+  };
 }
