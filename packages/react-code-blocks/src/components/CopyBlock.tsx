@@ -4,7 +4,7 @@ import CodeBlock from './CodeBlock';
 import Copy from './CopyIcon';
 import styled from 'styled-components';
 import { Theme, SupportedLanguages } from 'types';
-import useClipboard from 'hooks/use-clipboard';
+import useClipboard from '../hooks/use-clipboard';
 
 export interface Props {
   theme: Theme;
@@ -17,9 +17,8 @@ export interface Props {
 
 const Button = styled.button<Props>`
   position: absolute;
-  top: 0;
-  right: 0;
-  margin-right: 0.25rem;
+  top: 0.5em;
+  right: 0.75em;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

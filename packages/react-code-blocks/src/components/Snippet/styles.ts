@@ -1,4 +1,4 @@
-import { CodeBlockTheme } from 'types';
+import { CodeBlockTheme } from '../../types';
 
 export const getStyles = (theme: CodeBlockTheme) => {
   const styles = {

@@ -1,10 +1,10 @@
 import React, { useMemo, useRef, useContext } from 'react';
 import styled, { ThemeContext } from 'styled-components';
-import withDefaults from 'hooks/with-defaults';
-import { SnippetTypes, CopyTypes } from 'utils/prop-types';
+import withDefaults from '../../hooks/with-defaults';
+import { CopyTypes } from '../../utils/prop-types';
 import { getStyles } from './styles';
 import SnippetIcon from './SnippetIcon';
-import useClipboard from 'hooks/use-clipboard';
+import useClipboard from '../../hooks/use-clipboard';
 
 interface Props {
   text?: string | string[];
@@ -72,7 +72,6 @@ const SnippetWrapper = styled.div<
 const defaultProps = {
   width: 'initial',
   copy: 'default' as CopyTypes,
-  type: 'default' as SnippetTypes,
   className: '',
 };
 
@@ -87,7 +86,6 @@ const textArrayToString = (text: string[]): string => {
 };
 
 const Snippet: React.FC<React.PropsWithChildren<SnippetProps>> = ({
-  type,
   children,
   text,
   width,

@@ -1,11 +1,11 @@
 import React from 'react';
-import { CodeBlock } from '../src';
+import { CopyBlock } from '../src';
 import { withKnobs, select, text, boolean } from '@storybook/addon-knobs';
 import { supportedLanguages, themeObj } from '../utils/knobs';
 import he from 'he';
 
 export default {
-  title: 'Code Block',
+  title: 'Copy Block',
   decorators: [withKnobs],
 };
 
@@ -15,25 +15,30 @@ export const Default = () => {
   const language = select(
     'language',
     Object.assign({}, ...supportedLanguages.map(val => ({ [val]: val }))),
-    'javascript'
+    'python'
   );
   //@ts-ignore
+  const code = text(
+    'text',
+    `import pandas as pd
+df = pd.read_csv('some_random.csv');
+df.head(5)`
+  );
   const themes = select('theme', themeObj, 'dracula');
   const showLineNumbers = boolean('showLineNumbers', true);
   const wrapLines = boolean('wrapLines', true);
-  const code = text('text', `const add = (x,y) => x+y;`);
+  const codeBlock = boolean('codeBlock', true);
   return (
     <div
       style={{
         fontFamily: 'Fira Code',
       }}
     >
-      <CodeBlock
+      <CopyBlock
         text={he.decode(code)}
         language={language}
         theme={require('../src')[themes]}
-        showLineNumbers={showLineNumbers}
-        wrapLines={wrapLines}
+        {...{ showLineNumbers, wrapLines, codeBlock }}
       />
     </div>
   );

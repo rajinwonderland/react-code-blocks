@@ -1,11 +1,11 @@
 import React from 'react';
-import { CodeBlock } from '../src';
+import { Code } from '../src';
 import { withKnobs, select, text, boolean } from '@storybook/addon-knobs';
 import { supportedLanguages, themeObj } from '../utils/knobs';
 import he from 'he';
 
 export default {
-  title: 'Code Block',
+  title: 'Code',
   decorators: [withKnobs],
 };
 
@@ -19,21 +19,19 @@ export const Default = () => {
   );
   //@ts-ignore
   const themes = select('theme', themeObj, 'dracula');
-  const showLineNumbers = boolean('showLineNumbers', true);
-  const wrapLines = boolean('wrapLines', true);
   const code = text('text', `const add = (x,y) => x+y;`);
+
   return (
     <div
       style={{
         fontFamily: 'Fira Code',
       }}
     >
-      <CodeBlock
+      <Code
         text={he.decode(code)}
         language={language}
         theme={require('../src')[themes]}
-        showLineNumbers={showLineNumbers}
-        wrapLines={wrapLines}
+        wrapLines
       />
     </div>
   );
