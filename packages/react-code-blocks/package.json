@@ -8,7 +8,7 @@
     "mdx"
   ],
   "author": "rajinwonderland",
-  "version": "0.0.8-alpha",
+  "version": "0.0.8-beta",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
