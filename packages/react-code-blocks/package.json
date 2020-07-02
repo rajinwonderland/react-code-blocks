@@ -1,73 +1,75 @@
 {
   "name": "react-code-blocks",
-  "version": "0.0.7",
   "description": "Modified Atlaskit's Code Block to support more languages (i.e graphql, reasonml, etc) and theme (i.e railscast, darcula, monokai, etc) code snippets!",
-  "author": "rajinwonderland",
-  "main": "build/cjs/index.js",
-  "module": "build/esm/index.js",
   "keywords": [
     "code-snippets",
     "code-blocks",
     "react-syntax-highlighter",
     "mdx"
   ],
-  "scripts": {
-    "build": "yarn clean && yarn build:cjs && yarn build:esm",
-    "build:cjs": "NODE_ENV=production && BABEL_ENV=cjs babel src --out-dir ./build/cjs",
-    "build:esm": "NODE_ENV=production && BABEL_ENV=esm babel src --out-dir ./build/esm",
-    "clean": "rm -rf build",
-    "lint": "eslint src --fix",
-    "prettier": "prettier \"{src,test,examples}/**/*.js\" --write",
-    "prerelease": "yarn prettier && yarn build",
-    "release": "yarn publish",
-    "size": "npx bundlesize"
-  },
-  "dependencies": {
-    "clipboard": "^2.0.4",
-    "lodash.uniqueid": "^4.0.1",
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0",
-    "react-syntax-highlighter": "10.2.1",
-    "styled-components": "4.2.0"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.1.2",
-    "@babel/core": "^7.1.2",
-    "@babel/plugin-proposal-class-properties": "^7.1.0",
-    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
-    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
-    "@babel/plugin-transform-runtime": "^7.1.0",
-    "@babel/preset-env": "^7.1.0",
-    "@babel/preset-react": "^7.0.0",
-    "@babel/runtime": "^7.4.4",
-    "babel-core": "^7.0.0-bridge.0",
-    "babel-loader": "^8.0.4",
-    "babel-plugin-styled-components": "^1.10.0",
-    "babel-plugin-transform-dynamic-import": "^2.1.0",
-    "eslint": "5.12.0",
-    "eslint-config-google": "^0.12.0",
-    "eslint-config-prettier": "^4.2.0",
-    "eslint-plugin-filenames": "^1.3.2",
-    "eslint-plugin-prettier": "^3.0.1",
-    "prettier": "^1.17.0"
-  },
-  "homepage": "https://react-code-blocks.netlify.com/",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/rajinwonderland/react-code-blocks"
-  },
-  "bundlesize": [
-    {
-      "path": "./build/esm/index.js"
-    },
-    {
-      "path": "./build/cjs/index.js"
-    }
+  "author": "rajinwonderland",
+  "version": "0.0.8-alpha",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
   ],
   "engines": {
-    "node": ">=0.10.3 <0.12"
+    "node": ">=10"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test --passWithNoTests",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "module": "dist/react-code-blocks.esm.js",
+  "devDependencies": {
+    "@storybook/addon-actions": "^5.3.18",
+    "@storybook/addon-console": "^1.2.1",
+    "@storybook/addon-docs": "^5.3.18",
+    "@storybook/addon-info": "^5.3.18",
+    "@storybook/addon-knobs": "^5.3.19",
+    "@storybook/addon-links": "^5.3.18",
+    "@storybook/addon-storysource": "^5.3.18",
+    "@storybook/addon-viewport": "^5.3.18",
+    "@storybook/addons": "^5.3.18",
+    "@storybook/react": "^5.3.18",
+    "@types/color": "^3.0.1",
+    "@types/react": "^16.9.34",
+    "@types/react-dom": "^16.9.7",
+    "@types/react-syntax-highlighter": "^11.0.4",
+    "@types/styled-components": "^5.1.0",
+    "babel-loader": "^8.1.0",
+    "react": "^16.13.1",
+    "react-docgen-typescript-loader": "^3.7.2",
+    "react-dom": "^16.13.1",
+    "ts-loader": "^6.2.2",
+    "tsdx": "^0.13.2",
+    "typescript": "^3.9.6"
+  },
+  "dependencies": {
+    "react-syntax-highlighter": "^12.2.1",
+    "styled-components": "^5.1.1",
+    "tslib": "^2.0.0"
   }
 }

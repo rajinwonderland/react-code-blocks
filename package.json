@@ -1,32 +1,33 @@
 {
-	"name": "react-workspace",
-	"version": "1.0.0",
-	"description": "",
-	"author": "",
-	"private": true,
-	"dependencies": {},
-	"devDependencies": {},
-	"scripts": {
-		"start:demo": "yarn workspace demo start",
-		"demo": "yarn workspace demo",
-		"package": "yarn workspace react-code-blocks",
-		"syntax": "yarn workspace react-syntax-highlighter",
-		"test": "yarn workspace test",
-		"nuke": "rm -rf node_modules rm -rf yarn.lock"
-	},
-	"workspaces": [
-		"packages/*",
-		"demo"
-	],
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/rajinwonderland/react-code-blocks"
-	},
-	"resolutions": {
-		"**/**/react": "^16.11.0",
-		"**/react": "^16.11.0",
-		"**/**/react-dom": "^16.11.0",
-		"**/react-dom": "^16.11.0"
-	},
-	"license": "MIT"
+  "name": "react-workspace",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "start:demo": "yarn workspace demo start",
+    "demo": "yarn workspace demo",
+    "pkg": "yarn workspace react-code-blocks",
+    "rcb": "yarn workspace rcb",
+    "syntax": "yarn workspace react-syntax-highlighter",
+    "test": "yarn workspace test",
+    "nuke": "rm -rf node_modules rm -rf yarn.lock"
+  },
+  "workspaces": [
+    "packages/*",
+    "demo"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rajinwonderland/react-code-blocks"
+  },
+  "resolutions": {
+    "**/**/react": "^16.11.0",
+    "**/react": "^16.11.0",
+    "**/**/react-dom": "^16.11.0",
+    "**/react-dom": "^16.11.0"
+  },
+  "license": "MIT"
 }
