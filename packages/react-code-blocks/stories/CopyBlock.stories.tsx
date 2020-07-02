@@ -39,6 +39,7 @@ df.head(5)`
         language={language}
         theme={require('../src')[themes]}
         {...{ showLineNumbers, wrapLines, codeBlock }}
+        highlight="df.head(5)"
       />
     </div>
   );
