@@ -5,8 +5,9 @@ import { supportedLanguages, themeObj } from '../utils/knobs';
 import he from 'he';
 
 export default {
-  title: 'Copy Block',
+  title: 'CopyBlock',
   decorators: [withKnobs],
+  component: CopyBlock,
 };
 
 // By passing optional props to this story, you can control the props of the component when
@@ -39,7 +40,11 @@ df.head(5)`
         language={language}
         theme={require('../src')[themes]}
         {...{ showLineNumbers, wrapLines, codeBlock }}
-        highlight="df.head(5)"
+        customStyle={{
+          height: '50px',
+          width: '350px',
+          overflow: 'scroll',
+        }}
       />
     </div>
   );

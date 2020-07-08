@@ -9,9 +9,13 @@ export interface CodeProps {
   /** The element or custom react component to use in place of the default code tag */
   codeTagProps?: {};
   /** The language in which the code is written */
-  language: SupportedLanguages | string;
+  language: SupportedLanguages;
+  /** The style object that will be combined with the top level style on the pre tag, styles here will overwrite earlier styles. */
+  customStyle?: {};
+
   /** The style object to apply to the container that shows line number */
   lineNumberContainerStyle: {};
+
   /** The element or custom react component to use in place of the default span tag */
   preTag: Node | string;
   /** Indicates whether or not to show line numbers */
@@ -20,6 +24,8 @@ export interface CodeProps {
   text: string;
   /** A custom theme to be applied, implements the Theme interface */
   theme?: Theme;
+  /** The style object to apply to the line numbers directly i.e `fontSize` and such */
+  lineNumberStyle?: {};
 
   /**
    * Lines to highlight comma delimited.
@@ -40,6 +46,7 @@ export default class Code extends PureComponent<CodeProps, {}> {
     codeTagProps: {},
     preTag: 'span',
     highlight: '',
+    customStyle: {},
   };
 
   getLineOpacity(lineNumber: number) {
@@ -86,7 +93,6 @@ export default class Code extends PureComponent<CodeProps, {}> {
       PreTag: this.props.preTag,
       style: this.props.codeStyle || inlineCodeStyle,
       showLineNumbers: this.props.showLineNumbers,
-      lineNumberContainerStyle: this.props.lineNumberContainerStyle,
       codeTagProps: this.props.codeTagProps,
     };
 
@@ -98,12 +104,15 @@ export default class Code extends PureComponent<CodeProps, {}> {
         wrapLines={this.props.highlight.length > 0}
         lineNumberStyle={(lineNumber: number) => ({
           opacity: this.getLineOpacity(lineNumber),
+          ...this.props.lineNumberStyle,
         })}
+        customStyle={this.props.customStyle}
         // Types are incorrect.
         // @ts-ignore
         lineProps={lineNumber => ({
           style: {
             opacity: this.getLineOpacity(lineNumber),
+            ...this.props.lineNumberContainerStyle,
           },
         })}
       >

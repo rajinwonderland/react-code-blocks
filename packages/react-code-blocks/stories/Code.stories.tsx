@@ -1,5 +1,7 @@
 import React from 'react';
 import { Code } from '../src';
+import CodeComponent from '../src/components/Code';
+
 import { withKnobs, select, text, boolean } from '@storybook/addon-knobs';
 import { supportedLanguages, themeObj } from '../utils/knobs';
 import he from 'he';
@@ -7,6 +9,7 @@ import he from 'he';
 export default {
   title: 'Code',
   decorators: [withKnobs],
+  component: CodeComponent,
 };
 
 // By passing optional props to this story, you can control the props of the component when
@@ -31,7 +34,6 @@ export const Default = () => {
         text={he.decode(code)}
         language={language}
         theme={require('../src')[themes]}
-        wrapLines
       />
     </div>
   );

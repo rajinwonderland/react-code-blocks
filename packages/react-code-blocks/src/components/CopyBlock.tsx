@@ -11,7 +11,9 @@ export interface Props {
   text: string;
   codeBlock: boolean;
   copied: boolean;
-  language: SupportedLanguages | string;
+  language: SupportedLanguages | string; 
+  customStyle?: {};
+  /** I know it's lazy, but I'll extend the interfaces later */
   [x: string]: any;
 }
 
@@ -51,7 +53,13 @@ const Snippet = styled.div<Props>`
   padding: ${p => (p.codeBlock ? `0.25rem 0.5rem 0.25rem 0.25rem` : `0.25rem`)};
 `;
 
-export default function({ theme, text, codeBlock = false, ...rest }: Props) {
+export default function({
+  theme,
+  text,
+  codeBlock = false,
+  customStyle = {},
+  ...rest
+}: Props) {
   const [copied, toggleCopy] = useState(false);
   const { copy } = useClipboard();
   const handler = () => {
@@ -60,13 +68,13 @@ export default function({ theme, text, codeBlock = false, ...rest }: Props) {
   };
 
   return (
-    <Snippet {...{ codeBlock }} theme={theme}>
+    <Snippet {...{ codeBlock }} style={customStyle} theme={theme}>
       {codeBlock ? (
         <CodeBlock text={text} theme={theme} {...rest} />
       ) : (
         <Code text={text} theme={theme} {...rest} />
       )}
-      <Button onClick={handler} {...{ theme, copied }}>
+      <Button type="button" onClick={handler} {...{ theme, copied }}>
         <Copy
           color={copied ? theme.stringColor : theme.textColor}
           copied={copied}
