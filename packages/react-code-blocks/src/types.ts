@@ -61,39 +61,95 @@ export type DefaultValue = string | number;
 
 export type ThemedValue<V = DefaultValue> = (props?: ThemeProps) => V | '';
 
+/*
+ * These values all those are supported by ADF.
+ * The comments show mappings of these values to the corresponding
+ * language definition file, or to that of the most
+ * syntactically similar language supported by highlightjs
+ */
 export type SupportedLanguages =
-  | 'bash'
-  | 'c'
+  | 'abap' // → sql
+  | 'actionscript'
+  | 'ada'
+  | 'arduino'
+  | 'autoit'
+  | 'c' // → cpp
   | 'clojure'
+  | 'cs'
+  | 'c++' // → cpp
   | 'cpp'
-  | 'csharp'
+  | 'coffeescript'
+  | 'csharp' // → cs
+  | 'css'
+  | 'cuda' // → cpp
+  | 'd'
   | 'dart'
+  | 'delphi'
   | 'elixir'
   | 'elm'
   | 'erlang'
+  | 'fortran'
+  | 'foxpro' // → purebasic
   | 'fsharp'
-  | 'graphql'
   | 'go'
+  | 'graphql'
+  | 'gql'
   | 'groovy'
   | 'haskell'
-  | 'html'
+  | 'haxe'
+  | 'html' // → xml
   | 'java'
   | 'javascript'
-  | 'jsx'
+  | 'json'
   | 'julia'
+  | 'jsx'
+  | 'js'
   | 'kotlin'
+  | 'latex' // → tex
   | 'lisp'
+  | 'livescript'
+  | 'lua'
+  | 'mathematica'
   | 'makefile'
   | 'matlab'
   | 'objectivec'
+  | 'objective-c' // → objectivec
+  | 'objective-j' // → objectivec
+  | 'objectpascal' // → delphi
   | 'ocaml'
+  | 'octave' // → matlab
+  | 'perl'
   | 'php'
+  | 'powershell'
+  | 'prolog'
+  | 'puppet'
   | 'python'
+  | 'qml'
   | 'r'
+  | 'racket' // → lisp
+  | 'restructuredtext' // → rest
+  | 'rest'
   | 'ruby'
   | 'rust'
+  | 'sass' // → less
+  | 'less'
   | 'scala'
+  | 'scheme'
+  | 'shell'
+  | 'smalltalk'
   | 'sql'
+  | 'standardml' // → sml
+  | 'sml'
   | 'swift'
+  | 'tcl'
+  | 'tex'
+  | 'text'
   | 'tsx'
-  | 'typescript';
+  | 'ts'
+  | 'typescript'
+  | 'vala'
+  | 'vbnet'
+  | 'verilog'
+  | 'vhdl'
+  | 'xml'
+  | 'xquery';

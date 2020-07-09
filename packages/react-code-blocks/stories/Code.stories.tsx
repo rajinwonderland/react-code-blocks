@@ -1,12 +1,17 @@
 import React from 'react';
-import { Code } from '../src';
-import { withKnobs, select, text, boolean } from '@storybook/addon-knobs';
+import { Code, monokai } from '../src';
+import CodeComponent from '../src/components/Code';
+import { withKnobs, select, text } from '@storybook/addon-knobs';
 import { supportedLanguages, themeObj } from '../utils/knobs';
 import he from 'he';
 
 export default {
   title: 'Code',
   decorators: [withKnobs],
+  component: CodeComponent,
+  parameters: {
+    componentSubtitle: 'Code renders inline code snippets and code blocks.',
+  },
 };
 
 // By passing optional props to this story, you can control the props of the component when
@@ -31,7 +36,23 @@ export const Default = () => {
         text={he.decode(code)}
         language={language}
         theme={require('../src')[themes]}
-        wrapLines
+      />
+    </div>
+  );
+};
+
+export const CustomStyles = () => {
+  return (
+    <div
+      style={{
+        fontFamily: 'Fira Code',
+      }}
+    >
+      This is a python snippet:{' '}
+      <Code
+        text={`print('Hello {}').format('world')`}
+        theme={monokai}
+        language="py"
       />
     </div>
   );

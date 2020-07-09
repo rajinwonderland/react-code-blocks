@@ -3,15 +3,28 @@ import Code from './Code';
 import CodeBlock from './CodeBlock';
 import Copy from './CopyIcon';
 import styled from 'styled-components';
-import { Theme, SupportedLanguages } from 'types';
+import { Theme } from '../types';
 import useClipboard from '../hooks/use-clipboard';
 
 export interface Props {
+  /** A custom theme to be applied, implements the `CodeBlockTheme` interface. You can also pass pass a precomposed theme into here. For available themes. [See THEMES.md](https://github.com/rajinwonderland/react-code-blocks/blob/master/THEMES.md) */
   theme: Theme;
+
+  /** The code to be formatted */
   text: string;
+
+  /** If true, the component render a `CodeBlock` instead of a `Code` component */
+
   codeBlock: boolean;
+
+  /** This is a prop used internally by the `CopyBlock`'s button component to toggle the icon to a success icon */
   copied: boolean;
-  language: SupportedLanguages | string;
+
+  /** The language in which the code is written. [See LANGUAGES.md](https://github.com/rajinwonderland/react-code-blocks/blob/master/LANGUAGES.md) */
+
+  language: string;
+  customStyle?: {};
+  /** I know it's lazy, but I'll extend the interfaces later */
   [x: string]: any;
 }
 
@@ -28,7 +41,7 @@ const Button = styled.button<Props>`
   border-radius: 0.25rem;
   max-height: 2rem;
   max-width: 2rem;
-  padding: 0.5rem;
+  padding: 0.25rem;
   &:hover {
     opacity: ${p => (p.copied ? 1 : 0.5)};
   }
@@ -43,15 +56,19 @@ const Button = styled.button<Props>`
 `;
 
 const Snippet = styled.div<Props>`
-  display: flex;
-  flex-wrap: wrap;
   position: relative;
   background: ${p => p.theme.backgroundColor};
   border-radius: 0.25rem;
   padding: ${p => (p.codeBlock ? `0.25rem 0.5rem 0.25rem 0.25rem` : `0.25rem`)};
 `;
 
-export default function({ theme, text, codeBlock = false, ...rest }: Props) {
+export default function CopyBlock({
+  theme,
+  text,
+  codeBlock = false,
+  customStyle = {},
+  ...rest
+}: Props) {
   const [copied, toggleCopy] = useState(false);
   const { copy } = useClipboard();
   const handler = () => {
@@ -60,13 +77,15 @@ export default function({ theme, text, codeBlock = false, ...rest }: Props) {
   };
 
   return (
-    <Snippet {...{ codeBlock }} theme={theme}>
+    <Snippet {...{ codeBlock }} style={customStyle} theme={theme}>
       {codeBlock ? (
+        // @ts-ignore
         <CodeBlock text={text} theme={theme} {...rest} />
       ) : (
+        // @ts-ignore
         <Code text={text} theme={theme} {...rest} />
       )}
-      <Button onClick={handler} {...{ theme, copied }}>
+      <Button type="button" onClick={handler} {...{ theme, copied }}>
         <Copy
           color={copied ? theme.stringColor : theme.textColor}
           copied={copied}

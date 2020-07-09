@@ -78,3 +78,4 @@ export const themeObj = {
   xt256: 'xt256',
   zenburn: 'zenburn',
 };
+

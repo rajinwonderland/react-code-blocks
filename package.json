@@ -19,10 +19,15 @@
     "packages/*",
     "demo"
   ],
+  "np": {
+    "yarn": true,
+    "contents": "packages/react-code-blocks/dist"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/rajinwonderland/react-code-blocks"
   },
+  "homepage": "https://react-code-blocks.rajinwonderland.vercel.app",
   "resolutions": {
     "**/**/react": "^16.11.0",
     "**/react": "^16.11.0",
