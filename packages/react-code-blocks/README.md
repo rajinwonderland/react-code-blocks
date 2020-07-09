@@ -1,183 +1,207 @@
-# TSDX React User Guide
+<p align="center"><img src="packages/assets/alt.png"></p>
+<h1 align="center">Welcome to <code>react-code-blocks</code> 👋👋👋</h1>
+<p>
+  <a href="https://www.npmjs.com/package/react-code-blocks" target="_blank">
+    <img alt="Version" src="https://img.shields.io/npm/v/react-code-blocks.svg">
+  </a>
+   <a href="https://www.npmjs.com/package/react-code-blocks" target="_blank">
+  <img alt="Downloads" src="https://img.shields.io/npm/dw/react-code-blocks">
+  </a>
+  <img src="https://img.shields.io/node/v/react-code-blocks">
+  <a href="https://react-code-blocks.rajinwonderland.vercel.app" target="_blank">
+    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
+  </a>
+  <a href="#" target="_blank">
+    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
+  </a>
+  <a href="https://twitter.com/rajinwonderland" target="_blank">
+    <img alt="Twitter: rajinwonderland" src="https://img.shields.io/twitter/follow/rajinwonderland.svg?style=social" />
+  </a>
+</p>
 
-Congrats! You just saved yourself hours of work by bootstrapping this project with TSDX. Let’s get you oriented with what’s here and how to use it.
+> React components for rendering code snippets with syntax highlighting
 
-> This TSDX setup is meant for developing React components (not apps!) that can be published to NPM. If you’re looking to build an app, you should use `create-react-app`, `razzle`, `nextjs`, `gatsby`, or `react-static`.
+> **BREAKING CHANGES**: `VERSION >= 0.0.8-alpha` now requires a nodejs version >= 12
 
-> If you’re new to TypeScript and React, checkout [this handy cheatsheet](https://github.com/sw-yx/react-typescript-cheatsheet/)
+- [Background](#background)
+  - [✨ Demo](#-demo)
+- [Install](#install)
+- [Usage](#usage)
+- [Components](#components)
+  - [CodeBlock](#codeblock)
+    - [Props](#props)
+  - [CopyBlock](#copyblock)
+    - [Props](#props-1)
+- [Supported Themes](#supported-themes)
+- [Supported Languages](#supported-languages)
+- [Alternatives](#alternatives)
+- [Todos](#todos)
+- [Show your support](#show-your-support)
+- [Author](#author)
 
-## Commands
+## Background
 
-TSDX scaffolds your new library inside `/src`, and also sets up a [Parcel-based](https://parceljs.org) playground for it inside `/example`.
+Initially, this started as a small project looking to modify [Atlaskit's]() Code Block component to support more languages (i.e `graphql`, `reasonml`, etc). It then rapidly evolved into a **never-ending rabbithole** which ended up with support for themes (i.e railscast, darcula, monokai, etc), customizable styles, and copy functionality too!
 
-The recommended workflow is to run TSDX in one terminal:
+I don't plan on keeping this updated unless people are looking to actually use it. So don't be shy! Feel free to post an [issue](https://help.github.com/en/github/managing-your-work-on-github/creating-an-issue) or a [pr](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
-```
-npm start # or yarn start
-```
+### ✨ [Demo](https://react-code-blocks.netlify.com/)
 
-This builds to `/dist` and runs the project in watch mode so any edits you save inside `src` causes a rebuild to `/dist`.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a2a9f006-efd5-476f-ade6-11cde1ddc11e/deploy-status)](https://app.netlify.com/sites/react-code-blocks/deploys)
 
-Then run either example playground or storybook:
+[![Check out react-code-blocks](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/react-code-blocks-xgjrr?fontsize=14)
 
-### Storybook
+## Install
 
-Run inside another terminal:
+Install `react-code-blocks` via `yarn` or `npm`
 
-```
-yarn storybook
-```
-
-This loads the stories from `./stories`.
-
-> NOTE: Stories should reference the components as if using the library, similar to the example playground. This means importing from the root project directory. This has been aliased in the tsconfig and the storybook webpack config as a helper.
-
-### Example
-
-Then run the example inside another:
-
-```
-cd example
-npm i # or yarn to install dependencies
-npm start # or yarn start
-```
-
-The default example imports and live reloads whatever is in `/dist`, so if you are seeing an out of date component, make sure TSDX is running in watch mode like we recommend above. **No symlinking required**, [we use Parcel's aliasing](https://github.com/palmerhq/tsdx/pull/88/files).
-
-To do a one-off build, use `npm run build` or `yarn build`.
-
-To run tests, use `npm test` or `yarn test`.
-
-## Configuration
-
-Code quality is [set up for you](https://github.com/palmerhq/tsdx/pull/45/files) with `prettier`, `husky`, and `lint-staged`. Adjust the respective fields in `package.json` accordingly.
-
-### Jest
-
-Jest tests are set up to run with `npm test` or `yarn test`. This runs the test watcher (Jest) in an interactive mode. By default, runs tests related to files changed since the last commit.
-
-#### Setup Files
-
-This is the folder structure we set up for you:
-
-```
-/example
-  index.html
-  index.tsx       # test your component here in a demo app
-  package.json
-  tsconfig.json
-/src
-  index.tsx       # EDIT THIS
-/test
-  blah.test.tsx   # EDIT THIS
-.gitignore
-package.json
-README.md         # EDIT THIS
-tsconfig.json
+```sh
+yarn add react-code-blocks
 ```
 
-#### React Testing Library
+```sh
+npm i react-code-blocks
+```
 
-We do not set up `react-testing-library` for you yet, we welcome contributions and documentation on this.
+## Usage
 
-### Rollup
-
-TSDX uses [Rollup v1.x](https://rollupjs.org) as a bundler and generates multiple rollup configs for various module formats and build settings. See [Optimizations](#optimizations) for details.
-
-### TypeScript
-
-`tsconfig.json` is set up to interpret `dom` and `esnext` types, as well as `react` for `jsx`. Adjust according to your needs.
-
-## Continuous Integration
-
-### Travis
-
-_to be completed_
-
-### Circle
-
-_to be completed_
-
-## Optimizations
-
-Please see the main `tsdx` [optimizations docs](https://github.com/palmerhq/tsdx#optimizations). In particular, know that you can take advantage of development-only optimizations:
+> Updated usage instructions can be found [here](https://react-code-blocks.rajinwonderland.vercel.app/)
 
 ```js
-// ./types/index.d.ts
-declare var __DEV__: boolean;
+import { CopyBlock } from "react-code-blocks";
+```
 
-// inside your code...
-if (__DEV__) {
-  console.log('foo');
+```js
+function MyCodeComponent(props) {
+  return (
+    <CopyBlock
+      text={props.code}
+      language={props.language}
+      showLineNumbers={props.showLineNumbers}
+      wrapLines
+    />
+  );
 }
 ```
 
-You can also choose to install and use [invariant](https://github.com/palmerhq/tsdx#invariant) and [warning](https://github.com/palmerhq/tsdx#warning) functions.
+## Components
 
-## Module Formats
+### CodeBlock
 
-CJS, ESModules, and UMD module formats are supported.
+A simple code block component
 
-The appropriate paths are configured in `package.json` and `dist/index.js` accordingly. Please report if any issues are found.
+```js
+import { CodeBlock, dracula } from "react-code-blocks";
 
-## Using the Playground
-
-```
-cd example
-npm i # or yarn to install dependencies
-npm start # or yarn start
-```
-
-The default example imports and live reloads whatever is in `/dist`, so if you are seeing an out of date component, make sure TSDX is running in watch mode like we recommend above. **No symlinking required**!
-
-## Deploying the Playground
-
-The Playground is just a simple [Parcel](https://parceljs.org) app, you can deploy it anywhere you would normally deploy that. Here are some guidelines for **manually** deploying with the Netlify CLI (`npm i -g netlify-cli`):
-
-```bash
-cd example # if not already in the example folder
-npm run build # builds to dist
-netlify deploy # deploy the dist folder
+function MyCoolCodeBlock({ code, language, showLineNumbers }) {
+  return (
+    <CodeBlock
+      text={code}
+      language={language}
+      showLineNumbers={showLineNumbers}
+      theme={dracula}
+    />
+  );
+}
 ```
 
-Alternatively, if you already have a git repo connected, you can set up continuous deployment with Netlify:
+#### Props
 
-```bash
-netlify init
-# build command: yarn build && cd example && yarn && yarn build
-# directory to deploy: example/dist
-# pick yes for netlify.toml
+> Note that `CodeBlock` & `CopyBlock` share exactly the same props
+
+| name              | type      | default      | description                                                                                                                                                    |
+| ----------------- | --------- | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `text`            | `string`  | **required** | The code to be formatted                                                                                                                                       |
+| `language`        | `string`  | "text"       | The language in which the code is written. [See here](LANGUAGES.md) for a list of supported languages                                                          |
+| `showLineNumbers` | `boolean` | `true`       | Indicates whether or not to show line numbers                                                                                                                  |
+| `theme`           | `object`  | **dracula**  | A theme object for the code block. [See here](THEMES.md) for a list of supported themes                                                                        |  |
+| `highlight`       | `string`  | ""           | Lines to highlight! For multiple lines, use a comma i.e `highlight="1,6,7"`. For a range of lines, use a `-` i.e `highlight="1-5"` for highlighting lines 1-5. |
+
+---
+
+> **more to come...**
+
+### CopyBlock
+
+A code block component with a little copy button for copying a snippet.
+
+```jsx
+import { CopyBlock, dracula } from "react-code-blocks";
+
+function MyCoolCodeBlock({ code, language, showLineNumbers }) {
+  <CopyBlock
+    text={code}
+    language={language}
+    showLineNumbers={showLineNumbers}
+    theme={dracula}
+    codeBlock
+  />;
+}
 ```
 
-## Named Exports
+#### Props
 
-Per Palmer Group guidelines, [always use named exports.](https://github.com/palmerhq/typescript#exports) Code split inside your React app instead of your React library.
+Same as the `CodeBlock`'s component with the exception of one!
 
-## Including Styles
+| name        | type      | default | description                                                                                          |
+| ----------- | --------- | ------- | ---------------------------------------------------------------------------------------------------- |
+| `codeBlock` | `boolean` | `false` | Indicates whether to render the `CopyBlock` as an inline `Code` component or a `CodeBlock` component |
 
-There are many ways to ship styles, including with CSS-in-JS. TSDX has no opinion on this, configure how you like.
+## Supported Themes
 
-For vanilla CSS, you can include it at the root directory and add it to the `files` section in your `package.json`, so that it can be imported separately by your users and run through their bundler's loader.
+For a list of supported themes, check out the [list here](THEMES.md)
 
-## Publishing to NPM
+## Supported Languages
 
-We recommend using https://github.com/sindresorhus/np.
+For a list of supported languages, check out the [list here](LANGUAGES.md)
 
-## Usage with Lerna
+## Alternatives
 
-When creating a new package with TSDX within a project set up with Lerna, you might encounter a `Cannot resolve dependency` error when trying to run the `example` project. To fix that you will need to make changes to the `package.json` file _inside the `example` directory_.
+If you're looking for some more maintained solutions, I'd suggest the following:
 
-The problem is that due to the nature of how dependencies are installed in Lerna projects, the aliases in the example project's `package.json` might not point to the right place, as those dependencies might have been installed in the root of your Lerna project.
+- [`react-syntax-highlighter`](https://github.com/conorhastings/react-syntax-highlighter): syntax highlighting component for react with `prismjs` or `highlightjs` `ast` using inline styles by @conorhastings.
+  - It's actually used in this project as well! :smile:
+- [`react-highlight.js`](https://github.com/bvaughn/react-highlight.js): A lightweight React wrapper around the `Highlight.js` syntax highlighting library by @bvaughn.
+- [`react-live`](https://github.com/FormidableLabs/react-live): A flexible playground for live editing React components by @FormidableLabs.
+- [`@atlaskit/code`](https://atlaskit.atlassian.com/docs/getting-started): Renders inline code snippets and code blocks
+  - Original inspiration for this project kit for this project
+- [`carbon-components-react`](http://react.carbondesignsystem.com/?path=/story/codesnippet--inline): Check out their `<CodeSnippet>` component which supports multi-line, single-line, and inline snippets along with added copying functionality.
 
-Change the `alias` to point to where those packages are actually installed. This depends on the directory structure of your Lerna project, so the actual path might be different from the diff below.
+> Feel free to add any other alternative packages here! :smile:
 
-```diff
-   "alias": {
--    "react": "../node_modules/react",
--    "react-dom": "../node_modules/react-dom"
-+    "react": "../../../node_modules/react",
-+    "react-dom": "../../../node_modules/react-dom"
-   },
-```
+## Todos
 
-An alternative to fixing this problem would be to remove aliases altogether and define the dependencies referenced as aliases as dev dependencies instead. [However, that might cause other problems.](https://github.com/palmerhq/tsdx/issues/64)
+- [x] Add a better readme
+- [x] Highlighting line feature
+- [x] Supported Themes documentation
+- [x] Supported Languages documentation
+- [x] Add a License
+- [ ] Docs for usage with GatsbyJS
+- [ ] Docs for usage with `MDX`
+- [ ] Contributor guide for development
+- [ ] Contributor guide for adding themes
+- [ ] Contributor guide for adding languages
+- [ ] Document props for `Code` component
+- [ ] Better demo
+- [x] Storybook with Docs
+- [x] Move to typescript
+- [ ] A component with a terminal around it. because why not!? 🧐
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
+
+---
+
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
+
+## Author
+
+<div style="display:grid">
+<img src="https://avatars3.githubusercontent.com/u/15880596?s=460&v=4" width="175px"/>
+<img src="packages/assets/rajinwonderland.png" height="175px" />
+</div>
+
+- Website: https://novvum.io
+- Twitter: [@rajinwonderland](https://twitter.com/rajinwonderland)
+- Github: [@rajinwonderland](https://github.com/rajinwonderland)
