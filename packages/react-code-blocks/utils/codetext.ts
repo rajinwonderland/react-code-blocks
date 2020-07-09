@@ -63,3 +63,57 @@ export const languages = {
   | 'typescript';`,
   language: 'typescript',
 };
+
+export const resultSnippet = {
+  text: `{
+  "data": {
+    "leftComparison": {
+      "name": "Luke Skywalker",
+      "friendsConnection": {
+        "totalCount": 4,
+        "edges": [
+          {
+            "node": {
+              "name": "Han Solo"
+            }
+          },
+          {
+            "node": {
+              "name": "Leia Organa"
+            }
+          },
+          {
+            "node": {
+              "name": "C-3PO"
+            }
+          }
+        ]
+      }
+    },
+    "rightComparison": {
+      "name": "R2-D2",
+      "friendsConnection": {
+        "totalCount": 3,
+        "edges": [
+          {
+            "node": {
+              "name": "Luke Skywalker"
+            }
+          },
+          {
+            "node": {
+              "name": "Han Solo"
+            }
+          },
+          {
+            "node": {
+              "name": "Leia Organa"
+            }
+          }
+        ]
+      }
+    }
+  }
+}`,
+  language: 'json',
+};

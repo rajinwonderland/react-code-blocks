@@ -1,15 +1,21 @@
 import React from 'react';
-import { CodeBlock } from '../src';
+import { CodeBlock, atomOneDark, atomOneLight } from '../src';
 import CodeBlockComponent from '../src/components/CodeBlock';
+import CodeComponent from '../src/components/Code';
 import { withKnobs, select, text, boolean } from '@storybook/addon-knobs';
 import { supportedLanguages, themeObj } from '../utils/knobs';
-import { longSnippet, languages } from '../utils/codetext';
+import { longSnippet, languages, resultSnippet } from '../utils/codetext';
+
 import he from 'he';
 
 export default {
   title: 'CodeBlock',
+  parameters: {
+    componentSubtitle: 'CodeBlock renders an isolated code snippet or block.',
+  },
   decorators: [withKnobs],
   component: CodeBlockComponent,
+  subcomponents: { CodeComponent },
 };
 
 // By passing optional props to this story, you can control the props of the component when
@@ -23,7 +29,6 @@ export const Default = () => {
   //@ts-ignore
   const themes = select('theme', themeObj, 'dracula');
   const showLineNumbers = boolean('showLineNumbers', true);
-  const wrapLines = boolean('wrapLines', true);
   const code = text('text', `const add = (x,y) => x+y;`);
   return (
     <div
@@ -36,7 +41,6 @@ export const Default = () => {
         language={language}
         theme={require('../src')[themes]}
         showLineNumbers={showLineNumbers}
-        wrapLines={wrapLines}
       />
     </div>
   );
@@ -45,7 +49,7 @@ export const Default = () => {
 export const SupportedLanguages = () => {
   const themes = select('theme', themeObj, 'dracula');
   const showLineNumbers = boolean('showLineNumbers', true);
-  const wrapLines = boolean('wrapLines', true);
+
   return (
     <div
       style={{
@@ -56,7 +60,6 @@ export const SupportedLanguages = () => {
         {...languages}
         theme={require('../src')[themes]}
         showLineNumbers={showLineNumbers}
-        wrapLines={wrapLines}
       />
     </div>
   );
@@ -65,7 +68,6 @@ export const SupportedLanguages = () => {
 export const AddAScrollbar = () => {
   const themes = select('theme', themeObj, 'dracula');
   const showLineNumbers = boolean('showLineNumbers', true);
-  const wrapLines = boolean('wrapLines', true);
   return (
     <div
       style={{
@@ -80,16 +82,80 @@ export const AddAScrollbar = () => {
         }}
         theme={require('../src')[themes]}
         showLineNumbers={showLineNumbers}
-        wrapLines={wrapLines}
       />
     </div>
   );
 };
 
 export const CustomStyles = () => {
-  const themes = select('theme', themeObj, 'dracula');
   const showLineNumbers = boolean('showLineNumbers', true);
   const wrapLines = boolean('wrapLines', true);
+  return (
+    <div
+      style={{
+        fontFamily: 'Fira Code',
+        display: 'flex',
+        flexWrap: 'wrap',
+        justifyContent: 'center',
+        alignItems: 'center',
+        overflowX: 'auto',
+      }}
+    >
+      <div
+        style={{
+          width: '100%',
+          flex: 1,
+          background: atomOneDark.builtInColor,
+          paddingBottom: '1em',
+        }}
+      >
+        <h5 style={{ textAlign: 'center' }}>Query</h5>
+        <CodeBlock
+          {...longSnippet}
+          {...{ showLineNumbers, wrapLines }}
+          theme={atomOneDark}
+          customStyle={{
+            height: '250px',
+            overflowY: 'scroll',
+            margin: '0px 0.75rem',
+            borderRadius: '5px',
+            boxShadow: '1px 2px 3px rgba(0,0,0,0.35)',
+            fontSize: '0.75rem',
+          }}
+        />
+      </div>
+      <div
+        style={{
+          width: '100%',
+          flex: 1,
+          background: atomOneLight.sectionColor,
+          color: 'white',
+          paddingBottom: '1em',
+        }}
+      >
+        <h5 style={{ textAlign: 'center' }}>Result</h5>
+        <CodeBlock
+          {...resultSnippet}
+          {...{ showLineNumbers, wrapLines }}
+          theme={atomOneLight}
+          customStyle={{
+            height: '250px',
+            overflowY: 'scroll',
+            borderRadius: '5px',
+            boxShadow: '1px 2px 3px rgba(0,0,0,0.35)',
+            fontSize: '0.75rem',
+            margin: '0px 0.75rem',
+          }}
+        />
+      </div>
+    </div>
+  );
+};
+
+export const UsageWithAPredefinedTheme = () => {
+  const showLineNumbers = boolean('showLineNumbers', true);
+  const wrapLines = boolean('wrapLines', true);
+  const codeBlock = boolean('codeBlock', true);
   return (
     <div
       style={{
@@ -97,16 +163,21 @@ export const CustomStyles = () => {
       }}
     >
       <CodeBlock
-        {...longSnippet}
-        customStyle={{
-          height: '200px',
-          width: '500px',
-          overflow: 'scroll',
-        }}
-        theme={require('../src')[themes]}
-        showLineNumbers={showLineNumbers}
-        wrapLines={wrapLines}
+        text={`// using the atomOneDark theme
+import { CodeBlock, nord} from 'react-code-blocks';
+const MyCodeComponent = () => (
+  <CodeBlock
+    text="HELLO WORLD"
+    theme={nord}
+    language="text"
+  />
+)`}
+        language={'jsx'}
+        theme={atomOneDark}
+        {...{ showLineNumbers, wrapLines, codeBlock }}
       />
     </div>
   );
 };
+
+

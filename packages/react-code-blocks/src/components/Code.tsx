@@ -1,20 +1,21 @@
 import React, { PureComponent } from 'react';
 import { PrismAsyncLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { applyTheme } from '../utils/themeBuilder';
-import { Theme, SupportedLanguages } from 'types';
+import { Theme } from '../types';
+import { normalizeLanguage } from '../utils/normalizeLanguage';
 
 export interface CodeProps {
   /** The style object to apply to code */
   codeStyle?: {};
   /** The element or custom react component to use in place of the default code tag */
   codeTagProps?: {};
-  /** The language in which the code is written */
-  language: SupportedLanguages;
+  /** The language in which the code is written. [See LANGUAGES.md](https://github.com/rajinwonderland/react-code-blocks/blob/master/LANGUAGES.md) */
+  language: string;
   /** The style object that will be combined with the top level style on the pre tag, styles here will overwrite earlier styles. */
   customStyle?: {};
 
   /** The style object to apply to the container that shows line number */
-  lineNumberContainerStyle: {};
+  lineNumberContainerStyle?: {};
 
   /** The element or custom react component to use in place of the default span tag */
   preTag: Node | string;
@@ -22,10 +23,8 @@ export interface CodeProps {
   showLineNumbers: boolean;
   /** The code to be formatted */
   text: string;
-  /** A custom theme to be applied, implements the Theme interface */
+  /** A custom theme to be applied, implements the `CodeBlockTheme` interface. You can also pass pass a precomposed theme into here. For available themes. [See THEMES.md](https://github.com/rajinwonderland/react-code-blocks/blob/master/THEMES.md) */
   theme?: Theme;
-  /** The style object to apply to the line numbers directly i.e `fontSize` and such */
-  lineNumberStyle?: {};
 
   /**
    * Lines to highlight comma delimited.
@@ -39,6 +38,7 @@ export interface CodeProps {
 }
 
 export default class Code extends PureComponent<CodeProps, {}> {
+  _isMounted = false;
   static defaultProps = {
     theme: {},
     showLineNumbers: false,
@@ -48,6 +48,12 @@ export default class Code extends PureComponent<CodeProps, {}> {
     highlight: '',
     customStyle: {},
   };
+  componentDidMount() {
+    this._isMounted = true;
+  }
+  componentWillUnmount() {
+    this._isMounted = false;
+  }
 
   getLineOpacity(lineNumber: number) {
     if (!this.props.highlight) {
@@ -86,7 +92,7 @@ export default class Code extends PureComponent<CodeProps, {}> {
 
   render() {
     const { inlineCodeStyle } = applyTheme(this.props.theme);
-    const { language } = this.props;
+    const language = normalizeLanguage(this.props.language);
 
     const props = {
       language,
@@ -102,10 +108,6 @@ export default class Code extends PureComponent<CodeProps, {}> {
         // Wrap lines is needed to set styles on the line.
         // We use this to set opacity if highlight specific lines.
         wrapLines={this.props.highlight.length > 0}
-        lineNumberStyle={(lineNumber: number) => ({
-          opacity: this.getLineOpacity(lineNumber),
-          ...this.props.lineNumberStyle,
-        })}
         customStyle={this.props.customStyle}
         // Types are incorrect.
         // @ts-ignore

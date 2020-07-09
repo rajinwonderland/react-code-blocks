@@ -5,3 +5,6 @@ packages/**/build
 packages/**/coverage
 packages/**/dist
 .npmrc
+.vercel
+demo/build
+.netlify

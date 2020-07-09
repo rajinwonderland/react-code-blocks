@@ -19,6 +19,10 @@
     "packages/*",
     "demo"
   ],
+  "np": {
+    "yarn": true,
+    "contents": "packages/react-code-blocks/dist"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/rajinwonderland/react-code-blocks"

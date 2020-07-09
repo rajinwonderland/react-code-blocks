@@ -1,12 +1,30 @@
 @import url(https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css);
 @import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css);
 
-
 body {
-  font-family: -apple-system, Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
-  line-height: 1.5;  
+  font-family: -apple-system, Roboto, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.5;
+  overflow-y: scroll;
 }
 
 .demo {
-  font-family: 'Fira Code', monospace;
+  font-family: "Fira Code", monospace;
+  padding-bottom: 100px;
+}
+
+.alert-banner {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 1em;
+  font-size: 1.14em;
+}
+
+a:hover {
+  color: lightblue;
+  text-decoration: underline;
 }
