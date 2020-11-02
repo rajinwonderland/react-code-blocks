@@ -62,6 +62,7 @@ function App() {
           language="go"
           text={`v := Vertex{X: 1, Y: 2}`}
           theme={selectedTheme}
+          onCopy={() => alert("Copied code block!")}
         />
       </div>
       <GithubCorner href="https://github.com/rajinwonderland/react-code-blocks" />

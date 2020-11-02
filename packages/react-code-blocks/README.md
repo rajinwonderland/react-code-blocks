@@ -143,9 +143,10 @@ function MyCoolCodeBlock({ code, language, showLineNumbers }) {
 
 Same as the `CodeBlock`'s component with the exception of one!
 
-| name        | type      | default | description                                                                                          |
-| ----------- | --------- | ------- | ---------------------------------------------------------------------------------------------------- |
-| `codeBlock` | `boolean` | `false` | Indicates whether to render the `CopyBlock` as an inline `Code` component or a `CodeBlock` component |
+| name        | type       | default | description                                                                                                                       |
+| ----------- | ---------- | ------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| `codeBlock` | `boolean`  | `false` | Indicates whether to render the `CopyBlock` as an inline `Code` component or a `CodeBlock` component                              |
+| `onCopy`    | `function` | -       | The onCopy function is called if the copy icon is clicked. This enables you to add a custom message that the code block is copied |
 
 ## Supported Themes
 
