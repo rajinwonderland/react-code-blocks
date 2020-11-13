@@ -20,6 +20,9 @@ export interface Props {
   /** This is a prop used internally by the `CopyBlock`'s button component to toggle the icon to a success icon */
   copied: boolean;
 
+  /** The onCopy function is called if the copy icon is clicked. This enables you to add a custom message that the code block is copied. */
+  onCopy: Function,
+
   /** The language in which the code is written. [See LANGUAGES.md](https://github.com/rajinwonderland/react-code-blocks/blob/master/LANGUAGES.md) */
 
   language: string;
@@ -67,13 +70,14 @@ export default function CopyBlock({
   text,
   codeBlock = false,
   customStyle = {},
+  onCopy,
   ...rest
 }: Props) {
   const [copied, toggleCopy] = useState(false);
   const { copy } = useClipboard();
   const handler = () => {
     copy(text);
-    toggleCopy(!copied);
+    onCopy ? onCopy() : toggleCopy(!copied);
   };
 
   return (
