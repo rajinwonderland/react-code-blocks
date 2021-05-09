@@ -21,6 +21,8 @@ export interface CodeProps {
   preTag: Node | string;
   /** Indicates whether or not to show line numbers */
   showLineNumbers: boolean;
+  /**For choosing starting line**/
+  startingLineNumber :number;
   /** The code to be formatted */
   text: string;
   /** A custom theme to be applied, implements the `CodeBlockTheme` interface. You can also pass pass a precomposed theme into here. For available themes. [See THEMES.md](https://github.com/rajinwonderland/react-code-blocks/blob/master/THEMES.md) */
@@ -42,6 +44,7 @@ export default class Code extends PureComponent<CodeProps, {}> {
   static defaultProps = {
     theme: {},
     showLineNumbers: false,
+    startingLineNumber : 1,
     lineNumberContainerStyle: {},
     codeTagProps: {},
     preTag: 'span',
@@ -99,6 +102,7 @@ export default class Code extends PureComponent<CodeProps, {}> {
       PreTag: this.props.preTag,
       style: this.props.codeStyle || inlineCodeStyle,
       showLineNumbers: this.props.showLineNumbers,
+      startingLineNumber: this.props.startingLineNumber ,
       codeTagProps: this.props.codeTagProps,
     };
 

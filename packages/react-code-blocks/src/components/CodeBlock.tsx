@@ -10,6 +10,10 @@ export interface CodeBlockProps {
   language: string;
   /** Indicates whether or not to show line numbers */
   showLineNumbers?: boolean;
+
+  /**startingLineNumber - if showLineNumbers is enabled the line numbering will start from here.**/
+  startingLineNumber :number;
+
   /** A custom theme to be applied, implements the `CodeBlockTheme` interface. You can also pass pass a precomposed theme into here. For available themes. [See THEMES.md](https://github.com/rajinwonderland/react-code-blocks/blob/master/THEMES.md) */
   theme?: Theme;
   /** The element or custom react component to use in place of the default `span` tag */
@@ -43,6 +47,7 @@ export default class CodeBlock extends PureComponent<CodeBlockProps, {}> {
 
   static defaultProps = {
     showLineNumbers: true,
+    startingLineNumber : 1,
     language: LANGUAGE_FALLBACK,
     theme: {},
     highlight: '',
@@ -91,6 +96,7 @@ export default class CodeBlock extends PureComponent<CodeBlockProps, {}> {
       },
       customStyle: this.props?.customStyle,
       showLineNumbers: this.props.showLineNumbers,
+      startingLineNumber : this.props.startingLineNumber ,
       codeTagProps: {
         style: {
           ...codeContainerStyle,
