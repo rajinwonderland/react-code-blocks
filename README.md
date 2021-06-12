@@ -79,6 +79,7 @@ function MyCodeComponent(props) {
       text={props.code}
       language={props.language}
       showLineNumbers={props.showLineNumbers}
+      startingLineNumber={props.startingLineNumber}
       wrapLines
     />
   );
@@ -94,12 +95,13 @@ A simple code block component
 ```js
 import { CodeBlock, dracula } from "react-code-blocks";
 
-function MyCoolCodeBlock({ code, language, showLineNumbers }) {
+function MyCoolCodeBlock({ code, language, showLineNumbers, startingLineNumber }) {
   return (
     <CodeBlock
       text={code}
       language={language}
       showLineNumbers={showLineNumbers}
+      startingLineNumber={startingLineNumber}
       theme={dracula}
     />
   );
@@ -115,6 +117,7 @@ function MyCoolCodeBlock({ code, language, showLineNumbers }) {
 | `text`            | `string`  | **required** | The code to be formatted                                                                                                                                       |
 | `language`        | `string`  | "text"       | The language in which the code is written. [See here](LANGUAGES.md) for a list of supported languages                                                          |
 | `showLineNumbers` | `boolean` | `true`       | Indicates whether or not to show line numbers                                                                                                                  |
+| `startingLineNumber` | `number` | `1`       | if `showLineNumbers` is enabled the line numbering will start from here.                                                                                                                  |
 | `theme`           | `object`  | **dracula**  | A theme object for the code block. [See here](THEMES.md) for a list of supported themes                                                                        |  |
 | `highlight`       | `string`  | ""           | Lines to highlight! For multiple lines, use a comma i.e `highlight="1,6,7"`. For a range of lines, use a `-` i.e `highlight="1-5"` for highlighting lines 1-5. |
 
@@ -129,11 +132,12 @@ A code block component with a little copy button for copying a snippet.
 ```jsx
 import { CopyBlock, dracula } from "react-code-blocks";
 
-function MyCoolCodeBlock({ code, language, showLineNumbers }) {
+function MyCoolCodeBlock({ code, language, showLineNumbers, startingLineNumber }) {
   <CopyBlock
     text={code}
     language={language}
     showLineNumbers={showLineNumbers}
+    startingLineNumber={startingLineNumber}
     theme={dracula}
     codeBlock
   />;
