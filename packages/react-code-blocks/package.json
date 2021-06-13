@@ -8,7 +8,7 @@
     "mdx"
   ],
   "author": "rajinwonderland",
-  "version": "0.0.8",
+  "version": "0.0.9-0",
   "homepage": "https://react-code-blocks.rajinwonderland.vercel.app",
   "license": "MIT",
   "main": "dist/index.js",
