@@ -32,7 +32,7 @@ export const SUPPORTED_LANGUAGE_ALIASES = Object.freeze([
   {
     name: 'HTML',
     alias: ['html', 'htm'],
-    value: 'html',
+    value: 'markup',
   },
   {
     name: 'C++',
@@ -66,8 +66,8 @@ export const SUPPORTED_LANGUAGE_ALIASES = Object.freeze([
   },
   {
     name: 'Shell',
-    alias: ['shell', 'bash', 'sh', 'ksh', 'zsh'],
-    value: 'shell',
+    alias: ['shell', 'sh', 'ksh', 'zsh'],
+    value: 'bash',
   },
   {
     name: 'Scala',

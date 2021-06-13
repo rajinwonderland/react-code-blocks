@@ -73,6 +73,7 @@ export type SupportedLanguages =
   | 'ada'
   | 'arduino'
   | 'autoit'
+  | 'bash'
   | 'c' // → cpp
   | 'clojure'
   | 'cs'
@@ -109,6 +110,7 @@ export type SupportedLanguages =
   | 'lisp'
   | 'livescript'
   | 'lua'
+  | 'markup'
   | 'mathematica'
   | 'makefile'
   | 'matlab'

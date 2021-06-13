@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from "react";
 export default function Navbar() {
   return (
@@ -25,10 +26,7 @@ export default function Navbar() {
         />
       </a>
       <a class="mx-2">
-        <img
-          alt="node-version"
-          src="https://img.shields.io/node/v/react-code-blocks"
-        />
+        <img src="https://img.shields.io/node/v/react-code-blocks" />
       </a>
       <a
         class="mx-2"

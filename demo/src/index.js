@@ -1,9 +1,8 @@
 import React, { useState } from "react";
+import { CopyBlock, dracula } from "react-code-blocks";
 import ReactDOM from "react-dom";
-import { dracula, CopyBlock } from "react-code-blocks";
-import { themes, sample, TopBar, Navbar } from "./components";
 import GithubCorner from "react-github-corner";
-
+import { Navbar, sample, themes, TopBar } from "./components";
 import Logo from "./components/Logo";
 import "./styles.css";
 

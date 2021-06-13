@@ -15,9 +15,9 @@
 	],
 	"main": "src/index.js",
 	"dependencies": {
-		"react": "^16.11.0",
+		"react": "16.13.1",
 		"react-code-blocks": "*",
-		"react-dom": "^16.11.0",
+		"react-dom": "16.13.1",
 		"react-github-corner": "^2.3.0",
 		"react-scripts": "2.1.8",
 		"styled-components": "4.2.0"
