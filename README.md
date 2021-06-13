@@ -1,4 +1,7 @@
 <p align="center"><img src="packages/assets/alt.png"></p>
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 <h1 align="center">Welcome to <code>react-code-blocks</code> 👋👋👋</h1>
 <p>
   <a href="https://www.npmjs.com/package/react-code-blocks" target="_blank">
@@ -210,3 +213,23 @@ _This README was generated with ❤️ by [readme-md-generator](https://github.c
 - Website: https://novvum.io
 - Twitter: [@rajinwonderland](https://twitter.com/rajinwonderland)
 - Github: [@rajinwonderland](https://github.com/rajinwonderland)
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/HamadTheIronside"><img src="https://avatars.githubusercontent.com/u/31456990?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Abdollah Keshtkar</b></sub></a><br /><a href="#example-HamadTheIronside" title="Examples">💡</a> <a href="https://github.com/rajinwonderland/react-code-blocks/commits?author=HamadTheIronside" title="Documentation">📖</a> <a href="https://github.com/rajinwonderland/react-code-blocks/commits?author=HamadTheIronside" title="Code">💻</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
