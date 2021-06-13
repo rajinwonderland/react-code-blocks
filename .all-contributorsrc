@@ -6,10 +6,40 @@
   "commit": false,
   "contributors": [
     {
+
       "login": "tahaHichri",
       "name": "Taha HICHRI",
       "avatar_url": "https://avatars.githubusercontent.com/u/10195215?v=4",
       "profile": "http://hishri.com",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "florpor",
+      "name": "florpor",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1809093?v=4",
+      "profile": "https://github.com/florpor",
+      "contributions": [
+        "bug"
+      ]
+   },
+   {
+      "login": "HamadTheIronside",
+      "name": "Abdollah Keshtkar",
+      "avatar_url": "https://avatars.githubusercontent.com/u/31456990?v=4",
+      "profile": "https://github.com/HamadTheIronside",
+      "contributions": [
+        "example",
+        "doc",
+        "code"
+      ]
+    },
+    {
+      "login": "lukasbals",
+      "name": "Lukas Bals",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10163193?v=4",
+      "profile": "https://lukasbals.com",
       "contributions": [
         "code"
       ]

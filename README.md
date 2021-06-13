@@ -223,7 +223,11 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
+
+    <td align="center"><a href="https://github.com/HamadTheIronside"><img src="https://avatars.githubusercontent.com/u/31456990?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Abdollah Keshtkar</b></sub></a><br /><a href="#example-HamadTheIronside" title="Examples">💡</a> <a href="https://github.com/rajinwonderland/react-code-blocks/commits?author=HamadTheIronside" title="Documentation">📖</a> <a href="https://github.com/rajinwonderland/react-code-blocks/commits?author=HamadTheIronside" title="Code">💻</a></td>
+    <td align="center"><a href="https://lukasbals.com"><img src="https://avatars.githubusercontent.com/u/10163193?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Lukas Bals</b></sub></a><br /><a href="https://github.com/rajinwonderland/react-code-blocks/commits?author=lukasbals" title="Code">💻</a></td>
     <td align="center"><a href="http://hishri.com"><img src="https://avatars.githubusercontent.com/u/10195215?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Taha HICHRI</b></sub></a><br /><a href="https://github.com/rajinwonderland/react-code-blocks/commits?author=tahaHichri" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/florpor"><img src="https://avatars.githubusercontent.com/u/1809093?v=4?s=100" width="100px;" alt=""/><br /><sub><b>florpor</b></sub></a><br /><a href="https://github.com/rajinwonderland/react-code-blocks/issues?q=author%3Aflorpor" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 
