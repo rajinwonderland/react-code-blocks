@@ -6,6 +6,16 @@
   "commit": false,
   "contributors": [
     {
+
+      "login": "tahaHichri",
+      "name": "Taha HICHRI",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10195215?v=4",
+      "profile": "http://hishri.com",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
       "login": "florpor",
       "name": "florpor",
       "avatar_url": "https://avatars.githubusercontent.com/u/1809093?v=4",
