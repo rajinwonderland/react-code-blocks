@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "tahaHichri",
+      "name": "Taha HICHRI",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10195215?v=4",
+      "profile": "http://hishri.com",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "react-code-blocks",
+  "projectOwner": "rajinwonderland",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
