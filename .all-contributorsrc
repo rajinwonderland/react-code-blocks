@@ -6,6 +6,15 @@
   "commit": false,
   "contributors": [
     {
+      "login": "florpor",
+      "name": "florpor",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1809093?v=4",
+      "profile": "https://github.com/florpor",
+      "contributions": [
+        "bug"
+      ]
+   },
+   {
       "login": "HamadTheIronside",
       "name": "Abdollah Keshtkar",
       "avatar_url": "https://avatars.githubusercontent.com/u/31456990?v=4",
