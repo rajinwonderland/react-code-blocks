@@ -27,6 +27,9 @@ export interface CodeBlockProps {
   /** The style object that will be combined with the top level style on the pre tag, styles here will overwrite earlier styles. */
   customStyle?: {};
 
+  /** If true, wrap long lines */
+  wrapLongLines: boolean;
+
   /**
    * Lines to highlight comma delimited.
    * Example uses:
@@ -47,6 +50,7 @@ export default class CodeBlock extends PureComponent<CodeBlockProps, {}> {
 
   static defaultProps = {
     showLineNumbers: true,
+    wrapLongLines: false,
     startingLineNumber : 1,
     language: LANGUAGE_FALLBACK,
     theme: {},
@@ -109,6 +113,7 @@ export default class CodeBlock extends PureComponent<CodeBlockProps, {}> {
       },
       text: this.props.text.toString(),
       highlight: this.props.highlight,
+      wrapLongLines: this.props.wrapLongLines
     };
 
     return <Code {...props} />;

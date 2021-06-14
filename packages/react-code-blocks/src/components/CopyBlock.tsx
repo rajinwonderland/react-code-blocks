@@ -20,6 +20,9 @@ export interface Props {
   /** This is a prop used internally by the `CopyBlock`'s button component to toggle the icon to a success icon */
   copied: boolean;
 
+  /** If true, wrap long lines */
+  wrapLongLines: boolean;
+
   /** The onCopy function is called if the copy icon is clicked. This enables you to add a custom message that the code block is copied. */
   onCopy: Function,
 
