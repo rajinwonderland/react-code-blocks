@@ -32,6 +32,7 @@ df.head(5)`
   );
   const themes = select('theme', themeObj, 'dracula');
   const showLineNumbers = boolean('showLineNumbers', true);
+  const wrapLongLines = boolean('wrapLongLines', false);
   const codeBlock = boolean('codeBlock', true);
   return (
     <div
@@ -43,6 +44,7 @@ df.head(5)`
         text={he.decode(code)}
         language={language}
         theme={require('../src')[themes]}
+        wrapLongLines={wrapLongLines}
         {...{ showLineNumbers, codeBlock }}
       />
     </div>

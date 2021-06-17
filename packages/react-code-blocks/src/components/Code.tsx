@@ -28,6 +28,9 @@ export interface CodeProps {
   /** A custom theme to be applied, implements the `CodeBlockTheme` interface. You can also pass pass a precomposed theme into here. For available themes. [See THEMES.md](https://github.com/rajinwonderland/react-code-blocks/blob/master/THEMES.md) */
   theme?: Theme;
 
+  /** If true, wrap long lines */
+  wrapLongLines: boolean;
+
   /**
    * Lines to highlight comma delimited.
    * Example uses:
@@ -44,6 +47,7 @@ export default class Code extends PureComponent<CodeProps, {}> {
   static defaultProps = {
     theme: {},
     showLineNumbers: false,
+    wrapLongLines: false,
     startingLineNumber : 1,
     lineNumberContainerStyle: {},
     codeTagProps: {},
@@ -104,6 +108,7 @@ export default class Code extends PureComponent<CodeProps, {}> {
       showLineNumbers: this.props.showLineNumbers,
       startingLineNumber: this.props.startingLineNumber ,
       codeTagProps: this.props.codeTagProps,
+      wrapLongLines: this.props.wrapLongLines
     };
 
     return (
