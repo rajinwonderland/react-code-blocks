@@ -1,7 +1,9 @@
 <p align="center"><img src="packages/assets/alt.png"></p>
+
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
+
 <h1 align="center">Welcome to <code>react-code-blocks</code> 👋👋👋</h1>
 <p>
   <a href="https://www.npmjs.com/package/react-code-blocks" target="_blank">
