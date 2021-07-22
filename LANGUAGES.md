@@ -87,3 +87,4 @@ The following languages are supported:
 - vhdl
 - xml
 - xquery
+- yaml
