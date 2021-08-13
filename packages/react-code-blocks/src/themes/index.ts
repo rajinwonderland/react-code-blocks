@@ -17,6 +17,7 @@ export { default as monoBlue } from './mono-blue';
 export { default as monokaiSublime } from './monokai-sublime';
 export { default as monokai } from './monokai';
 export { default as nord } from './nord';
+export { default as noctisViola } from './noctis-viola';
 export { default as obsidian } from './obsidian';
 export { default as ocean } from './ocean';
 export { default as paraisoDark } from './paraiso-dark';

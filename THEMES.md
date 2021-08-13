@@ -22,6 +22,7 @@
 | Monokai Sublime         | monokaiSublime        | monokai-sublime         |
 | Monokai                 | monokai               | monokai                 |
 | Nord                    | nord                  | nord                    |
+| Noctis Viola            | noctisViola           | noctis-viola            |
 | Obsidian                | obsidian              | obsidian                |
 | Ocean                   | ocean                 | ocean                   |
 | Paraiso Dark            | paraisoDark           | paraiso-dark            |
