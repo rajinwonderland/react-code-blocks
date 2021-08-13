@@ -57,6 +57,7 @@ export const themeObj = {
   'monokai-sublime': 'monokaiSublime',
   monokai: 'monokai',
   nord: 'nord',
+  'noctis-viola': 'noctisViola',
   obsidian: 'obsidian',
   ocean: 'ocean',
   'paraiso-dark': 'paraisoDark',

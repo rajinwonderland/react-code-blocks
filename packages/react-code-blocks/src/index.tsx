@@ -21,6 +21,7 @@ export { default as monoBlue } from './themes/mono-blue';
 export { default as monokaiSublime } from './themes/monokai-sublime';
 export { default as monokai } from './themes/monokai';
 export { default as nord } from './themes/nord';
+export { default as noctisViola } from './themes/noctis-viola';
 export { default as obsidian } from './themes/obsidian';
 export { default as ocean } from './themes/ocean';
 export { default as paraisoDark } from './themes/paraiso-dark';

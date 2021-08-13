@@ -18,6 +18,7 @@ export const themes = {
   monokaiSublime: "monokai-sublime",
   monokai: "monokai",
   nord: "nord",
+  noctisViola: "noctis-viola",
   obsidian: "obsidian",
   ocean: "ocean",
   paraisoDark: "paraiso-dark",
