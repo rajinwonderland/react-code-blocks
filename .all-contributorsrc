@@ -60,6 +60,17 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "daceynolan",
+      "name": "Dacey Nolan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/54158919?v=4",
+      "profile": "https://github.com/daceynolan",
+      "contributions": [
+        "example",
+        "doc",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
