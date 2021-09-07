@@ -1,8 +1,8 @@
 import React, { PropsWithChildren } from 'react';
 import { withTheme } from 'styled-components';
-import CopyBlock from './components/CopyBlock';
+import CopyBlock, { CopyBlockProps } from './components/CopyBlock';
 const CopyBlockWithTheme = withTheme(CopyBlock);
 
-export default function(props: PropsWithChildren<any>) {
+export default function(props: PropsWithChildren<CopyBlockProps>) {
   return <CopyBlockWithTheme {...props} />;
 }
