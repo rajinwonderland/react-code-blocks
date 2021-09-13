@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import { Theme } from '../types';
 import useClipboard from '../hooks/use-clipboard';
 
-export interface Props {
+export interface CopyBlockProps {
   /** A custom theme to be applied, implements the `CodeBlockTheme` interface. You can also pass pass a precomposed theme into here. For available themes. [See THEMES.md](https://github.com/rajinwonderland/react-code-blocks/blob/master/THEMES.md) */
   theme: Theme;
 
@@ -34,7 +34,7 @@ export interface Props {
   [x: string]: any;
 }
 
-const Button = styled.button<Props>`
+const Button = styled.button<CopyBlockProps>`
   position: absolute;
   top: 0.5em;
   right: 0.75em;
@@ -61,7 +61,7 @@ const Button = styled.button<Props>`
   }
 `;
 
-const Snippet = styled.div<Props>`
+const Snippet = styled.div<CopyBlockProps>`
   position: relative;
   background: ${p => p.theme.backgroundColor};
   border-radius: 0.25rem;
@@ -75,7 +75,7 @@ export default function CopyBlock({
   customStyle = {},
   onCopy,
   ...rest
-}: Props) {
+}: CopyBlockProps) {
   const [copied, toggleCopy] = useState(false);
   const { copy } = useClipboard();
   const handler = () => {
