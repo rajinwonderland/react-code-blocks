@@ -1,37 +1,37 @@
 {
-	"name": "demo",
-	"version": "0.0.1",
-	"description": "Modified Atlaskit's Code Block to support more languages (i.e graphql, reasonml, etc) and theme (i.e railscast, darcula, monokai, etc) code snippets!",
-	"author": "rajinwonderland",
-	"keywords": [
-		"react components",
-		"code snippets",
-		"code-blocks",
-		"code-snippet-components",
-		"react-syntax-highlighter",
-		"mdx",
-		"markdown code snippets",
-		"syntax highlighting"
-	],
-	"main": "src/index.js",
-	"dependencies": {
-		"react": "16.13.1",
-		"react-code-blocks": "*",
-		"react-dom": "16.13.1",
-		"react-github-corner": "^2.3.0",
-		"react-scripts": "2.1.8",
-		"styled-components": "4.2.0"
-	},
-	"scripts": {
-		"start": "react-scripts start",
-		"build": "react-scripts build",
-		"test": "react-scripts test --env=jsdom",
-		"eject": "react-scripts eject"
-	},
-	"browserslist": [
-		">0.2%",
-		"not dead",
-		"not ie <= 11",
-		"not op_mini all"
-	]
+  "name": "demo",
+  "version": "0.0.1",
+  "description": "Modified Atlaskit's Code Block to support more languages (i.e graphql, reasonml, etc) and theme (i.e railscast, darcula, monokai, etc) code snippets!",
+  "author": "rajinwonderland",
+  "keywords": [
+    "react components",
+    "code snippets",
+    "code-blocks",
+    "code-snippet-components",
+    "react-syntax-highlighter",
+    "mdx",
+    "markdown code snippets",
+    "syntax highlighting"
+  ],
+  "main": "src/index.js",
+  "dependencies": {
+    "react": "17.0.2",
+    "react-code-blocks": "*",
+    "react-dom": "17.0.2",
+    "react-github-corner": "^2.5.0",
+    "react-scripts": "4.0.3",
+    "styled-components": "5.3.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

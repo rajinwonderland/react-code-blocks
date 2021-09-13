@@ -4,13 +4,11 @@
   "description": "",
   "author": "",
   "private": true,
-  "dependencies": {},
-  "devDependencies": {},
   "scripts": {
     "start:demo": "yarn workspace demo start",
     "demo": "yarn workspace demo",
     "pkg": "yarn workspace react-code-blocks",
-    "rcb": "yarn workspace rcb",
+    "rcb": "yarn workspace pkg",
     "syntax": "yarn workspace react-syntax-highlighter",
     "test": "yarn workspace test",
     "nuke": "rm -rf node_modules rm -rf yarn.lock"
@@ -28,11 +26,6 @@
     "url": "https://github.com/rajinwonderland/react-code-blocks"
   },
   "homepage": "https://react-code-blocks.rajinwonderland.vercel.app",
-  "resolutions": {
-    "**/**/react": "^16.11.0",
-    "**/react": "^16.11.0",
-    "**/**/react-dom": "^16.11.0",
-    "**/react-dom": "^16.11.0"
-  },
-  "license": "MIT"
+  "license": "MIT",
+  "packageManager": "yarn@3.0.2"
 }

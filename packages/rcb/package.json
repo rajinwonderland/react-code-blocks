@@ -1,0 +1,80 @@
+{
+  "name": "rcb",
+  "description": "Modified Atlaskit's Code Block to support more languages (i.e graphql, reasonml, etc) and theme (i.e railscast, darcula, monokai, etc) code snippets!",
+  "keywords": [
+    "code-snippets",
+    "code-blocks",
+    "react-syntax-highlighter",
+    "mdx"
+  ],
+  "author": "rajinwonderland",
+  "version": "0.0.9-0",
+  "homepage": "https://react-code-blocks.rajinwonderland.vercel.app",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=12"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test --passWithNoTests",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "module": "dist/react-code-blocks.esm.js",
+  "devDependencies": {
+    "@storybook/addon-actions": "^6.3.8",
+    "@storybook/addon-console": "^1.2.3",
+    "@storybook/addon-docs": "^6.3.8",
+    "@storybook/addon-info": "^5.3.21",
+    "@storybook/addon-knobs": "^6.3.1",
+    "@storybook/addon-links": "^6.3.8",
+    "@storybook/addon-storysource": "^6.3.8",
+    "@storybook/addon-viewport": "^6.3.8",
+    "@storybook/addons": "^6.3.8",
+    "@storybook/react": "^6.3.8",
+    "@types/color": "^3.0.2",
+    "@types/enzyme": "^3.10.9",
+    "@types/he": "^1.1.2",
+    "@types/react": "^17.0.20",
+    "@types/react-dom": "^17.0.9",
+    "@types/react-syntax-highlighter": "^13.5.2",
+    "@types/styled-components": "^5.1.14",
+    "enzyme": "^3.11.0",
+    "react": "^17.0.2",
+    "react-docgen-typescript-loader": "^3.7.2",
+    "react-dom": "^17.0.2",
+    "ts-loader": "^9.2.5",
+    "tsdx": "^0.14.1",
+    "typescript": "^4.4.3",
+    "typescript-plugin-styled-components": "^2.0.0"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.15.4",
+    "react-syntax-highlighter": "^15.4.4",
+    "styled-components": "^5.3.1",
+    "tslib": "^2.3.1"
+  }
+}

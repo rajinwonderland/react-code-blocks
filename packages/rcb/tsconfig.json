@@ -1,0 +1,30 @@
+{
+  "include": ["src"],
+  "compilerOptions": {
+    "allowJs": false,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "downlevelIteration": true,
+    "skipLibCheck": true,
+    "target": "es5",
+    "module": "esnext",
+    "lib": ["dom", "esnext", "ES2020"],
+    "importHelpers": true,
+    "declaration": true,
+    "sourceMap": true,
+    "rootDir": "./src",
+    "strict": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "@": ["src/*"],
+      "*": ["src/*", "../../node_modules/*"]
+    },
+    "jsx": "react",
+    "esModuleInterop": true
+  }
+}
