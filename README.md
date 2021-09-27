@@ -1,7 +1,7 @@
 <p align="center"><img src="packages/assets/alt.png"></p>
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <h1 align="center">Welcome to <code>react-code-blocks</code> 👋👋👋</h1>
@@ -232,6 +232,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://bofeiwang.com"><img src="https://avatars.githubusercontent.com/u/34177142?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Bobby Wang</b></sub></a><br /><a href="https://github.com/rajinwonderland/react-code-blocks/commits?author=bofeiw" title="Code">💻</a></td>
     <td align="center"><a href="http://www.mpeveler.com"><img src="https://avatars.githubusercontent.com/u/1845314?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Matthew Peveler</b></sub></a><br /><a href="https://github.com/rajinwonderland/react-code-blocks/commits?author=MasterOdin" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/daceynolan"><img src="https://avatars.githubusercontent.com/u/54158919?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Dacey Nolan</b></sub></a><br /><a href="#example-daceynolan" title="Examples">💡</a> <a href="https://github.com/rajinwonderland/react-code-blocks/commits?author=daceynolan" title="Documentation">📖</a> <a href="https://github.com/rajinwonderland/react-code-blocks/commits?author=daceynolan" title="Code">💻</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/kevineaton603"><img src="https://avatars.githubusercontent.com/u/25751382?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kevin Eaton</b></sub></a><br /><a href="https://github.com/rajinwonderland/react-code-blocks/commits?author=kevineaton603" title="Code">💻</a></td>
   </tr>
 </table>
 

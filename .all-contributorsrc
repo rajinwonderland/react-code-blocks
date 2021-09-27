@@ -71,6 +71,15 @@
         "doc",
         "code"
       ]
+    },
+    {
+      "login": "kevineaton603",
+      "name": "Kevin Eaton",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25751382?v=4",
+      "profile": "https://github.com/kevineaton603",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
