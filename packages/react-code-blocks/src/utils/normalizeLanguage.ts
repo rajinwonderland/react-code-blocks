@@ -11,8 +11,8 @@ export const SUPPORTED_LANGUAGE_ALIASES = Object.freeze([
   },
   {
     name: 'CSharp',
-    alias: ['csharp', 'c#'],
-    value: 'cs',
+    alias: ['csharp', 'c#', 'cs'],
+    value: 'csharp',
   },
   {
     name: 'Python',

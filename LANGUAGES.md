@@ -10,7 +10,7 @@ The following languages are supported:
 - c
 - clojure
 - cs
-- c
+- c#
 - cpp
 - coffeescript
 - csharp
