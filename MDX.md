@@ -37,10 +37,9 @@ const CustomCodeBlock = (props) => {
 
   const { className, copy, children } = props;
 
-  const language =
-    className?.split("-")[0] === "language"
-      ? className.split("-")[1]
-      : "javascript";
+  const language = className.match(/(?<=language-)(\w.*?)\b/) != null
+    ? className.match(/(?<=language-)(\w.*?)\b/)[0]
+    : "javascript";
 
   return copy ? (
     <CopyBlock
