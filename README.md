@@ -175,7 +175,7 @@ If you're looking for some more maintained solutions, I'd suggest the following:
 - [`react-live`](https://github.com/FormidableLabs/react-live): A flexible playground for live editing React components by @FormidableLabs.
 - [`@atlaskit/code`](https://atlaskit.atlassian.com/docs/getting-started): Renders inline code snippets and code blocks
   - Original inspiration for this project kit for this project
-- [`carbon-components-react`](http://react.carbondesignsystem.com/?path=/story/codesnippet--inline): Check out their `<CodeSnippet>` component which supports multi-line, single-line, and inline snippets along with added copying functionality.
+- [`carbon-components-react`](iframe.html?id=components-codesnippet--inline): Check out their `<CodeSnippet>` component which supports multi-line, single-line, and inline snippets along with added copying functionality.
 
 > Feel free to add any other alternative packages here! :smile:
 
