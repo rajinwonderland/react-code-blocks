@@ -24,7 +24,7 @@ export interface CopyBlockProps {
   wrapLongLines: boolean;
 
   /** The onCopy function is called if the copy icon is clicked. This enables you to add a custom message that the code block is copied. */
-  onCopy: Function,
+  onCopy: (event: React.MouseEvent<HTMLButtonElement>) => void;
 
   /** The language in which the code is written. [See LANGUAGES.md](https://github.com/rajinwonderland/react-code-blocks/blob/master/LANGUAGES.md) */
 
@@ -80,7 +80,7 @@ export default function CopyBlock({
   const { copy } = useClipboard();
   const handler = () => {
     copy(text);
-    onCopy ? onCopy() : toggleCopy(!copied);
+    onCopy ? onCopy(event) : toggleCopy(!copied);
   };
 
   return (
