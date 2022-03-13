@@ -78,7 +78,7 @@ export default function CopyBlock({
 }: CopyBlockProps) {
   const [copied, toggleCopy] = useState(false);
   const { copy } = useClipboard();
-  const handler = () => {
+  const handler = (event: React.MouseEvent<HTMLButtonElement>) => {
     copy(text);
     onCopy ? onCopy(event) : toggleCopy(!copied);
   };
