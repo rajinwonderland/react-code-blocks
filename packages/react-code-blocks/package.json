@@ -73,7 +73,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.10.4",
-    "react-syntax-highlighter": "^15.4.3",
+    "react-syntax-highlighter": "^15.5.0",
     "styled-components": "^5.1.1",
     "tslib": "^2.0.0"
   }

@@ -17535,7 +17535,7 @@ react-syntax-highlighter@^11.0.2:
     highlight.js "~9.13.0"
     lowlight "~1.11.0"
     prismjs "^1.8.4"
-    refractor "^2.4.1"
+    refractor "^4.8.1"
 
 react-syntax-highlighter@^12.2.1:
   version "12.2.1"
@@ -17546,7 +17546,7 @@ react-syntax-highlighter@^12.2.1:
     highlight.js "~9.15.1"
     lowlight "1.12.1"
     prismjs "^1.8.4"
-    refractor "^2.4.1"
+    refractor "^4.8.1"
 
 react-syntax-highlighter@^15.4.3:
   version "15.4.3"
@@ -17557,7 +17557,7 @@ react-syntax-highlighter@^15.4.3:
     highlight.js "^10.4.1"
     lowlight "^1.17.0"
     prismjs "^1.22.0"
-    refractor "^3.2.0"
+    refractor "^4.8.1"
 
 react-textarea-autosize@^7.1.0:
   version "7.1.2"
