@@ -32,7 +32,9 @@
     "**/**/react": "^16.11.0",
     "**/react": "^16.11.0",
     "**/**/react-dom": "^16.11.0",
-    "**/react-dom": "^16.11.0"
+    "**/react-dom": "^16.11.0",
+    "refractor": "^4.8.1",
+    "react-syntax-highlighter": "^15.5.0"
   },
   "license": "MIT"
 }
