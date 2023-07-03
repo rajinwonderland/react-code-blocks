@@ -8,7 +8,7 @@
     "mdx"
   ],
   "author": "rajinwonderland",
-  "version": "0.0.9-0",
+  "version": "0.1.0",
   "homepage": "https://react-code-blocks.rajinwonderland.vercel.app",
   "license": "MIT",
   "main": "dist/index.js",
@@ -60,7 +60,7 @@
     "@types/he": "^1.1.1",
     "@types/react": "^16.9.34",
     "@types/react-dom": "^16.9.7",
-    "@types/react-syntax-highlighter": "^15.5.6",
+    "@types/react-syntax-highlighter": "^15.5.7",
     "@types/styled-components": "^5.1.0",
     "enzyme": "^3.11.0",
     "react": "^16.13.1",
@@ -73,8 +73,9 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.10.4",
+    "@types/react-syntax-highlighter": "^15.5.7",
     "react-syntax-highlighter": "^15.5.0",
     "styled-components": "^5.1.1",
-    "tslib": "^2.0.0"
+    "tslib": "^2.6.0"
   }
 }

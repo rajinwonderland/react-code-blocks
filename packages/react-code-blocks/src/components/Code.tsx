@@ -18,7 +18,7 @@ export interface CodeProps {
   lineNumberContainerStyle?: {};
 
   /** The element or custom react component to use in place of the default span tag */
-  preTag: Node | string;
+  preTag: keyof JSX.IntrinsicElements | React.ComponentType<any> | undefined;
   /** Indicates whether or not to show line numbers */
   showLineNumbers: boolean;
   /**For choosing starting line**/
