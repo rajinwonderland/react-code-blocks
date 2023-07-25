@@ -15,7 +15,7 @@ jobs:
         with:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
-      - run: pnpm install --frozen-lockfile
+      - run: npx pnpm install --frozen-lockfile
       - run: cd packages/react-code-blocks && npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
