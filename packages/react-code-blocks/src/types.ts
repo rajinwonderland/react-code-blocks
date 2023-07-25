@@ -42,6 +42,10 @@ export interface CodeBlockTheme {
 
 export type ThemeModes = 'light' | 'dark';
 export interface Theme extends CodeBlockTheme {
+  mode?: ThemeModes;
+}
+
+export interface ModeSafeTheme extends Theme {
   mode: ThemeModes;
 }
 

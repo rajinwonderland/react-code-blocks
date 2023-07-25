@@ -12,6 +12,7 @@ export default function themed(modesOrVariant: {
       | undefined
   ) {
     var theme = getTheme(props);
-    return modes[theme.mode];
+    let themeMode = theme.mode;
+    return modes[themeMode];
   };
 }
