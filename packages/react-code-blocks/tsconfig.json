@@ -8,6 +8,7 @@
     "skipLibCheck": true,
     "target": "es5",
     "module": "esnext",
+    "types": ["node"],
     "lib": ["dom", "esnext", "ES2020"],
     "importHelpers": true,
     "declaration": true,

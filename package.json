@@ -1,40 +1,30 @@
 {
   "name": "react-workspace",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "author": "",
   "private": true,
   "dependencies": {},
   "devDependencies": {},
   "scripts": {
-    "start:demo": "yarn workspace demo start",
-    "demo": "yarn workspace demo",
-    "pkg": "yarn workspace react-code-blocks",
-    "rcb": "yarn workspace rcb",
-    "syntax": "yarn workspace react-syntax-highlighter",
-    "test": "yarn workspace test",
-    "nuke": "rm -rf node_modules rm -rf yarn.lock"
+    "start:demo": "pnpm start demo",
+    "test": "pnpm test",
+    "nuke": "rm -rf node_modules rm -rf pnpm-lock.yaml"
   },
   "workspaces": [
     "packages/*",
     "demo"
   ],
-  "np": {
-    "yarn": true,
-    "contents": "packages/react-code-blocks/dist"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/rajinwonderland/react-code-blocks"
   },
-  "homepage": "https://react-code-blocks.rajinwonderland.vercel.app",
   "resolutions": {
-    "**/**/react": "^16.11.0",
-    "**/react": "^16.11.0",
-    "**/**/react-dom": "^16.11.0",
-    "**/react-dom": "^16.11.0",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
     "refractor": "^4.8.1",
     "react-syntax-highlighter": "^15.5.0"
   },
+  "homepage": "https://react-code-blocks.rajinwonderland.vercel.app",
   "license": "MIT"
 }

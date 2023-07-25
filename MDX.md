@@ -7,12 +7,6 @@ I will assume that you have mdx plugin up and running, if you aren't then visit 
 Also don't forget to install react code blocks.
 
 ```sh
-yarn add react-code-blocks
-```
-
-or
-
-```sh
 npm i react-code-blocks
 ```
 

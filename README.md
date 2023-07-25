@@ -59,11 +59,7 @@ I don't plan on keeping this updated unless people are looking to actually use i
 
 ## Install
 
-Install `react-code-blocks` via `yarn` or `npm`
-
-```sh
-yarn add react-code-blocks
-```
+Install `react-code-blocks`
 
 ```sh
 npm i react-code-blocks

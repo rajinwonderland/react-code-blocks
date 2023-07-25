@@ -2,6 +2,8 @@ name: Publish Package to npmjs
 on:
   release:
     types: [published]
+env:
+  CI: true
 jobs:
   build:
     name: Build & Publish
@@ -13,7 +15,7 @@ jobs:
         with:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
-      - run: npx yarn install --frozen-lockfile
+      - run: pnpm install --frozen-lockfile
       - run: cd packages/react-code-blocks && npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
