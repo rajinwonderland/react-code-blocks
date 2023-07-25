@@ -11,7 +11,7 @@
 		"gatsby": "^2.3.24",
 		"gatsby-image": "^2.0.39",
 		"gatsby-mdx": "^0.6.2",
-		"gatsby-plugin-manifest": "^2.0.29",
+		"gatsby-plugin-manifest": "^5.11.0",
 		"gatsby-plugin-offline": "^2.0.25",
 		"gatsby-plugin-react-helmet": "^3.0.12",
 		"gatsby-plugin-sharp": "^2.0.35",
