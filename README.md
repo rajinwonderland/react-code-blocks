@@ -212,6 +212,13 @@ _This README was generated with ❤️ by [readme-md-generator](https://github.c
 - Twitter: [@rajinwonderland](https://twitter.com/rajinwonderland)
 - Github: [@rajinwonderland](https://github.com/rajinwonderland)
 
+## Maintainer
+react-code-blocks is currently maintained by [Thomas](https://github.com/thomasmost)
+
+- Website: [Bend](https://usebend.com/)
+- Bluesky: [@thomasmost.bsky.social](https://bsky.app/profile/thomasmost.bsky.social)
+- Github: [@thomasmost](https://github.com/thomasmost)
+
 ## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
