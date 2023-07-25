@@ -73,7 +73,7 @@
     "typescript-plugin-styled-components": "^1.4.4"
   },
   "dependencies": {
-    "@babel/runtime": "^7.10.4",
+    "@babel/runtime": "^7.22.6",
     "@types/react-syntax-highlighter": "^15.5.7",
     "react-syntax-highlighter": "^15.5.0",
     "styled-components": "^5.1.1",
