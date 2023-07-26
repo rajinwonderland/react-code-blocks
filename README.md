@@ -26,7 +26,7 @@
 
 > React components for rendering code snippets with syntax highlighting
 
-> **BREAKING CHANGES**: `VERSION >= 0.0.8-alpha` now requires a nodejs version >= 12
+> **BREAKING CHANGES**: `VERSION >= ^0.1.0` has not been tested with Node 14 or lower
 
 - [Background](#background)
   - [✨ Demo](#-demo)
@@ -47,13 +47,9 @@
 
 ## Background
 
-Initially, this started as a small project looking to modify [Atlaskit's]() Code Block component to support more languages (i.e `graphql`, `reasonml`, etc). It then rapidly evolved into a **never-ending rabbithole** which ended up with support for themes (i.e railscast, darcula, monokai, etc), customizable styles, and copy functionality too!
+Initially, this started as a small project looking to modify [Atlaskit's]() Code Block component to support more languages (i.e `graphql`, `reasonml`, etc). It then rapidly evolved into a **never-ending rabbithole** which ended up with support for themes (i.e railscast, darcula, monokai, etc), customizable styles, and copy functionality too. Contributions are welcome via PRs and issues.
 
-I don't plan on keeping this updated unless people are looking to actually use it. So don't be shy! Feel free to post an [issue](https://help.github.com/en/github/managing-your-work-on-github/creating-an-issue) or a [pr](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
-
-### ✨ [Demo](https://react-code-blocks.netlify.com/)
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/a2a9f006-efd5-476f-ade6-11cde1ddc11e/deploy-status)](https://app.netlify.com/sites/react-code-blocks/deploys)
+### ✨ [Storybook](https://react-code-blocks.vercel.app/)
 
 [![Check out react-code-blocks](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/react-code-blocks-xgjrr?fontsize=14)
 
