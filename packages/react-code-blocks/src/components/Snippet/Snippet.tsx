@@ -19,7 +19,6 @@ const SnippetWrapper = styled.div<
     style: any;
   }
 >`
-   {
     position: relative;
     width: ${({ width }) => width};
     max-width: 100%;
@@ -29,7 +28,6 @@ const SnippetWrapper = styled.div<
     background-color: ${({ style }) => style.bgColor};
     border: 1px solid ${({ style }) => style.border};
     border-radius: 5px;
-  }
   pre {
     margin: 0;
     padding: 0;
@@ -97,7 +95,7 @@ const Snippet: React.FC<React.PropsWithChildren<SnippetProps>> = ({
   const ref = useRef<HTMLPreElement>(null);
   const isMultiLine = text && Array.isArray(text);
   const theme = useContext(ThemeContext);
-  const style = useMemo(() => getStyles(theme), [theme]);
+  const style = useMemo(() => !!theme && getStyles(theme), [theme]);
   const showCopyIcon = useMemo(() => copyType !== 'prevent', [copyType]);
   const childText = useMemo<string | undefined | null>(() => {
     if (isMultiLine) return textArrayToString(text as string[]);
