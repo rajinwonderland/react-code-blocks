@@ -17,10 +17,11 @@ interface Props {
 const SnippetWrapper = styled.div<
   Props & {
     style: any;
+    width?: string;
   }
 >`
     position: relative;
-    width: ${({ width }) => width};
+    width: ${({ width }) => !!width ? width : 'auto'};
     max-width: 100%;
     padding: 8pt;
     padding-right: calc(2 * 16pt);
