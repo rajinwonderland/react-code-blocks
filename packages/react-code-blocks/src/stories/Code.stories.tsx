@@ -1,9 +1,10 @@
 import React from 'react';
-import { Code, monokai } from '../src';
-import CodeComponent from '../src/components/Code';
+import { Code, monokai } from '..';
+import CodeComponent from '../components/Code';
 import { withKnobs, select, text } from '@storybook/addon-knobs';
-import { supportedLanguages, themeObj } from '../utils/knobs';
+import { supportedLanguages, themeObj } from './utils/knobs';
 import he from 'he';
+import { a11yLight } from '../themes';
 
 export default {
   title: 'Code',
@@ -35,7 +36,7 @@ export const Default = () => {
       <Code
         text={he.decode(code)}
         language={language}
-        theme={require('../src')[themes]}
+        theme={a11yLight}
       />
     </div>
   );
