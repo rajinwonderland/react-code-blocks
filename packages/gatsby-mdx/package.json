@@ -24,7 +24,7 @@
 		"react-code-blocks": "*",
 		"react-dom": "^16.11.0",
 		"react-helmet": "^5.2.0",
-		"styled-components": "^4.2.0",
+		"styled-components": "^6.0.5",
 		"styled-system": "^4.2.2"
 	},
 	"keywords": [
