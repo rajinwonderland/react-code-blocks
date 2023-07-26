@@ -1,4 +1,4 @@
-import { SupportedLanguages } from '../../types';
+import { SupportedLanguages } from '../src/types';
 export const supportedLanguages: SupportedLanguages[] = [
   'bash',
   'c',

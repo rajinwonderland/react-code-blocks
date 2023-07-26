@@ -1,22 +1,18 @@
 import React from 'react';
-import { CodeBlock, atomOneDark, atomOneLight } from '../.';
-import CodeBlockComponent from '../components/CodeBlock';
-import CodeComponent from '../components/Code';
+import { CopyBlock, nord, a11yLight, a11yDark, dracula } from '../src';
+import CodeBlockComponent from '../src/components/CodeBlock';
+import CopyBlockComponent from '../src/components/CopyBlock';
+import CodeComponent from '../src/components/Code';
 import { withKnobs, select, text, boolean } from '@storybook/addon-knobs';
-import { supportedLanguages, themeObj } from './utils/knobs';
-import { longSnippet, languages, resultSnippet } from './utils/codetext';
-import { a11yLight } from '../themes';
-
+import { supportedLanguages, themeObj } from '../utils/knobs';
+import { longSnippet, resultSnippet } from '../utils/codetext';
 import he from 'he';
 
 export default {
-  title: 'CodeBlock',
-  parameters: {
-    componentSubtitle: 'CodeBlock renders an isolated code snippet or block.',
-  },
+  title: 'CopyBlock',
   decorators: [withKnobs],
-  component: CodeBlockComponent,
-  subcomponents: { CodeComponent },
+  component: CopyBlockComponent,
+  subcomponents: { CodeBlockComponent, CodeComponent },
 };
 
 // By passing optional props to this story, you can control the props of the component when
@@ -25,64 +21,31 @@ export const Default = () => {
   const language = select(
     'language',
     Object.assign({}, ...supportedLanguages.map(val => ({ [val]: val }))),
-    'javascript'
+    'python'
   );
   //@ts-ignore
+  const code = text(
+    'text',
+    `import pandas as pd
+df = pd.read_csv('some_random.csv');
+df.head(5)`
+  );
   const themes = select('theme', themeObj, 'dracula');
   const showLineNumbers = boolean('showLineNumbers', true);
-  const code = text('text', `const add = (x,y) => x+y;`);
+  const wrapLongLines = boolean('wrapLongLines', false);
+  const codeBlock = boolean('codeBlock', true);
   return (
     <div
       style={{
         fontFamily: 'Fira Code',
       }}
     >
-      <CodeBlock
+      <CopyBlock
         text={he.decode(code)}
         language={language}
-        theme={a11yLight}
-        showLineNumbers={showLineNumbers}
-      />
-    </div>
-  );
-};
-
-export const SupportedLanguages = () => {
-  const themes = select('theme', themeObj, 'dracula');
-  const showLineNumbers = boolean('showLineNumbers', true);
-
-  return (
-    <div
-      style={{
-        fontFamily: 'Fira Code',
-      }}
-    >
-      <CodeBlock
-        {...languages}
-        theme={a11yLight}
-        showLineNumbers={showLineNumbers}
-      />
-    </div>
-  );
-};
-
-export const AddAScrollbar = () => {
-  const themes = select('theme', themeObj, 'dracula');
-  const showLineNumbers = boolean('showLineNumbers', true);
-  return (
-    <div
-      style={{
-        fontFamily: 'Fira Code',
-      }}
-    >
-      <CodeBlock
-        {...longSnippet}
-        customStyle={{
-          height: '200px',
-          overflow: 'scroll',
-        }}
-        theme={a11yLight}
-        showLineNumbers={showLineNumbers}
+        theme={require('../src')[themes]}
+        wrapLongLines={wrapLongLines}
+        {...{ showLineNumbers, codeBlock }}
       />
     </div>
   );
@@ -90,7 +53,7 @@ export const AddAScrollbar = () => {
 
 export const CustomStyles = () => {
   const showLineNumbers = boolean('showLineNumbers', true);
-  const wrapLines = boolean('wrapLines', true);
+  const codeBlock = boolean('codeBlock', true);
   return (
     <div
       style={{
@@ -106,15 +69,15 @@ export const CustomStyles = () => {
         style={{
           width: '100%',
           flex: 1,
-          background: atomOneDark.builtInColor,
+          background: a11yDark.builtInColor,
           paddingBottom: '1em',
         }}
       >
         <h5 style={{ textAlign: 'center' }}>Query</h5>
-        <CodeBlock
+        <CopyBlock
           {...longSnippet}
-          {...{ showLineNumbers, wrapLines }}
-          theme={atomOneDark}
+          {...{ showLineNumbers, codeBlock }}
+          theme={a11yDark}
           customStyle={{
             height: '250px',
             overflowY: 'scroll',
@@ -129,16 +92,16 @@ export const CustomStyles = () => {
         style={{
           width: '100%',
           flex: 1,
-          background: atomOneLight.sectionColor,
+          background: a11yLight.sectionColor,
           color: 'white',
           paddingBottom: '1em',
         }}
       >
         <h5 style={{ textAlign: 'center' }}>Result</h5>
-        <CodeBlock
+        <CopyBlock
           {...resultSnippet}
-          {...{ showLineNumbers, wrapLines }}
-          theme={atomOneLight}
+          {...{ showLineNumbers, codeBlock }}
+          theme={a11yLight}
           customStyle={{
             height: '250px',
             overflowY: 'scroll',
@@ -155,7 +118,6 @@ export const CustomStyles = () => {
 
 export const UsageWithAPredefinedTheme = () => {
   const showLineNumbers = boolean('showLineNumbers', true);
-  const wrapLines = boolean('wrapLines', true);
   const codeBlock = boolean('codeBlock', true);
   return (
     <div
@@ -163,22 +125,38 @@ export const UsageWithAPredefinedTheme = () => {
         fontFamily: 'Fira Code',
       }}
     >
-      <CodeBlock
-        text={`// using the atomOneDark theme
+      <CopyBlock
+        text={`// Usage with the Nord theme
 import { CodeBlock, nord} from 'react-code-blocks';
 const MyCodeComponent = () => (
-  <CodeBlock
+  <CopyBlock
     text="HELLO WORLD"
     theme={nord}
     language="text"
   />
 )`}
         language={'jsx'}
-        theme={atomOneDark}
-        {...{ showLineNumbers, wrapLines, codeBlock }}
+        theme={nord}
+        {...{ showLineNumbers, codeBlock }}
       />
     </div>
   );
 };
 
-
+export const WithACoolMonospaceFont = () => (
+  <div style={{ fontFamily: 'IBM Plex Mono' }}>
+    <CopyBlock
+      text={`function toBe() {
+  if (Math.random() < 0.5) {
+    return true;
+  } else {
+    return false;
+  }
+}`}
+      showLineNumbers
+      codeBlock
+      language="js"
+      theme={dracula}
+    />
+  </div>
+);
