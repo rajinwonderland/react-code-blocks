@@ -76,7 +76,7 @@
     "react-dom": "^16.13.1",
     "storybook": "^7.1.1",
     "ts-loader": "^6.2.2",
-    "tsdx": "^0.13.2",
+    "tsdx": "^0.14.1",
     "typescript": "^5.1.6",
     "typescript-plugin-styled-components": "^1.4.4"
   },
