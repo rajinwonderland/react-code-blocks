@@ -70,14 +70,20 @@ import { CopyBlock } from "react-code-blocks";
 ```
 
 ```js
+
+
 function MyCodeComponent(props) {
+  const copyBlockProps = {
+    text: props.code,
+    language: props.language,
+    showLineNumbers: props.showLineNumbers,
+    startingLineNUmber: props.startingLineNumber,
+    wrapLines: true,
+  };
+
   return (
     <CopyBlock
-      text={props.code}
-      language={props.language}
-      showLineNumbers={props.showLineNumbers}
-      startingLineNumber={props.startingLineNumber}
-      wrapLines
+      {...copyBlockProps}
     />
   );
 }
