@@ -13,6 +13,11 @@
   ],
   "version": "0.1.2",
   "homepage": "https://react-code-blocks.rajinwonderland.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rajinwonderland/react-code-blocks",
+    "directory": "packages/react-code-blocks"
+  },
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
