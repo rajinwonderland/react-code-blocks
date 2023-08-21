@@ -65,7 +65,7 @@
     "@types/color": "^3.0.1",
     "@types/enzyme": "^3.10.5",
     "@types/he": "^1.1.1",
-    "@types/node": "^20.4.4",
+    "@types/node": "^20.5.1",
     "@types/react": "^16.9.34",
     "@types/react-dom": "^16.9.7",
     "@types/react-syntax-highlighter": "^15.5.7",
