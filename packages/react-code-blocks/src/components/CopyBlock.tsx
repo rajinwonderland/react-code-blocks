@@ -94,7 +94,7 @@ export default function CopyBlock({
         // @ts-ignore
         <Code text={text} theme={theme} {...rest} />
       )}
-      <Button type="button" onClick={handler} {...{ theme, copied }}>
+      <Button aria-label="Copy Code" type="button" onClick={handler} {...{ theme, copied }}>
         <Copy
           color={copied ? theme.stringColor : theme.textColor}
           copied={copied}
