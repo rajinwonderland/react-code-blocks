@@ -11,7 +11,7 @@
   "maintainers": [
     "thomasmost"
   ],
-  "version": "0.1.3",
+  "version": "0.1.4",
   "homepage": "https://react-code-blocks.rajinwonderland.vercel.app",
   "license": "MIT",
   "main": "dist/index.js",

@@ -48,7 +48,8 @@ export default class CodeBlock extends PureComponent<CodeBlockProps, {}> {
 
   static displayName = 'CodeBlock';
 
-  static defaultProps = {
+  static defaultProps: CodeBlockProps = {
+    text: "",
     showLineNumbers: true,
     wrapLongLines: false,
     startingLineNumber : 1,
