@@ -77,7 +77,7 @@ function MyCodeComponent(props) {
     text: props.code,
     language: props.language,
     showLineNumbers: props.showLineNumbers,
-    startingLineNUmber: props.startingLineNumber,
+    startingLineNumber: props.startingLineNumber,
     wrapLines: true,
   };
 
