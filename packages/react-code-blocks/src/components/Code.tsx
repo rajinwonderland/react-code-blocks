@@ -12,24 +12,24 @@ export interface CodeProps {
   /** The language in which the code is written. [See LANGUAGES.md](https://github.com/rajinwonderland/react-code-blocks/blob/master/LANGUAGES.md) */
   language: string;
   /** The style object that will be combined with the top level style on the pre tag, styles here will overwrite earlier styles. */
-  customStyle?: {};
+  customStyle?: Record<string,string>;
 
   /** The style object to apply to the container that shows line number */
   lineNumberContainerStyle?: {};
 
   /** The element or custom react component to use in place of the default span tag */
-  preTag: keyof JSX.IntrinsicElements | React.ComponentType<any> | undefined;
+  preTag?: keyof JSX.IntrinsicElements | React.ComponentType<any> | undefined;
   /** Indicates whether or not to show line numbers */
-  showLineNumbers: boolean;
+  showLineNumbers?: boolean;
   /**For choosing starting line**/
-  startingLineNumber :number;
+  startingLineNumber?: number;
   /** The code to be formatted */
   text: string;
   /** A custom theme to be applied, implements the `CodeBlockTheme` interface. You can also pass pass a precomposed theme into here. For available themes. [See THEMES.md](https://github.com/rajinwonderland/react-code-blocks/blob/master/THEMES.md) */
   theme?: Theme;
 
   /** If true, wrap long lines */
-  wrapLongLines: boolean;
+  wrapLongLines?: boolean;
 
   /**
    * Lines to highlight comma delimited.
@@ -39,7 +39,7 @@ export interface CodeProps {
    * - To highlight a group of lines `highlight="1-5"`
    * - To highlight multiple groups `highlight="1-5,7,10,15-20"`
    */
-  highlight: string;
+  highlight?: string;
 }
 
 export default class Code extends PureComponent<CodeProps, {}> {
@@ -116,7 +116,7 @@ export default class Code extends PureComponent<CodeProps, {}> {
         {...props}
         // Wrap lines is needed to set styles on the line.
         // We use this to set opacity if highlight specific lines.
-        wrapLines={this.props.highlight.length > 0}
+        wrapLines={!!this.props.highlight}
         customStyle={this.props.customStyle}
         // Types are incorrect.
         // @ts-ignore

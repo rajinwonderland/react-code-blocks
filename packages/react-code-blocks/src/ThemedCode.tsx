@@ -1,4 +1,5 @@
 import { withTheme } from 'styled-components';
-import Code from './components/Code';
+import Code, { CodeProps } from './components/Code';
 
-export default withTheme(Code);
+// HELP WANTED: I don't understand why this forced typing is necessary for CopyBlock and Code, but not CodeBlock
+export default withTheme(Code) as (props: CodeProps) => JSX.Element;
