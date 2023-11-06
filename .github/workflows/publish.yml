@@ -17,7 +17,7 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - uses: pnpm/action-setup@v2
         with:
-          version: 8.8
+          version: 8.6
       - run: pnpm install
       - run: cd packages/react-code-blocks && pnpm publish
         env:
