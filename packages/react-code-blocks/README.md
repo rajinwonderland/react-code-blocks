@@ -68,7 +68,7 @@ npm i react-code-blocks
 > Updated usage instructions can be found [here](https://react-code-blocks.rajinwonderland.vercel.app/)
 
 ```js
-import { CopyBlock } from "react-code-blocks";
+import { CopyBlock } from 'react-code-blocks';
 ```
 
 ```js
@@ -91,7 +91,7 @@ function MyCodeComponent(props) {
 A simple code block component
 
 ```js
-import { CodeBlock, dracula } from "react-code-blocks";
+import { CodeBlock, dracula } from 'react-code-blocks';
 
 function MyCoolCodeBlock({ code, language, showLineNumbers }) {
   return (
@@ -126,7 +126,7 @@ function MyCoolCodeBlock({ code, language, showLineNumbers }) {
 A code block component with a little copy button for copying a snippet.
 
 ```jsx
-import { CopyBlock, dracula } from "react-code-blocks";
+import { CopyBlock, dracula } from 'react-code-blocks';
 
 function MyCoolCodeBlock({ code, language, showLineNumbers }) {
   <CopyBlock
@@ -203,6 +203,5 @@ _This README was generated with ❤️ by [readme-md-generator](https://github.c
 <img src="packages/assets/rajinwonderland.png" height="175px" />
 </div>
 
-- Website: https://novvum.io
 - Twitter: [@rajinwonderland](https://twitter.com/rajinwonderland)
 - Github: [@rajinwonderland](https://github.com/rajinwonderland)
