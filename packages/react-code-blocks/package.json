@@ -1,6 +1,6 @@
 {
   "name": "react-code-blocks",
-  "description": "Modified Atlaskit's Code Block to support more languages (i.e graphql, reasonml, etc) and theme (i.e railscast, darcula, monokai, etc) code snippets!",
+  "description": "Modified Atlaskit's Code Block to support more languages (i.e graphql, reasonml, etc) and theme (i.e railscast, dracula, monokai, etc) code snippets!",
   "keywords": [
     "code-snippets",
     "code-blocks",
@@ -81,9 +81,8 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.10.4",
-    "@types/react-syntax-highlighter": "^15.5.7",
     "react-syntax-highlighter": "^15.5.0",
-		"styled-components": "^6.1.0",
+    "styled-components": "^6.1.0",
     "tslib": "^2.6.0"
   }
 }
