@@ -15,10 +15,7 @@ jobs:
         with:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 8.6
-      - run: pnpm install
-      - run: cd packages/react-code-blocks && pnpm publish
+      - run: npx pnpm install
+      - run: cd packages/react-code-blocks && npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
