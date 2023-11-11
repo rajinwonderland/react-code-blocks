@@ -1,14 +1,9 @@
 lockfileVersion: '6.0'
 
 settings:
-  autoInstallPeers: false
   excludeLinksFromLockfile: false
 
 overrides:
-  react: ^16.11.0
-  react-dom: ^16.11.0
-  refractor: ^3.6.0
-  react-syntax-highlighter: ^15.5.0
   node-notifier@<8.0.1: '>=8.0.1'
   marked@>=0.3.14 <0.6.2: '>=0.6.2'
   node-forge@<1.0.0: '>=1.0.0'
@@ -228,13 +223,13 @@ importers:
         specifier: ^3.11.0
         version: 3.11.0
       react:
-        specifier: ^16.11.0
+        specifier: ^16.13.1
         version: 16.14.0
       react-docgen-typescript-loader:
         specifier: ^3.7.2
         version: 3.7.2(typescript@5.1.6)
       react-dom:
-        specifier: ^16.11.0
+        specifier: ^16.13.1
         version: 16.14.0(react@16.14.0)
       storybook:
         specifier: ^7.5.2
@@ -425,7 +420,7 @@ packages:
       '@babel/helper-replace-supers': 7.22.5
       '@babel/helper-skip-transparent-expression-wrappers': 7.22.5
       '@babel/helper-split-export-declaration': 7.22.6
-      semver: 7.5.4
+      semver: 6.3.1
     transitivePeerDependencies:
       - supports-color
 
@@ -438,7 +433,7 @@ packages:
       '@babel/core': 7.23.2
       '@babel/helper-annotate-as-pure': 7.22.5
       regexpu-core: 5.3.2
-      semver: 7.5.4
+      semver: 6.3.1
 
   /@babel/helper-define-polyfill-provider@0.4.2(@babel/core@7.23.2):
     resolution: {integrity: sha512-k0qnnOqHn5dK9pZpfD5XXZ9SojAITdCKRn2Lp6rnDGzIbaP0rHyMPk/4wsSxVBVz4RfN0q6VpXWP2pDGIoQ7hw==}
@@ -1415,7 +1410,7 @@ packages:
       babel-plugin-polyfill-corejs2: 0.4.5(@babel/core@7.23.2)
       babel-plugin-polyfill-corejs3: 0.8.3(@babel/core@7.23.2)
       babel-plugin-polyfill-regenerator: 0.5.2(@babel/core@7.23.2)
-      semver: 7.5.4
+      semver: 6.3.1
     transitivePeerDependencies:
       - supports-color
 
@@ -1844,7 +1839,7 @@ packages:
   /@emotion/core@10.3.1(react@16.14.0):
     resolution: {integrity: sha512-447aUEjPIm0MnE6QYIaFz9VQOHSXf4Iu6EWOIqq11EAPqinkSZmfymPTmlOE3QjLv846lH4JVZBUOtwGbuQoww==}
     peerDependencies:
-      react: ^16.11.0
+      react: '>=16.3.0'
     dependencies:
       '@babel/runtime': 7.23.2
       '@emotion/cache': 10.0.29
@@ -1894,7 +1889,7 @@ packages:
     resolution: {integrity: sha512-5mlW1DquU5HaxjLkfkGN1GA/fvVGdyHURRiX/0FHl2cfIfRxSOfmxEH5YS43edp0OldZrZ+dkBKbngxcNCdZvA==}
     peerDependencies:
       '@types/react': '*'
-      react: ^16.11.0
+      react: '>=16.8.0'
     peerDependenciesMeta:
       '@types/react':
         optional: true
@@ -1943,7 +1938,7 @@ packages:
     resolution: {integrity: sha512-PBRqsVKR7QRNkmfH78hTSSwHWcwDpecH9W6heujWAcyp2wdz/64PP73s7fWS1dIPm8/Exc8JAzYS8dEWXjv60w==}
     peerDependencies:
       '@emotion/core': ^10.0.28
-      react: ^16.11.0
+      react: '>=16.3.0'
     dependencies:
       '@babel/runtime': 7.23.2
       '@emotion/core': 10.3.1(react@16.14.0)
@@ -1957,7 +1952,7 @@ packages:
     resolution: {integrity: sha512-GgcUpXBBEU5ido+/p/mCT2/Xx+Oqmp9JzQRuC+a4lYM4i4LBBn/dWvc0rQ19N9ObA8/T4NWMrPNe79kMBDJqoQ==}
     peerDependencies:
       '@emotion/core': ^10.0.27
-      react: ^16.11.0
+      react: '>=16.3.0'
     dependencies:
       '@emotion/core': 10.3.1(react@16.14.0)
       '@emotion/styled-base': 10.3.0(@emotion/core@10.3.1)(react@16.14.0)
@@ -1979,7 +1974,7 @@ packages:
   /@emotion/use-insertion-effect-with-fallbacks@1.0.1(react@16.14.0):
     resolution: {integrity: sha512-jT/qyKZ9rzLErtrjGgdkMBn2OP8wl0G3sQlBb3YPryvKHsjvINUhVaPFfP+fpBcOkmrVOVEEHQFJ7nbj2TH2gw==}
     peerDependencies:
-      react: ^16.11.0
+      react: '>=16.8.0'
     dependencies:
       react: 16.14.0
     dev: true
@@ -2235,8 +2230,8 @@ packages:
   /@floating-ui/react-dom@2.0.2(react-dom@16.14.0)(react@16.14.0):
     resolution: {integrity: sha512-5qhlDvjaLmAst/rKb3VdlCinwTF4EYMiVxuuc/HVUjs46W0zgtbMmAZ1UTsDrRTxRmUEzl92mOtWbeeXL26lSQ==}
     peerDependencies:
-      react: ^16.11.0
-      react-dom: ^16.11.0
+      react: '>=16.8.0'
+      react-dom: '>=16.8.0'
     dependencies:
       '@floating-ui/dom': 1.5.3
       react: 16.14.0
@@ -2262,8 +2257,8 @@ packages:
   /@gatsbyjs/reach-router@1.3.9(react-dom@16.14.0)(react@16.14.0):
     resolution: {integrity: sha512-/354IaUSM54xb7K/TxpLBJB94iEAJ3P82JD38T8bLnIDWF+uw8+W/82DKnQ7y24FJcKxtVmG43aiDLG88KSuYQ==}
     peerDependencies:
-      react: ^16.11.0
-      react-dom: ^16.11.0
+      react: 15.x || 16.x || 17.x || 18.x
+      react-dom: 15.x || 16.x || 17.x || 18.x
     dependencies:
       invariant: 2.2.4
       prop-types: 15.8.1
@@ -2540,7 +2535,7 @@ packages:
     resolution: {integrity: sha512-V1klUed202XahrWJLLOT3EXNeCpFHCcJntdFGI15ntCwau+jfT386w7OFTMaCqOgXUH1fa0w/I1oZs+i/Rfr0A==}
     peerDependencies:
       prop-types: ^15.0.0
-      react: ^16.11.0
+      react: '>=0.14.0'
     dependencies:
       gud: 1.0.0
       prop-types: 15.8.1
@@ -3332,7 +3327,7 @@ packages:
   /@mdx-js/react@1.6.22(react@16.14.0):
     resolution: {integrity: sha512-TDoPum4SHdfPiGSAaRBw7ECyI8VaHpK8GJugbJIJuqyh6kzw9ZLJZW3HGL3NNrJGxcAixUvqROm+YuQOo5eXtg==}
     peerDependencies:
-      react: ^16.11.0
+      react: ^16.13.1 || ^17.0.0
     dependencies:
       react: 16.14.0
     dev: false
@@ -3340,7 +3335,7 @@ packages:
   /@mdx-js/react@2.3.0(react@16.14.0):
     resolution: {integrity: sha512-zQH//gdOmuu7nt2oJR29vFhDv88oGPmVw6BggmrHeMI+xgEkp1B2dX9/bMBSYtK0dyLX/aOmesKS09g222K1/g==}
     peerDependencies:
-      react: ^16.11.0
+      react: '>=16'
     dependencies:
       '@types/mdx': 2.0.5
       '@types/react': 16.14.43
@@ -3350,7 +3345,7 @@ packages:
   /@mdx-js/tag@0.20.3(react@16.14.0):
     resolution: {integrity: sha512-Co3gUFmNDv9z2LjuvLTpTj2NaOSHFxuoZjohcG0YK/KfECO+Ns9idzThMYjfEDe1vAf4c824rqlBYseedJdFNw==}
     peerDependencies:
-      react: ^16.11.0
+      react: ^0.14.x || ^15.x || ^16.x
     dependencies:
       react: 16.14.0
     dev: false
@@ -3517,7 +3512,7 @@ packages:
       json5: 2.2.3
       msgpackr: 1.9.5
       nullthrows: 1.1.1
-      semver: 7.5.4
+      semver: 5.7.2
     dev: false
 
   /@parcel/diagnostic@2.6.2:
@@ -3603,7 +3598,7 @@ packages:
       '@parcel/diagnostic': 2.6.2
       '@parcel/utils': 2.6.2
       nullthrows: 1.1.1
-      semver: 7.5.4
+      semver: 5.7.2
     dev: false
 
   /@parcel/optimizer-terser@2.6.2(@parcel/core@2.6.2):
@@ -3633,7 +3628,7 @@ packages:
       '@parcel/types': 2.6.2(@parcel/core@2.6.2)
       '@parcel/utils': 2.6.2
       '@parcel/workers': 2.6.2(@parcel/core@2.6.2)
-      semver: 7.5.4
+      semver: 5.7.2
     dev: false
 
   /@parcel/packager-js@2.6.2(@parcel/core@2.6.2):
@@ -3724,7 +3719,7 @@ packages:
       detect-libc: 1.0.3
       nullthrows: 1.1.1
       regenerator-runtime: 0.13.11
-      semver: 7.5.4
+      semver: 5.7.2
     dev: false
 
   /@parcel/transformer-json@2.6.2(@parcel/core@2.6.2):
@@ -3992,8 +3987,8 @@ packages:
     peerDependencies:
       '@types/react': '*'
       '@types/react-dom': '*'
-      react: ^16.11.0
-      react-dom: ^16.11.0
+      react: ^16.8 || ^17.0 || ^18.0
+      react-dom: ^16.8 || ^17.0 || ^18.0
     peerDependenciesMeta:
       '@types/react':
         optional: true
@@ -4013,8 +4008,8 @@ packages:
     peerDependencies:
       '@types/react': '*'
       '@types/react-dom': '*'
-      react: ^16.11.0
-      react-dom: ^16.11.0
+      react: ^16.8 || ^17.0 || ^18.0
+      react-dom: ^16.8 || ^17.0 || ^18.0
     peerDependenciesMeta:
       '@types/react':
         optional: true
@@ -4036,7 +4031,7 @@ packages:
     resolution: {integrity: sha512-fDSBgd44FKHa1FRMU59qBMPFcl2PZE+2nmqunj+BWFyYYjnhIDWL2ItDs3rrbJDQOtzt5nIebLCQc4QRfz6LJw==}
     peerDependencies:
       '@types/react': '*'
-      react: ^16.11.0
+      react: ^16.8 || ^17.0 || ^18.0
     peerDependenciesMeta:
       '@types/react':
         optional: true
@@ -4050,7 +4045,7 @@ packages:
     resolution: {integrity: sha512-ebbrdFoYTcuZ0v4wG5tedGnp9tzcV8awzsxYph7gXUyvnNLuTIcCk1q17JEbnVhXAKG9oX3KtchwiMIAYp9NLg==}
     peerDependencies:
       '@types/react': '*'
-      react: ^16.11.0
+      react: ^16.8 || ^17.0 || ^18.0
     peerDependenciesMeta:
       '@types/react':
         optional: true
@@ -4064,7 +4059,7 @@ packages:
     resolution: {integrity: sha512-RXcvnXgyvYvBEOhCBuddKecVkoMiI10Jcm5cTI7abJRAHYfFxeu+FBQs/DvdxSYucxR5mna0dNsL6QFlds5TMA==}
     peerDependencies:
       '@types/react': '*'
-      react: ^16.11.0
+      react: ^16.8 || ^17.0 || ^18.0
     peerDependenciesMeta:
       '@types/react':
         optional: true
@@ -4079,8 +4074,8 @@ packages:
     peerDependencies:
       '@types/react': '*'
       '@types/react-dom': '*'
-      react: ^16.11.0
-      react-dom: ^16.11.0
+      react: ^16.8 || ^17.0 || ^18.0
+      react-dom: ^16.8 || ^17.0 || ^18.0
     peerDependenciesMeta:
       '@types/react':
         optional: true
@@ -4103,7 +4098,7 @@ packages:
     resolution: {integrity: sha512-Rect2dWbQ8waGzhMavsIbmSVCgYxkXLxxR3ZvCX79JOglzdEy4JXMb98lq4hPxUbLr77nP0UOGf4rcMU+s1pUA==}
     peerDependencies:
       '@types/react': '*'
-      react: ^16.11.0
+      react: ^16.8 || ^17.0 || ^18.0
     peerDependenciesMeta:
       '@types/react':
         optional: true
@@ -4118,8 +4113,8 @@ packages:
     peerDependencies:
       '@types/react': '*'
       '@types/react-dom': '*'
-      react: ^16.11.0
-      react-dom: ^16.11.0
+      react: ^16.8 || ^17.0 || ^18.0
+      react-dom: ^16.8 || ^17.0 || ^18.0
     peerDependenciesMeta:
       '@types/react':
         optional: true
@@ -4140,7 +4135,7 @@ packages:
     resolution: {integrity: sha512-tI7sT/kqYp8p96yGWY1OAnLHrqDgzHefRBKQ2YAkBS5ja7QLcZ9Z/uY7bEjPUatf8RomoXM8/1sMj1IJaE5UzQ==}
     peerDependencies:
       '@types/react': '*'
-      react: ^16.11.0
+      react: ^16.8 || ^17.0 || ^18.0
     peerDependenciesMeta:
       '@types/react':
         optional: true
@@ -4156,8 +4151,8 @@ packages:
     peerDependencies:
       '@types/react': '*'
       '@types/react-dom': '*'
-      react: ^16.11.0
-      react-dom: ^16.11.0
+      react: ^16.8 || ^17.0 || ^18.0
+      react-dom: ^16.8 || ^17.0 || ^18.0
     peerDependenciesMeta:
       '@types/react':
         optional: true
@@ -4186,8 +4181,8 @@ packages:
     peerDependencies:
       '@types/react': '*'
       '@types/react-dom': '*'
-      react: ^16.11.0
-      react-dom: ^16.11.0
+      react: ^16.8 || ^17.0 || ^18.0
+      react-dom: ^16.8 || ^17.0 || ^18.0
     peerDependenciesMeta:
       '@types/react':
         optional: true
@@ -4207,8 +4202,8 @@ packages:
     peerDependencies:
       '@types/react': '*'
       '@types/react-dom': '*'
-      react: ^16.11.0
-      react-dom: ^16.11.0
+      react: ^16.8 || ^17.0 || ^18.0
+      react-dom: ^16.8 || ^17.0 || ^18.0
     peerDependenciesMeta:
       '@types/react':
         optional: true
@@ -4228,8 +4223,8 @@ packages:
     peerDependencies:
       '@types/react': '*'
       '@types/react-dom': '*'
-      react: ^16.11.0
-      react-dom: ^16.11.0
+      react: ^16.8 || ^17.0 || ^18.0
+      react-dom: ^16.8 || ^17.0 || ^18.0
     peerDependenciesMeta:
       '@types/react':
         optional: true
@@ -4257,8 +4252,8 @@ packages:
     peerDependencies:
       '@types/react': '*'
       '@types/react-dom': '*'
-      react: ^16.11.0
-      react-dom: ^16.11.0
+      react: ^16.8 || ^17.0 || ^18.0
+      react-dom: ^16.8 || ^17.0 || ^18.0
     peerDependenciesMeta:
       '@types/react':
         optional: true
@@ -4298,8 +4293,8 @@ packages:
     peerDependencies:
       '@types/react': '*'
       '@types/react-dom': '*'
-      react: ^16.11.0
-      react-dom: ^16.11.0
+      react: ^16.8 || ^17.0 || ^18.0
+      react-dom: ^16.8 || ^17.0 || ^18.0
     peerDependenciesMeta:
       '@types/react':
         optional: true
@@ -4318,7 +4313,7 @@ packages:
     resolution: {integrity: sha512-YeTpuq4deV+6DusvVUW4ivBgnkHwECUu0BiN43L5UCDFgdhsRUWAghhTF5MbvNTPzmiFOx90asDSUjWuCNapwg==}
     peerDependencies:
       '@types/react': '*'
-      react: ^16.11.0
+      react: ^16.8 || ^17.0 || ^18.0
     peerDependenciesMeta:
       '@types/react':
         optional: true
@@ -4334,8 +4329,8 @@ packages:
     peerDependencies:
       '@types/react': '*'
       '@types/react-dom': '*'
-      react: ^16.11.0
-      react-dom: ^16.11.0
+      react: ^16.8 || ^17.0 || ^18.0
+      react-dom: ^16.8 || ^17.0 || ^18.0
     peerDependenciesMeta:
       '@types/react':
         optional: true
@@ -4361,8 +4356,8 @@ packages:
     peerDependencies:
       '@types/react': '*'
       '@types/react-dom': '*'
-      react: ^16.11.0
-      react-dom: ^16.11.0
+      react: ^16.8 || ^17.0 || ^18.0
+      react-dom: ^16.8 || ^17.0 || ^18.0
     peerDependenciesMeta:
       '@types/react':
         optional: true
@@ -4384,8 +4379,8 @@ packages:
     peerDependencies:
       '@types/react': '*'
       '@types/react-dom': '*'
-      react: ^16.11.0
-      react-dom: ^16.11.0
+      react: ^16.8 || ^17.0 || ^18.0
+      react-dom: ^16.8 || ^17.0 || ^18.0
     peerDependenciesMeta:
       '@types/react':
         optional: true
@@ -4410,7 +4405,7 @@ packages:
     resolution: {integrity: sha512-D94LjX4Sp0xJFVaoQOd3OO9k7tpBYNOXdVhkltUbGv2Qb9OXdrg/CpsjlZv7ia14Sylv398LswWBVVu5nqKzAQ==}
     peerDependencies:
       '@types/react': '*'
-      react: ^16.11.0
+      react: ^16.8 || ^17.0 || ^18.0
     peerDependenciesMeta:
       '@types/react':
         optional: true
@@ -4424,7 +4419,7 @@ packages:
     resolution: {integrity: sha512-Svl5GY5FQeN758fWKrjM6Qb7asvXeiZltlT4U2gVfl8Gx5UAv2sMR0LWo8yhsIZh2oQ0eFdZ59aoOOMV7b47VA==}
     peerDependencies:
       '@types/react': '*'
-      react: ^16.11.0
+      react: ^16.8 || ^17.0 || ^18.0
     peerDependenciesMeta:
       '@types/react':
         optional: true
@@ -4439,7 +4434,7 @@ packages:
     resolution: {integrity: sha512-vyL82j40hcFicA+M4Ex7hVkB9vHgSse1ZWomAqV2Je3RleKGO5iM8KMOEtfoSB0PnIelMd2lATjTGMYqN5ylTg==}
     peerDependencies:
       '@types/react': '*'
-      react: ^16.11.0
+      react: ^16.8 || ^17.0 || ^18.0
     peerDependenciesMeta:
       '@types/react':
         optional: true
@@ -4454,7 +4449,7 @@ packages:
     resolution: {integrity: sha512-v/5RegiJWYdoCvMnITBkNNx6bCj20fiaJnWtRkU18yITptraXjffz5Qbn05uOiQnOvi+dbkznkoaMltz1GnszQ==}
     peerDependencies:
       '@types/react': '*'
-      react: ^16.11.0
+      react: ^16.8 || ^17.0 || ^18.0
     peerDependenciesMeta:
       '@types/react':
         optional: true
@@ -4468,7 +4463,7 @@ packages:
     resolution: {integrity: sha512-cV5La9DPwiQ7S0gf/0qiD6YgNqM5Fk97Kdrlc5yBcrF3jyEZQwm7vYFqMo4IfeHgJXsRaMvLABFtd0OVEmZhDw==}
     peerDependencies:
       '@types/react': '*'
-      react: ^16.11.0
+      react: ^16.8 || ^17.0 || ^18.0
     peerDependenciesMeta:
       '@types/react':
         optional: true
@@ -4482,7 +4477,7 @@ packages:
     resolution: {integrity: sha512-Cq5DLuSiuYVKNU8orzJMbl15TXilTnJKUCltMVQg53BQOF1/C5toAaGrowkgksdBQ9H+SRL23g0HDmg9tvmxXw==}
     peerDependencies:
       '@types/react': '*'
-      react: ^16.11.0
+      react: ^16.8 || ^17.0 || ^18.0
     peerDependenciesMeta:
       '@types/react':
         optional: true
@@ -4497,7 +4492,7 @@ packages:
     resolution: {integrity: sha512-ibay+VqrgcaI6veAojjofPATwledXiSmX+C0KrBk/xgpX9rBzPV3OsfwlhQdUOFbh+LKQorLYT+xTXW9V8yd0g==}
     peerDependencies:
       '@types/react': '*'
-      react: ^16.11.0
+      react: ^16.8 || ^17.0 || ^18.0
     peerDependenciesMeta:
       '@types/react':
         optional: true
@@ -4513,8 +4508,8 @@ packages:
     peerDependencies:
       '@types/react': '*'
       '@types/react-dom': '*'
-      react: ^16.11.0
-      react-dom: ^16.11.0
+      react: ^16.8 || ^17.0 || ^18.0
+      react-dom: ^16.8 || ^17.0 || ^18.0
     peerDependenciesMeta:
       '@types/react':
         optional: true
@@ -4538,8 +4533,8 @@ packages:
   /@reach/router@1.3.4(react-dom@16.14.0)(react@16.14.0):
     resolution: {integrity: sha512-+mtn9wjlB9NN2CNnnC/BRYtwdKBfSyyasPYraNAyvaV1occr/5NnB4CVzjEZipNHwYebQwcndGUmpFzxAUoqSA==}
     peerDependencies:
-      react: ^16.11.0
-      react-dom: ^16.11.0
+      react: 15.x || 16.x || 16.4.0-alpha.0911da3
+      react-dom: 15.x || 16.x || 16.4.0-alpha.0911da3
     dependencies:
       create-react-context: 0.3.0(prop-types@15.8.1)(react@16.14.0)
       invariant: 2.2.4
@@ -4655,8 +4650,8 @@ packages:
   /@storybook/addon-actions@7.5.2(@types/react-dom@16.9.19)(@types/react@16.14.43)(react-dom@16.14.0)(react@16.14.0):
     resolution: {integrity: sha512-jKF3rrMEu42TgZ5AEszADpVdASDu1S4Ozp1Ymf4akHLkaMOv+yzzD7LV6YGjJz8S2IryndZqE47e6stF0T99uA==}
     peerDependencies:
-      react: ^16.11.0
-      react-dom: ^16.11.0
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
     peerDependenciesMeta:
       react:
         optional: true
@@ -4698,8 +4693,8 @@ packages:
   /@storybook/addon-docs@7.5.2(@types/react-dom@16.9.19)(@types/react@16.14.43)(react-dom@16.14.0)(react@16.14.0):
     resolution: {integrity: sha512-KxX4XuxK6YcI2mUosFkAlueMon/nby6mp3GRHenuK+nobY0ecfILqSTbsOeO1wqPxALBoq7fLnrgYhdDlandgQ==}
     peerDependencies:
-      react: ^16.11.0
-      react-dom: ^16.11.0
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:
       '@jest/transform': 29.6.1
       '@mdx-js/react': 2.3.0(react@16.14.0)
@@ -4732,7 +4727,7 @@ packages:
   /@storybook/addon-info@5.3.21(@types/react@16.14.43)(react-dom@16.14.0)(react@16.14.0):
     resolution: {integrity: sha512-A/K9HzmoXMuOUxH3AozTvjNZwTlYVHob2OaDRfMza0gYMzG0tOrxqcdNTigeAWAjS//Z0G3enue6rHulQZK/+g==}
     peerDependencies:
-      react: ^16.11.0
+      react: '*'
     dependencies:
       '@storybook/addons': 5.3.21(react-dom@16.14.0)
       '@storybook/client-logger': 5.3.21
@@ -4764,8 +4759,8 @@ packages:
       '@storybook/components': ^7.0.0
       '@storybook/core-events': ^7.0.0
       '@storybook/theming': ^7.0.0
-      react: ^16.11.0
-      react-dom: ^16.11.0
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
     peerDependenciesMeta:
       react:
         optional: true
@@ -4793,8 +4788,8 @@ packages:
   /@storybook/addon-links@7.5.2(react-dom@16.14.0)(react@16.14.0):
     resolution: {integrity: sha512-IhUYNOJQYJd8Cnb93l8egnGCGhHV0VHo6HmZT9YjBVuUtetGQbW8Eoh0pQwuklUrJ3jLPwMoKFhN1irQXJjZwQ==}
     peerDependencies:
-      react: ^16.11.0
-      react-dom: ^16.11.0
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
     peerDependenciesMeta:
       react:
         optional: true
@@ -4818,8 +4813,8 @@ packages:
   /@storybook/addon-storysource@7.5.2(@types/react-dom@16.9.19)(@types/react@16.14.43)(react-dom@16.14.0)(react@16.14.0):
     resolution: {integrity: sha512-cKw6bNNgguo1V4FZhNIWI1/M0NqxrRWjoWq2MiC+S1YkKrfZcyssHvy0/4XgWcf/vPKWjwD3nGLLt8BJQL+3bg==}
     peerDependencies:
-      react: ^16.11.0
-      react-dom: ^16.11.0
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
     peerDependenciesMeta:
       react:
         optional: true
@@ -4847,8 +4842,8 @@ packages:
   /@storybook/addon-viewport@7.5.2(@types/react-dom@16.9.19)(@types/react@16.14.43)(react-dom@16.14.0)(react@16.14.0):
     resolution: {integrity: sha512-qN5X9vgp0v+WGXyFBHQ/CqjdtmnCoHhUjqXmBxEGBziJz/tZwWwtTGWeUUZpuTjCGiZutLrizOFl5MqQAI+ipg==}
     peerDependencies:
-      react: ^16.11.0
-      react-dom: ^16.11.0
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
     peerDependenciesMeta:
       react:
         optional: true
@@ -4889,8 +4884,8 @@ packages:
   /@storybook/addons@7.5.2(react-dom@16.14.0)(react@16.14.0):
     resolution: {integrity: sha512-hRiy56zQbz72Pwa4F40srUWXKGNIriNkZ1R0j5KPd8ZqoMk1hIeW0S8E7s1vuM/MplnUE/jFJZqu6HQCvbqmGg==}
     peerDependencies:
-      react: ^16.11.0
-      react-dom: ^16.11.0
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:
       '@storybook/manager-api': 7.5.2(react-dom@16.14.0)(react@16.14.0)
       '@storybook/preview-api': 7.5.2
@@ -4931,8 +4926,8 @@ packages:
   /@storybook/blocks@7.5.2(@types/react-dom@16.9.19)(@types/react@16.14.43)(react-dom@16.14.0)(react@16.14.0):
     resolution: {integrity: sha512-Tf6XE/YcnWQVBJRcJWJzhkahjSymv6QZuxMAiKFD8v48QRJ8kTxz1tBN9676Ux+l1WwtVWxwvd/0kRKKxE70wQ==}
     peerDependencies:
-      react: ^16.11.0
-      react-dom: ^16.11.0
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:
       '@storybook/channels': 7.5.2
       '@storybook/client-logger': 7.5.2
@@ -5149,8 +5144,8 @@ packages:
   /@storybook/components@5.3.21(@types/react@16.14.43)(react-dom@16.14.0)(react@16.14.0):
     resolution: {integrity: sha512-42QQk6qZl6wrtajP8yNCfmNS2t8Iod5QY+4V/l6iNnnT9O+j6cWOlnO+ZyvjNv0Xm0zIOt+VyVjdkKh8FUjQmA==}
     peerDependencies:
-      react: ^16.11.0
-      react-dom: ^16.11.0
+      react: '*'
+      react-dom: '*'
     dependencies:
       '@storybook/client-logger': 5.3.21
       '@storybook/theming': 5.3.21(react-dom@16.14.0)(react@16.14.0)
@@ -5169,7 +5164,7 @@ packages:
       react-focus-lock: 2.9.4(@types/react@16.14.43)(react@16.14.0)
       react-helmet-async: 1.3.0(react-dom@16.14.0)(react@16.14.0)
       react-popper-tooltip: 2.11.1(react-dom@16.14.0)(react@16.14.0)
-      react-syntax-highlighter: 15.5.0(react@16.14.0)
+      react-syntax-highlighter: 11.0.3(react@16.14.0)
       react-textarea-autosize: 7.1.2(react@16.14.0)
       simplebar-react: 1.2.3(react-dom@16.14.0)(react@16.14.0)
       ts-dedent: 1.2.0
@@ -5180,8 +5175,8 @@ packages:
   /@storybook/components@7.5.2(@types/react-dom@16.9.19)(@types/react@16.14.43)(react-dom@16.14.0)(react@16.14.0):
     resolution: {integrity: sha512-OP+o6AoxoQDbqjk/jdQ1arlc1T8601eCL+rS1dJY9EtAFq7Z0LEFtafhEW/Lx8FotfVGjfCNptH9ODhHU6e5Jw==}
     peerDependencies:
-      react: ^16.11.0
-      react-dom: ^16.11.0
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:
       '@radix-ui/react-select': 1.2.2(@types/react-dom@16.9.19)(@types/react@16.14.43)(react-dom@16.14.0)(react@16.14.0)
       '@radix-ui/react-toolbar': 1.0.4(@types/react-dom@16.9.19)(@types/react@16.14.43)(react-dom@16.14.0)(react@16.14.0)
@@ -5376,8 +5371,8 @@ packages:
   /@storybook/manager-api@7.5.2(react-dom@16.14.0)(react@16.14.0):
     resolution: {integrity: sha512-WX8GjBkITRQzhQ08WEAVjdDW8QqqIQhWOpFzXUYCxCNzt1eSALI31QQ+M1/MYymw+TOkotC/SMcn/puIAm4rdA==}
     peerDependencies:
-      react: ^16.11.0
-      react-dom: ^16.11.0
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:
       '@storybook/channels': 7.5.2
       '@storybook/client-logger': 7.5.2
@@ -5419,8 +5414,8 @@ packages:
     engines: {node: '>=16.0.0'}
     peerDependencies:
       '@babel/core': ^7.22.0
-      react: ^16.11.0
-      react-dom: ^16.11.0
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
       typescript: '*'
     peerDependenciesMeta:
       '@babel/core':
@@ -5507,8 +5502,8 @@ packages:
   /@storybook/react-dom-shim@7.5.2(react-dom@16.14.0)(react@16.14.0):
     resolution: {integrity: sha512-x7h3TTLRLs8mrsCBKXbvjBRFms73XrNlm0Lo5Tu/Tf//+pwOFq+2sGBkqbRkYd54jNHhpqNF7+UUdzA93ESnbQ==}
     peerDependencies:
-      react: ^16.11.0
-      react-dom: ^16.11.0
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:
       react: 16.14.0
       react-dom: 16.14.0(react@16.14.0)
@@ -5519,8 +5514,8 @@ packages:
     engines: {node: '>=16.0.0'}
     peerDependencies:
       '@babel/core': ^7.22.0
-      react: ^16.11.0
-      react-dom: ^16.11.0
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
       typescript: '*'
     peerDependenciesMeta:
       '@babel/core':
@@ -5555,8 +5550,8 @@ packages:
     resolution: {integrity: sha512-7X8GtqvRjWmVS112ifChJMxfD15rMVg5m3t6apZqi0uui1S/DImAveHwz8M4FhsElW6MIHs5xK0uJhR9rVQgTA==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
-      react: ^16.11.0
-      react-dom: ^16.11.0
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
       typescript: '*'
     peerDependenciesMeta:
       typescript:
@@ -5594,8 +5589,8 @@ packages:
   /@storybook/router@5.3.21(react-dom@16.14.0)(react@16.14.0):
     resolution: {integrity: sha512-c29m5UikK5Q1lyd6FltOGFhIcpd6PIb855YS3OUNe3F6ZA1tfJ+aNKrCBc65d1c+fvCGG76dYYYv0RvwEmKXXg==}
     peerDependencies:
-      react: ^16.11.0
-      react-dom: ^16.11.0
+      react: '*'
+      react-dom: '*'
     dependencies:
       '@reach/router': 1.3.4(react-dom@16.14.0)(react@16.14.0)
       '@storybook/csf': 0.0.1
@@ -5613,8 +5608,8 @@ packages:
   /@storybook/router@7.5.2(react-dom@16.14.0)(react@16.14.0):
     resolution: {integrity: sha512-jlh48TVUlqvGkU8MnkVp9SrCHomWGtQGx1WMK94NMyOPVPTLWzM6LjIybgmHz0MTe4lpzmbiIOfSlU3pPX054w==}
     peerDependencies:
-      react: ^16.11.0
-      react-dom: ^16.11.0
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:
       '@storybook/client-logger': 7.5.2
       memoizerific: 1.11.3
@@ -5626,8 +5621,8 @@ packages:
   /@storybook/source-loader@7.5.2(react-dom@16.14.0)(react@16.14.0):
     resolution: {integrity: sha512-9j52EWVXwkK5kBf1EryNCdFJVoel4Mf2STFYqyTyWV0EyYQu+RrSQpqqduaF6tbYY1spDXCnyTg0AmduXazMlw==}
     peerDependencies:
-      react: ^16.11.0
-      react-dom: ^16.11.0
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:
       '@storybook/csf': 0.1.1
       '@storybook/types': 7.5.2
@@ -5657,8 +5652,8 @@ packages:
   /@storybook/theming@5.3.21(react-dom@16.14.0)(react@16.14.0):
     resolution: {integrity: sha512-FZbxjizqdO9lV5LUixPio/7+6UdPiswCzTJn8Hcot9uwwgfnrViRdN7xyjmSYRqv9nHP3OlYbtdeCAgZ4aPq8g==}
     peerDependencies:
-      react: ^16.11.0
-      react-dom: ^16.11.0
+      react: '*'
+      react-dom: '*'
     dependencies:
       '@emotion/core': 10.3.1(react@16.14.0)
       '@emotion/styled': 10.3.0(@emotion/core@10.3.1)(react@16.14.0)
@@ -5679,8 +5674,8 @@ packages:
   /@storybook/theming@7.5.2(react-dom@16.14.0)(react@16.14.0):
     resolution: {integrity: sha512-DZBTcYErSYvmTYsGz7lKtiIcBe8flBw5Ojp52r3O4GcRYG4AbuUwwVvehz+O1cWaS+UW3HavrcgapERH7ZHd1A==}
     peerDependencies:
-      react: ^16.11.0
-      react-dom: ^16.11.0
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:
       '@emotion/use-insertion-effect-with-fallbacks': 1.0.1(react@16.14.0)
       '@storybook/client-logger': 7.5.2
@@ -5851,7 +5846,7 @@ packages:
   /@turist/fetch@7.2.0(node-fetch@2.6.12):
     resolution: {integrity: sha512-2x7EGw+6OJ29phunsbGvtxlNmSfcuPcyYudkMbi8gARCP9eJ1CtuMvnVUHL//O9Ixi9SJiug8wNt6lj86pN8XQ==}
     peerDependencies:
-      node-fetch: '>=2.6.1'
+      node-fetch: '2'
     dependencies:
       '@types/node-fetch': 2.6.4
       node-fetch: 2.6.12
@@ -7156,7 +7151,7 @@ packages:
     engines: {node: ^10 || ^12 || >=14}
     hasBin: true
     peerDependencies:
-      postcss: '>=8.4.31'
+      postcss: ^8.1.0
     dependencies:
       browserslist: 4.22.1
       caniuse-lite: 1.0.30001561
@@ -7456,7 +7451,7 @@ packages:
     engines: {node: '>=14.15.0'}
     peerDependencies:
       '@babel/core': ^7.0.0
-      gatsby: '>=4.25.7'
+      gatsby: ^4.0.0-next
     dependencies:
       '@babel/core': 7.23.2
       '@babel/runtime': 7.23.2
@@ -8606,7 +8601,7 @@ packages:
     resolution: {integrity: sha512-dNldIoSuNSvlTJ7slIKC/ZFGKexBMBrrcc+TTe1NdmROnaASuLPvqpwj9v4XS4uXZ8+YPu0sNmShX2rXI5LNsw==}
     peerDependencies:
       prop-types: ^15.0.0
-      react: ^16.11.0
+      react: ^0.14.0 || ^15.0.0 || ^16.0.0
     dependencies:
       gud: 1.0.0
       prop-types: 15.8.1
@@ -8628,7 +8623,7 @@ packages:
     dependencies:
       nice-try: 1.0.5
       path-key: 2.0.1
-      semver: 7.5.4
+      semver: 5.7.2
       shebang-command: 1.2.0
       which: 1.3.1
 
@@ -8653,7 +8648,7 @@ packages:
     resolution: {integrity: sha512-rtdthzxKuyq6IzqX6jEcIzQF/YqccluefyCYheovBOLhFT/drQA9zj/UbRAa9J7C0o6EG6u3E6g+vKkay7/k3g==}
     engines: {node: ^10 || ^12 || >=14}
     peerDependencies:
-      postcss: '>=8.4.31'
+      postcss: ^8.0.9
     dependencies:
       postcss: 8.4.31
     dev: false
@@ -8785,7 +8780,7 @@ packages:
     resolution: {integrity: sha512-t0SFesj/ZV2OTylqQVOrFgEh5uanxbO6ZAdeCrNsUQ6fVuXwYTxJPNAGvGTxHbD68ldIJNec7PyYZDBrfDQ+6A==}
     engines: {node: ^10 || ^12 || >=14.0}
     peerDependencies:
-      postcss: '>=8.4.31'
+      postcss: ^8.2.15
     dependencies:
       css-declaration-sorter: 6.4.1(postcss@8.4.31)
       cssnano-utils: 3.1.0(postcss@8.4.31)
@@ -8823,7 +8818,7 @@ packages:
     resolution: {integrity: sha512-JQNR19/YZhz4psLX/rQ9M83e3z2Wf/HdJbryzte4a3NSuafyp9w/I4U+hx5C2S9g41qlstH7DEWnZaaj83OuEA==}
     engines: {node: ^10 || ^12 || >=14.0}
     peerDependencies:
-      postcss: '>=8.4.31'
+      postcss: ^8.2.15
     dependencies:
       postcss: 8.4.31
     dev: false
@@ -8832,7 +8827,7 @@ packages:
     resolution: {integrity: sha512-j+BKgDcLDQA+eDifLx0EO4XSA56b7uut3BQFH+wbSaSTuGLuiyTa/wbRYthUXX8LC9mLg+WWKe8h+qJuwTAbHw==}
     engines: {node: ^10 || ^12 || >=14.0}
     peerDependencies:
-      postcss: '>=8.4.31'
+      postcss: ^8.2.15
     dependencies:
       cssnano-preset-default: 5.2.14(postcss@8.4.31)
       lilconfig: 2.1.0
@@ -9367,7 +9362,7 @@ packages:
     resolution: {integrity: sha512-mXiD2Oj7N9b6+h/dC6oLf9hwxbtKHQjoIqtodEyL8CpkN4F3V4IK/BT4D0C7zSs4BBFOu4UlPJbvvBLa88SGEA==}
     peerDependencies:
       '@emotion/core': ^10.0.27
-      react: ^16.11.0
+      react: '>=16.3.0'
     dependencies:
       '@babel/runtime': 7.23.2
       '@emotion/core': 10.3.1(react@16.14.0)
@@ -9904,7 +9899,7 @@ packages:
       minimatch: 3.1.2
       object.values: 1.1.6
       resolve: 1.22.2
-      semver: 7.5.4
+      semver: 6.3.1
       tsconfig-paths: 3.14.2
     transitivePeerDependencies:
       - eslint-import-resolver-typescript
@@ -9937,7 +9932,7 @@ packages:
       minimatch: 3.1.2
       object.values: 1.1.6
       resolve: 1.22.2
-      semver: 7.5.4
+      semver: 6.3.1
       tsconfig-paths: 3.14.2
     transitivePeerDependencies:
       - eslint-import-resolver-typescript
@@ -9967,7 +9962,7 @@ packages:
       minimatch: 3.1.2
       object.entries: 1.1.6
       object.fromentries: 2.0.6
-      semver: 7.5.4
+      semver: 6.3.1
     dev: true
 
   /eslint-plugin-jsx-a11y@6.7.1(eslint@7.32.0):
@@ -9992,7 +9987,7 @@ packages:
       minimatch: 3.1.2
       object.entries: 1.1.6
       object.fromentries: 2.0.6
-      semver: 7.5.4
+      semver: 6.3.1
     dev: false
 
   /eslint-plugin-prettier@3.4.1(eslint-config-prettier@6.15.0)(eslint@6.8.0)(prettier@1.19.1):
@@ -10050,7 +10045,7 @@ packages:
       object.values: 1.1.6
       prop-types: 15.8.1
       resolve: 2.0.0-next.4
-      semver: 7.5.4
+      semver: 6.3.1
       string.prototype.matchall: 4.0.8
     dev: true
 
@@ -10074,7 +10069,7 @@ packages:
       object.values: 1.1.6
       prop-types: 15.8.1
       resolve: 2.0.0-next.4
-      semver: 7.5.4
+      semver: 6.3.1
       string.prototype.matchall: 4.0.8
     dev: false
 
@@ -10170,7 +10165,7 @@ packages:
       optionator: 0.8.3
       progress: 2.0.3
       regexpp: 2.0.1
-      semver: 7.5.4
+      semver: 6.3.1
       strip-ansi: 5.2.0
       strip-json-comments: 3.1.1
       table: 5.4.6
@@ -11223,8 +11218,8 @@ packages:
     engines: {node: '>=14.15.0'}
     peerDependencies:
       '@gatsbyjs/reach-router': ^1.3.5
-      react: ^16.11.0
-      react-dom: ^16.11.0
+      react: ^16.9.0 || ^17.0.0 || ^18.0.0 || ^0.0.0
+      react-dom: ^16.9.0 || ^17.0.0 || ^18.0.0 || ^0.0.0
     dependencies:
       '@gatsbyjs/reach-router': 1.3.9(react-dom@16.14.0)(react@16.14.0)
       '@types/reach__router': 1.3.11
@@ -11310,7 +11305,7 @@ packages:
     resolution: {integrity: sha512-Kiom3IHQ+hsRA/yt+XcBdOn1q+Rqbso5Iw0mXQQg+F+8U23sU66NaJY67ZXUkW8iwU25SOrwZaSw49C8BV0EGw==}
     engines: {node: '>=10.13.0'}
     peerDependencies:
-      gatsby: '>=4.25.7'
+      gatsby: ^2.25.0
     dependencies:
       '@babel/runtime': 7.23.2
       gatsby: 4.25.7(react-dom@16.14.0)(react@16.14.0)
@@ -11326,7 +11321,7 @@ packages:
     resolution: {integrity: sha512-S+fzmu/7vPDyZyZLMpiQniQllnjgBx87k8Ii00Nea6oij9TlEYpRVTFEtJO+6P8QyF20PxoKvq0ZNmuxK9mAiw==}
     engines: {node: '>=8.0.0'}
     peerDependencies:
-      gatsby: '>=4.25.7'
+      gatsby: ^2.0.100
     dependencies:
       '@babel/runtime': 7.23.2
       cheerio: 1.0.0-rc.12
@@ -11341,7 +11336,7 @@ packages:
     resolution: {integrity: sha512-plHek7xHSV9l1bLPa1JAnxzBqP7j2ihCPRwpBk/wIJAR8cG65wjAT+Nu8DKpW0+2/MYill84ns1r2m8g0L/7bg==}
     engines: {node: '>=14.15.0'}
     peerDependencies:
-      gatsby: '>=4.25.7'
+      gatsby: ^4.0.0-next
     dependencies:
       '@babel/runtime': 7.23.2
       '@babel/traverse': 7.23.2
@@ -11366,7 +11361,7 @@ packages:
     resolution: {integrity: sha512-TktmUysb7wDwYOKowNcpXxLJfQiwQ7cSQ8ALH3pJrW63wBaCoBXvAHg3OhgHVR74CrqN2Tb89tr3GXa4JhO4Qw==}
     engines: {node: '>=10.13.0'}
     peerDependencies:
-      gatsby: '>=4.25.7'
+      gatsby: ^2.0.0
       react-helmet: ^5.1.3 || ^6.0.0
     dependencies:
       '@babel/runtime': 7.23.2
@@ -11378,7 +11373,7 @@ packages:
     resolution: {integrity: sha512-cGRb8lmwJkzwT1Qze0R+VL+55BIb9weM17m+dUf6gs5Z++lQltqge+L8a1qWWsGL6KfLQN7+bIqjhmTTscIPMQ==}
     engines: {node: '>=14.15.0'}
     peerDependencies:
-      gatsby: '>=4.25.7'
+      gatsby: ^4.0.0-next
     dependencies:
       '@babel/runtime': 7.23.2
       async: 3.2.4
@@ -11403,7 +11398,7 @@ packages:
     engines: {node: '>=10.13.0'}
     peerDependencies:
       babel-plugin-styled-components: '>1.5.0'
-      gatsby: '>=4.25.7'
+      gatsby: ^2.0.32
       styled-components: '>=2.0.0'
     dependencies:
       '@babel/runtime': 7.23.2
@@ -11416,7 +11411,7 @@ packages:
     resolution: {integrity: sha512-8BTtiVWuIqIEGx/PBBMWd6FYPgel16hT3js7SMo5oI9K4EPsSxRItgRf41MTJGxRR20EhL4e99g2S8x0v1+odA==}
     engines: {node: '>=14.15.0'}
     peerDependencies:
-      gatsby: '>=4.25.7'
+      gatsby: ^4.0.0-next
     dependencies:
       '@babel/core': 7.23.2
       '@babel/plugin-proposal-nullish-coalescing-operator': 7.18.6(@babel/core@7.23.2)
@@ -11434,7 +11429,7 @@ packages:
     resolution: {integrity: sha512-InM8PNHtx1kF87qQOlf4pVeNA8lSIsvSjImvN6dvpUjeQqOMRN1avY0W9Trh6LKTF/keWWj975Gk8Vcr+PYyDA==}
     engines: {node: '>=10.13.0'}
     peerDependencies:
-      gatsby: '>=4.25.7'
+      gatsby: ^2.24.79
       graphql: ^15.0.0
     dependencies:
       '@babel/runtime': 7.23.2
@@ -11447,7 +11442,7 @@ packages:
     resolution: {integrity: sha512-EZtvgHSU5NPbEn6a4cfSpEGCQ09SfwbhoybHTJKj1clop86HSwOCV2iH8RbCc+X6jbdgHaSZsfsl7zG1h7DBUw==}
     engines: {node: '>=14.15.0'}
     peerDependencies:
-      gatsby: '>=4.25.7'
+      gatsby: ^4.0.0-next
       graphql: ^15.0.0
     dependencies:
       '@babel/runtime': 7.23.2
@@ -11468,8 +11463,8 @@ packages:
     engines: {node: '>=14.15.0'}
     peerDependencies:
       '@gatsbyjs/reach-router': ^1.3.5
-      react: ^16.11.0
-      react-dom: ^16.11.0
+      react: ^16.9.0 || ^17.0.0 || ^18.0.0 || ^0.0.0
+      react-dom: ^16.9.0 || ^17.0.0 || ^18.0.0 || ^0.0.0
     dependencies:
       '@babel/runtime': 7.23.2
       '@gatsbyjs/reach-router': 1.3.9(react-dom@16.14.0)(react@16.14.0)
@@ -11483,8 +11478,8 @@ packages:
     engines: {node: '>=14.15.0'}
     peerDependencies:
       '@gatsbyjs/reach-router': ^1.3.5
-      react: ^16.11.0
-      react-dom: ^16.11.0
+      react: ^16.9.0 || ^17.0.0 || ^18.0.0 || ^0.0.0
+      react-dom: ^16.9.0 || ^17.0.0 || ^18.0.0 || ^0.0.0
     dependencies:
       '@gatsbyjs/reach-router': 1.3.9(react-dom@16.14.0)(react@16.14.0)
       react: 16.14.0
@@ -11503,7 +11498,7 @@ packages:
     resolution: {integrity: sha512-Ao526Mmhm8KkF+0Tvf9Le5kKnqX7kgC1wecp82BW2KLQgdtG7UIgmHvG6PkjuFNiJ2ghXPC3vRK3J/vDPyLtkA==}
     engines: {node: '>=10.13.0'}
     peerDependencies:
-      gatsby: '>=4.25.7'
+      gatsby: ^2.2.0
     dependencies:
       '@babel/runtime': 7.23.2
       better-queue: 3.8.12
@@ -11546,8 +11541,8 @@ packages:
     resolution: {integrity: sha512-J9eZB82EMW3QnkGAJVH2X4ydmcRoDGLMPJBzc/VWDSxexuE7CYO/aQvq5RdCW5xetYu7X7J/gSiDflrNNS+F7w==}
     engines: {node: '>=10.13.0'}
     peerDependencies:
-      gatsby: '>=4.25.7'
-      gatsby-plugin-sharp: '>=4.25.1'
+      gatsby: ^2.12.1
+      gatsby-plugin-sharp: ^2.0.0-beta.3
     dependencies:
       '@babel/runtime': 7.23.2
       bluebird: 3.7.2
@@ -11578,8 +11573,8 @@ packages:
     hasBin: true
     requiresBuild: true
     peerDependencies:
-      react: ^16.11.0
-      react-dom: ^16.11.0
+      react: ^16.9.0 || ^17.0.0 || ^18.0.0 || ^0.0.0
+      react-dom: ^16.9.0 || ^17.0.0 || ^18.0.0 || ^0.0.0
     dependencies:
       '@babel/code-frame': 7.22.13
       '@babel/core': 7.23.2
@@ -12262,6 +12257,15 @@ packages:
       zwitch: 1.0.5
     dev: false
 
+  /hastscript@5.1.2:
+    resolution: {integrity: sha512-WlztFuK+Lrvi3EggsqOkQ52rKbxkXL3RwB6t5lwoa8QLMemoWfBuL43eDrwOamJyR7uKQKdmKYaBH1NZBiIRrQ==}
+    dependencies:
+      comma-separated-tokens: 1.0.8
+      hast-util-parse-selector: 2.2.5
+      property-information: 5.6.0
+      space-separated-tokens: 1.1.5
+    dev: true
+
   /hastscript@6.0.0:
     resolution: {integrity: sha512-nDM6bvd7lIqDUiYEiu5Sl/+6ReP0BMk/2f4U/Rooccxkj0P5nm+acM5PrGJ/t5I8qPGiqZSE6hVAwZEdZIvP4w==}
     dependencies:
@@ -12485,7 +12489,7 @@ packages:
     resolution: {integrity: sha512-soFhflCVWLfRNOPU3iv5Z9VUdT44xFRbzjLsEzSr5AQmgqPMTHdU3PMT1Cf1ssx8fLNJDA1juftYl+PUcv3MqA==}
     engines: {node: ^10 || ^12 || >= 14}
     peerDependencies:
-      postcss: '>=8.4.31'
+      postcss: ^8.1.0
     dependencies:
       postcss: 8.4.31
 
@@ -13150,7 +13154,7 @@ packages:
       '@babel/traverse': 7.23.2
       '@babel/types': 7.23.0
       istanbul-lib-coverage: 2.0.5
-      semver: 7.5.4
+      semver: 6.3.1
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -13163,7 +13167,7 @@ packages:
       '@babel/parser': 7.23.0
       '@istanbuljs/schema': 0.1.3
       istanbul-lib-coverage: 3.2.0
-      semver: 7.5.4
+      semver: 6.3.1
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -13600,7 +13604,7 @@ packages:
       mkdirp: 0.5.6
       natural-compare: 1.4.0
       pretty-format: 24.9.0
-      semver: 7.5.4
+      semver: 6.3.1
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -14302,6 +14306,13 @@ packages:
     resolution: {integrity: sha512-tqNXrS78oMOE73NMxK4EMLQsQowWf8jKooH9g7xPavRT706R6bkQJ6DY2Te7QukaZsulxa30wQ7bk0pm4XiHmA==}
     engines: {node: '>=8'}
 
+  /lowlight@1.11.0:
+    resolution: {integrity: sha512-xrGGN6XLL7MbTMdPD6NfWPwY43SNkjf/d0mecSx/CW36fUZTjRHEq0/Cdug3TWKtRXLWi7iMl1eP0olYxj/a4A==}
+    dependencies:
+      fault: 1.0.4
+      highlight.js: 10.7.3
+    dev: true
+
   /lowlight@1.20.0:
     resolution: {integrity: sha512-8Ktj+prEb1RoCPkEOrPMYUN/nCggB7qAWe3a7OpMjWQkh3l2RD5wKRQ+o8Q8YuI9RG/xs95waaI/E6ym/7NsTw==}
     dependencies:
@@ -14355,14 +14366,14 @@ packages:
     engines: {node: '>=6'}
     dependencies:
       pify: 4.0.1
-      semver: 7.5.4
+      semver: 5.7.2
     dev: true
 
   /make-dir@3.1.0:
     resolution: {integrity: sha512-g3FeP20LNwhALb/6Cz6Dd4F2ngze0jz7tbzrD2wAV+o9FeNHe4rL+yK2md0J/fiSf1sa1ADhXqi5+oVwOM/eGw==}
     engines: {node: '>=8'}
     dependencies:
-      semver: 7.5.4
+      semver: 6.3.1
 
   /make-dir@4.0.0:
     resolution: {integrity: sha512-hXdUTZYIVOt1Ex//jAQi+wTZZpUpwBj/0QsOzqegb3rGMMeJiSEu5xLHnYfBrRV4RH2+OCSOO95Is/7x1WJ4bw==}
@@ -14415,7 +14426,7 @@ packages:
     resolution: {integrity: sha512-3lRCD5Sh+tfA52iGgfs/XZiw33f7fFX9Bn55aNnVNUd2GzLDkOWyKYYD8Yju2B1Vn+feiEdgJs8T6Tg0xNokPw==}
     engines: {node: '>= 4'}
     peerDependencies:
-      react: ^16.11.0
+      react: '>= 0.14.0'
     dependencies:
       prop-types: 15.8.1
       react: 16.14.0
@@ -14426,7 +14437,7 @@ packages:
     resolution: {integrity: sha512-9HrdzBAo0+sFz9ZYAGT5fB8ilzTW+q6lPocRxrIesMO+aB40V9MgFfbfMXxlGjf22OpRy+IXlvVaQenicdpgbg==}
     engines: {node: '>= 10'}
     peerDependencies:
-      react: ^16.11.0
+      react: '>= 0.14.0'
     dependencies:
       react: 16.14.0
     dev: true
@@ -14935,7 +14946,7 @@ packages:
     resolution: {integrity: sha512-tmPX422rYgofd4epzrNoOXiE8XFZYOcCq1vD7MAXCDO+O+zndlA2ztdKKMa+EeuBG5tHETpr4ml4RGgpqDCCAg==}
     engines: {node: '>= 0.10.5'}
     dependencies:
-      minimatch: 9.0.3
+      minimatch: 3.1.2
     dev: true
 
   /node-eta@0.9.0:
@@ -15003,7 +15014,7 @@ packages:
     dependencies:
       hosted-git-info: 2.8.9
       resolve: 1.22.2
-      semver: 7.5.4
+      semver: 5.7.2
       validate-npm-package-license: 3.0.4
     dev: true
 
@@ -15371,7 +15382,7 @@ packages:
       got: 11.8.6
       registry-auth-token: 4.2.2
       registry-url: 5.1.0
-      semver: 7.5.4
+      semver: 6.3.1
 
   /pako@0.2.9:
     resolution: {integrity: sha512-NUcwaKxUxWrZLpDG+z/xZaCgQITkA/Dv4V/T6bw7VON6l1Xz/VnrBqrYjZQ12TamKHzITTfOEIYUj48y2KXImA==}
@@ -15426,7 +15437,6 @@ packages:
       is-alphanumerical: 1.0.4
       is-decimal: 1.0.4
       is-hexadecimal: 1.0.4
-    dev: false
 
   /parse-entities@2.0.0:
     resolution: {integrity: sha512-kkywGpCcRYhqQIchaWqZ875wzpS/bMKhz5HnN3p7wveJTkTtyAB/AlnS0f8DFSqYW1T82t6yEAkEcB+A1I3MbQ==}
@@ -15737,7 +15747,7 @@ packages:
   /postcss-calc@8.2.4(postcss@8.4.31):
     resolution: {integrity: sha512-SmWMSJmB8MRnnULldx0lQIyhSNvuDl9HfrZkaqqE/WHAhToYsAvDq+yAsA/kIyINDszOp3Rh0GFoNuH5Ypsm3Q==}
     peerDependencies:
-      postcss: '>=8.4.31'
+      postcss: ^8.2.2
     dependencies:
       postcss: 8.4.31
       postcss-selector-parser: 6.0.13
@@ -15748,7 +15758,7 @@ packages:
     resolution: {integrity: sha512-UsWQG0AqTFQmpBegeLLc1+c3jIqBNB0zlDGRWR+dQ3pRKJL1oeMzyqmH3o2PIfn9MBdNrVPWhDbT769LxCTLJQ==}
     engines: {node: ^10 || ^12 || >=14.0}
     peerDependencies:
-      postcss: '>=8.4.31'
+      postcss: ^8.2.15
     dependencies:
       browserslist: 4.22.1
       caniuse-api: 3.0.0
@@ -15761,7 +15771,7 @@ packages:
     resolution: {integrity: sha512-82pC1xkJZtcJEfiLw6UXnXVXScgtBrjlO5CBmuDQc+dlb88ZYheFsjTn40+zBVi3DkfF7iezO0nJUPLcJK3pvA==}
     engines: {node: ^10 || ^12 || >=14.0}
     peerDependencies:
-      postcss: '>=8.4.31'
+      postcss: ^8.2.15
     dependencies:
       browserslist: 4.22.1
       postcss: 8.4.31
@@ -15772,7 +15782,7 @@ packages:
     resolution: {integrity: sha512-+L8208OVbHVF2UQf1iDmRcbdjJkuBF6IS29yBDSiWUIzpYaAhtNl6JYnYm12FnkeCwQqF5LeklOu6rAqgfBZqQ==}
     engines: {node: ^10 || ^12 || >=14.0}
     peerDependencies:
-      postcss: '>=8.4.31'
+      postcss: ^8.2.15
     dependencies:
       postcss: 8.4.31
     dev: false
@@ -15781,7 +15791,7 @@ packages:
     resolution: {integrity: sha512-zmX3IoSI2aoenxHV6C7plngHWWhUOV3sP1T8y2ifzxzbtnuhk1EdPwm0S1bIUNaJ2eNbWeGLEwzw8huPD67aQw==}
     engines: {node: ^10 || ^12 || >=14.0}
     peerDependencies:
-      postcss: '>=8.4.31'
+      postcss: ^8.2.15
     dependencies:
       postcss: 8.4.31
     dev: false
@@ -15790,7 +15800,7 @@ packages:
     resolution: {integrity: sha512-zPz4WljiSuLWsI0ir4Mcnr4qQQ5e1Ukc3i7UfE2XcrwKK2LIPIqE5jxMRxO6GbI3cv//ztXDsXwEWT3BHOGh3A==}
     engines: {node: ^10 || ^12 || >=14.0}
     peerDependencies:
-      postcss: '>=8.4.31'
+      postcss: ^8.2.15
     dependencies:
       postcss: 8.4.31
     dev: false
@@ -15799,7 +15809,7 @@ packages:
     resolution: {integrity: sha512-21nOL7RqWR1kasIVdKs8HNqQJhFxLsyRfAnUDm4Fe4t4mCWL9OJiHvlHPjcd8zc5Myu89b/7wZDnOSjFgeWRtw==}
     engines: {node: ^10 || ^12 || >=14.0}
     peerDependencies:
-      postcss: '>=8.4.31'
+      postcss: ^8.2.15
     dependencies:
       postcss: 8.4.31
     dev: false
@@ -15807,7 +15817,7 @@ packages:
   /postcss-flexbugs-fixes@5.0.2(postcss@8.4.31):
     resolution: {integrity: sha512-18f9voByak7bTktR2QgDveglpn9DTbBWPUzSOe9g0N4WR/2eSt6Vrcbf0hmspvMI6YWGywz6B9f7jzpFNJJgnQ==}
     peerDependencies:
-      postcss: '>=8.4.31'
+      postcss: ^8.1.4
     dependencies:
       postcss: 8.4.31
     dev: false
@@ -15816,7 +15826,7 @@ packages:
     resolution: {integrity: sha512-/+Z1RAmssdiSLgIZwnJHwBMnlABPgF7giYzTN2NOfr9D21IJZ4mQC1R2miwp80zno9M4zMD/umGI8cR+2EL5zw==}
     engines: {node: '>= 10.13.0'}
     peerDependencies:
-      postcss: '>=8.4.31'
+      postcss: ^7.0.0 || ^8.0.1
       webpack: ^5.0.0
     dependencies:
       cosmiconfig: 7.1.0
@@ -15830,7 +15840,7 @@ packages:
     resolution: {integrity: sha512-YCI9gZB+PLNskrK0BB3/2OzPnGhPkBEwmwhfYk1ilBHYVAZB7/tkTHFBAnCrvBBOmeYyMYw3DMjT55SyxMBzjQ==}
     engines: {node: ^10 || ^12 || >=14.0}
     peerDependencies:
-      postcss: '>=8.4.31'
+      postcss: ^8.2.15
     dependencies:
       postcss: 8.4.31
       postcss-value-parser: 4.2.0
@@ -15841,7 +15851,7 @@ packages:
     resolution: {integrity: sha512-0R2IuYpgU93y9lhVbO/OylTtKMVcHb67zjWIfCiKR9rWL3GUk1677LAqD/BcHizukdZEjT8Ru3oHRoAYoJy44g==}
     engines: {node: ^10 || ^12 || >=14.0}
     peerDependencies:
-      postcss: '>=8.4.31'
+      postcss: ^8.2.15
     dependencies:
       browserslist: 4.22.1
       caniuse-api: 3.0.0
@@ -15854,7 +15864,7 @@ packages:
     resolution: {integrity: sha512-el3mYTgx13ZAPPirSVsHqFzl+BBBDrXvbySvPGFnQcTI4iNslrPaFq4muTkLZmKlGk4gyFAYUBMH30+HurREyA==}
     engines: {node: ^10 || ^12 || >=14.0}
     peerDependencies:
-      postcss: '>=8.4.31'
+      postcss: ^8.2.15
     dependencies:
       postcss: 8.4.31
       postcss-value-parser: 4.2.0
@@ -15864,7 +15874,7 @@ packages:
     resolution: {integrity: sha512-VGvXMTpCEo4qHTNSa9A0a3D+dxGFZCYwR6Jokk+/3oB6flu2/PnPXAh2x7x52EkY5xlIHLm+Le8tJxe/7TNhzw==}
     engines: {node: ^10 || ^12 || >=14.0}
     peerDependencies:
-      postcss: '>=8.4.31'
+      postcss: ^8.2.15
     dependencies:
       colord: 2.9.3
       cssnano-utils: 3.1.0(postcss@8.4.31)
@@ -15876,7 +15886,7 @@ packages:
     resolution: {integrity: sha512-+mePA3MgdmVmv6g+30rn57USjOGSAyuxUmkfiWpzalZ8aiBkdPYjXWtHuwJGm1v5Ojy0Z0LaSYhHaLJQB0P8Jw==}
     engines: {node: ^10 || ^12 || >=14.0}
     peerDependencies:
-      postcss: '>=8.4.31'
+      postcss: ^8.2.15
     dependencies:
       browserslist: 4.22.1
       cssnano-utils: 3.1.0(postcss@8.4.31)
@@ -15888,7 +15898,7 @@ packages:
     resolution: {integrity: sha512-nPJu7OjZJTsVUmPdm2TcaiohIwxP+v8ha9NehQ2ye9szv4orirRU3SDdtUmKH+10nzn0bAyOXZ0UEr7OpvLehg==}
     engines: {node: ^10 || ^12 || >=14.0}
     peerDependencies:
-      postcss: '>=8.4.31'
+      postcss: ^8.2.15
     dependencies:
       postcss: 8.4.31
       postcss-selector-parser: 6.0.13
@@ -15898,7 +15908,7 @@ packages:
     resolution: {integrity: sha512-bdHleFnP3kZ4NYDhuGlVK+CMrQ/pqUm8bx/oGL93K6gVwiclvX5x0n76fYMKuIGKzlABOy13zsvqjb0f92TEXw==}
     engines: {node: ^10 || ^12 || >= 14}
     peerDependencies:
-      postcss: '>=8.4.31'
+      postcss: ^8.1.0
     dependencies:
       postcss: 8.4.31
 
@@ -15906,7 +15916,7 @@ packages:
     resolution: {integrity: sha512-2/u2zraspoACtrbFRnTijMiQtb4GW4BvatjaG/bCjYQo8kLTdevCUlwuBHx2sCnSyrI3x3qj4ZK1j5LQBgzmwA==}
     engines: {node: ^10 || ^12 || >= 14}
     peerDependencies:
-      postcss: '>=8.4.31'
+      postcss: ^8.1.0
     dependencies:
       icss-utils: 5.1.0(postcss@8.4.31)
       postcss: 8.4.31
@@ -15917,7 +15927,7 @@ packages:
     resolution: {integrity: sha512-hncihwFA2yPath8oZ15PZqvWGkWf+XUfQgUGamS4LqoP1anQLOsOJw0vr7J7IwLpoY9fatA2qiGUGmuZL0Iqlg==}
     engines: {node: ^10 || ^12 || >= 14}
     peerDependencies:
-      postcss: '>=8.4.31'
+      postcss: ^8.1.0
     dependencies:
       postcss: 8.4.31
       postcss-selector-parser: 6.0.13
@@ -15926,7 +15936,7 @@ packages:
     resolution: {integrity: sha512-RDxHkAiEGI78gS2ofyvCsu7iycRv7oqw5xMWn9iMoR0N/7mf9D50ecQqUo5BZ9Zh2vH4bCUR/ktCqbB9m8vJjQ==}
     engines: {node: ^10 || ^12 || >= 14}
     peerDependencies:
-      postcss: '>=8.4.31'
+      postcss: ^8.1.0
     dependencies:
       icss-utils: 5.1.0(postcss@8.4.31)
       postcss: 8.4.31
@@ -15935,7 +15945,7 @@ packages:
     resolution: {integrity: sha512-mSgUJ+pd/ldRGVx26p2wz9dNZ7ji6Pn8VWBajMXFf8jk7vUoSrZ2lt/wZR7DtlZYKesmZI680qjr2CeFF2fbUg==}
     engines: {node: ^10 || ^12 || >=14.0}
     peerDependencies:
-      postcss: '>=8.4.31'
+      postcss: ^8.2.15
     dependencies:
       postcss: 8.4.31
     dev: false
@@ -15944,7 +15954,7 @@ packages:
     resolution: {integrity: sha512-WP4KIM4o2dazQXWmFaqMmcvsKmhdINFblgSeRgn8BJ6vxaMyaJkwAzpPpuvSIoG/rmX3M+IrRZEz2H0glrQNEA==}
     engines: {node: ^10 || ^12 || >=14.0}
     peerDependencies:
-      postcss: '>=8.4.31'
+      postcss: ^8.2.15
     dependencies:
       postcss: 8.4.31
       postcss-value-parser: 4.2.0
@@ -15954,7 +15964,7 @@ packages:
     resolution: {integrity: sha512-6UpCb0G4eofTCQLFVuI3EVNZzBNPiIKcA1AKVka+31fTVySphr3VUgAIULBhxZkKgwLImhzMR2Bw1ORK+37INg==}
     engines: {node: ^10 || ^12 || >=14.0}
     peerDependencies:
-      postcss: '>=8.4.31'
+      postcss: ^8.2.15
     dependencies:
       postcss: 8.4.31
       postcss-value-parser: 4.2.0
@@ -15964,7 +15974,7 @@ packages:
     resolution: {integrity: sha512-mFpLspGWkQtBcWIRFLmewo8aC3ImN2i/J3v8YCFUwDnPu3Xz4rLohDO26lGjwNsQxB3YF0KKRwspGzE2JEuS0g==}
     engines: {node: ^10 || ^12 || >=14.0}
     peerDependencies:
-      postcss: '>=8.4.31'
+      postcss: ^8.2.15
     dependencies:
       postcss: 8.4.31
       postcss-value-parser: 4.2.0
@@ -15974,7 +15984,7 @@ packages:
     resolution: {integrity: sha512-oYiIJOf4T9T1N4i+abeIc7Vgm/xPCGih4bZz5Nm0/ARVJ7K6xrDlLwvwqOydvyL3RHNf8qZk6vo3aatiw/go3w==}
     engines: {node: ^10 || ^12 || >=14.0}
     peerDependencies:
-      postcss: '>=8.4.31'
+      postcss: ^8.2.15
     dependencies:
       postcss: 8.4.31
       postcss-value-parser: 4.2.0
@@ -15984,7 +15994,7 @@ packages:
     resolution: {integrity: sha512-DOEkzJ4SAXv5xkHl0Wa9cZLF3WCBhF3o1SKVxKQAa+0pYKlueTpCgvkFAHfk+Y64ezX9+nITGrDZeVGgITJXjg==}
     engines: {node: ^10 || ^12 || >=14.0}
     peerDependencies:
-      postcss: '>=8.4.31'
+      postcss: ^8.2.15
     dependencies:
       postcss: 8.4.31
       postcss-value-parser: 4.2.0
@@ -15994,7 +16004,7 @@ packages:
     resolution: {integrity: sha512-qnCL5jzkNUmKVhZoENp1mJiGNPcsJCs1aaRmURmeJGES23Z/ajaln+EPTD+rBeNkSryI+2WTdW+lwcVdOikrpA==}
     engines: {node: ^10 || ^12 || >=14.0}
     peerDependencies:
-      postcss: '>=8.4.31'
+      postcss: ^8.2.15
     dependencies:
       browserslist: 4.22.1
       postcss: 8.4.31
@@ -16005,7 +16015,7 @@ packages:
     resolution: {integrity: sha512-5upGeDO+PVthOxSmds43ZeMeZfKH+/DKgGRD7TElkkyS46JXAUhMzIKiCa7BabPeIy3AQcTkXwVVN7DbqsiCew==}
     engines: {node: ^10 || ^12 || >=14.0}
     peerDependencies:
-      postcss: '>=8.4.31'
+      postcss: ^8.2.15
     dependencies:
       normalize-url: 6.1.0
       postcss: 8.4.31
@@ -16016,7 +16026,7 @@ packages:
     resolution: {integrity: sha512-83ZJ4t3NUDETIHTa3uEg6asWjSBYL5EdkVB0sDncx9ERzOKBVJIUeDO9RyA9Zwtig8El1d79HBp0JEi8wvGQnA==}
     engines: {node: ^10 || ^12 || >=14.0}
     peerDependencies:
-      postcss: '>=8.4.31'
+      postcss: ^8.2.15
     dependencies:
       postcss: 8.4.31
       postcss-value-parser: 4.2.0
@@ -16026,7 +16036,7 @@ packages:
     resolution: {integrity: sha512-9UO79VUhPwEkzbb3RNpqqghc6lcYej1aveQteWY+4POIwlqkYE21HKWaLDF6lWNuqCobEAyTovVhtI32Rbv2RQ==}
     engines: {node: ^10 || ^12 || >=14.0}
     peerDependencies:
-      postcss: '>=8.4.31'
+      postcss: ^8.2.15
     dependencies:
       cssnano-utils: 3.1.0(postcss@8.4.31)
       postcss: 8.4.31
@@ -16037,7 +16047,7 @@ packages:
     resolution: {integrity: sha512-dE/y2XRaqAi6OvjzD22pjTUQ8eOfc6m/natGHgKFBK9DxFmIm69YmaRVQrGgFlEfc1HePIurY0TmDeROK05rIg==}
     engines: {node: ^10 || ^12 || >=14.0}
     peerDependencies:
-      postcss: '>=8.4.31'
+      postcss: ^8.2.15
     dependencies:
       browserslist: 4.22.1
       caniuse-api: 3.0.0
@@ -16048,7 +16058,7 @@ packages:
     resolution: {integrity: sha512-2fbdbmgir5AvpW9RLtdONx1QoYG2/EtqpNQbFASDlixBbAYuTcJ0dECwlqNqH7VbaUnEnh8SrxOe2sRIn24XyQ==}
     engines: {node: ^10 || ^12 || >=14.0}
     peerDependencies:
-      postcss: '>=8.4.31'
+      postcss: ^8.2.15
     dependencies:
       postcss: 8.4.31
       postcss-value-parser: 4.2.0
@@ -16065,7 +16075,7 @@ packages:
     resolution: {integrity: sha512-D75KsH1zm5ZrHyxPakAxJWtkyXew5qwS70v56exwvw542d9CRtTo78K0WeFxZB4G7JXKKMbEZtZayTGdIky/eA==}
     engines: {node: ^10 || ^12 || >=14.0}
     peerDependencies:
-      postcss: '>=8.4.31'
+      postcss: ^8.2.15
     dependencies:
       postcss: 8.4.31
       postcss-value-parser: 4.2.0
@@ -16076,7 +16086,7 @@ packages:
     resolution: {integrity: sha512-5JiODlELrz8L2HwxfPnhOWZYWDxVHWL83ufOv84NrcgipI7TaeRsatAhK4Tr2/ZiYldpK/wBvw5BD3qfaK96GA==}
     engines: {node: ^10 || ^12 || >=14.0}
     peerDependencies:
-      postcss: '>=8.4.31'
+      postcss: ^8.2.15
     dependencies:
       postcss: 8.4.31
       postcss-selector-parser: 6.0.13
@@ -16467,7 +16477,7 @@ packages:
   /react-clientside-effect@1.2.6(react@16.14.0):
     resolution: {integrity: sha512-XGGGRQAKY+q25Lz9a/4EPqom7WRjz3z9R2k4jhVKA/puQFH/5Nt27vFZYql4m4NVNdUvX8PS3O7r/Zzm7cjUlg==}
     peerDependencies:
-      react: ^16.11.0
+      react: ^15.3.0 || ^16.0.0 || ^17.0.0 || ^18.0.0
     dependencies:
       '@babel/runtime': 7.23.2
       react: 16.14.0
@@ -16476,8 +16486,8 @@ packages:
   /react-colorful@5.6.1(react-dom@16.14.0)(react@16.14.0):
     resolution: {integrity: sha512-1exovf0uGTGyq5mXQT0zgQ80uvj2PCwvF8zY1RN9/vbJVSjSo3fsB/4L3ObbF7u70NduSiK4xu4Y6q1MHoUGEw==}
     peerDependencies:
-      react: ^16.11.0
-      react-dom: ^16.11.0
+      react: '>=16.8.0'
+      react-dom: '>=16.8.0'
     dependencies:
       react: 16.14.0
       react-dom: 16.14.0(react@16.14.0)
@@ -16575,7 +16585,7 @@ packages:
   /react-dom@16.14.0(react@16.14.0):
     resolution: {integrity: sha512-1gCeQXDLoIqMgqD3IO2Ah9bnf0w9kzhwN5q4FGnHZ67hBm9yePzB5JJAIQCc8x3pFnNlwFq4RidZggNAAkzWWw==}
     peerDependencies:
-      react: ^16.11.0
+      react: ^16.14.0
     dependencies:
       loose-envify: 1.4.0
       object-assign: 4.1.1
@@ -16586,8 +16596,8 @@ packages:
   /react-element-to-jsx-string@14.3.4(react-dom@16.14.0)(react@16.14.0):
     resolution: {integrity: sha512-t4ZwvV6vwNxzujDQ+37bspnLwA4JlgUPWhLjBJWsNIDceAf6ZKUTCjdm08cN6WeZ5pTMKiCJkmAYnpmR4Bm+dg==}
     peerDependencies:
-      react: ^16.11.0
-      react-dom: ^16.11.0
+      react: ^0.14.8 || ^15.0.1 || ^16.0.0 || ^17.0.1
+      react-dom: ^0.14.8 || ^15.0.1 || ^16.0.0 || ^17.0.1
     dependencies:
       '@base2/pretty-print-object': 1.0.1
       is-plain-object: 5.0.0
@@ -16599,8 +16609,8 @@ packages:
   /react-element-to-jsx-string@15.0.0(react-dom@16.14.0)(react@16.14.0):
     resolution: {integrity: sha512-UDg4lXB6BzlobN60P8fHWVPX3Kyw8ORrTeBtClmIlGdkOOE+GYQSFvmEU5iLLpwp/6v42DINwNcwOhOLfQ//FQ==}
     peerDependencies:
-      react: ^16.11.0
-      react-dom: ^16.11.0
+      react: ^0.14.8 || ^15.0.1 || ^16.0.0 || ^17.0.1 || ^18.0.0
+      react-dom: ^0.14.8 || ^15.0.1 || ^16.0.0 || ^17.0.1 || ^18.0.0
     dependencies:
       '@base2/pretty-print-object': 1.0.1
       is-plain-object: 5.0.0
@@ -16625,7 +16635,7 @@ packages:
     resolution: {integrity: sha512-7pEdXyMseqm3kVjhdVH18sovparAzLg5h6WvIx7/Ck3ekjhrrDMEegHSa3swwC8wgfdd7DIdUVRGeiHT9/7Sgg==}
     peerDependencies:
       '@types/react': ^16.8.0 || ^17.0.0 || ^18.0.0
-      react: ^16.11.0
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
     peerDependenciesMeta:
       '@types/react':
         optional: true
@@ -16643,8 +16653,8 @@ packages:
   /react-helmet-async@1.3.0(react-dom@16.14.0)(react@16.14.0):
     resolution: {integrity: sha512-9jZ57/dAn9t3q6hneQS0wukqC2ENOBgMNVEhb/ZG9ZSxUetzVIw4iAmEU38IaVg3QGYauQPhSeUTuIUtFglWpg==}
     peerDependencies:
-      react: ^16.11.0
-      react-dom: ^16.11.0
+      react: ^16.6.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.6.0 || ^17.0.0 || ^18.0.0
     dependencies:
       '@babel/runtime': 7.23.2
       invariant: 2.2.4
@@ -16658,7 +16668,7 @@ packages:
   /react-helmet@5.2.1(react@16.14.0):
     resolution: {integrity: sha512-CnwD822LU8NDBnjCpZ4ySh8L6HYyngViTZLfBBb3NjtrpN8m49clH8hidHouq20I51Y6TpCTISCBbqiY5GamwA==}
     peerDependencies:
-      react: ^16.11.0
+      react: '>=15.0.0'
     dependencies:
       object-assign: 4.1.1
       prop-types: 15.8.1
@@ -16670,7 +16680,7 @@ packages:
   /react-inspector@6.0.2(react@16.14.0):
     resolution: {integrity: sha512-x+b7LxhmHXjHoU/VrFAzw5iutsILRoYyDq97EDYdFpPLcvqtEzk4ZSZSQjnFPbr5T57tLXnHcqFYoN1pI6u8uQ==}
     peerDependencies:
-      react: ^16.11.0
+      react: ^16.8.4 || ^17.0.0 || ^18.0.0
     dependencies:
       react: 16.14.0
     dev: true
@@ -16692,8 +16702,8 @@ packages:
   /react-popper-tooltip@2.11.1(react-dom@16.14.0)(react@16.14.0):
     resolution: {integrity: sha512-04A2f24GhyyMicKvg/koIOQ5BzlrRbKiAgP6L+Pdj1MVX3yJ1NeZ8+EidndQsbejFT55oW1b++wg2Z8KlAyhfQ==}
     peerDependencies:
-      react: ^16.11.0
-      react-dom: ^16.11.0
+      react: ^16.6.0
+      react-dom: ^16.6.0
     dependencies:
       '@babel/runtime': 7.23.2
       react: 16.14.0
@@ -16704,7 +16714,7 @@ packages:
   /react-popper@1.3.11(react@16.14.0):
     resolution: {integrity: sha512-VSA/bS+pSndSF2fiasHK/PTEEAyOpX60+H5EPAjoArr8JGm+oihu4UbrqcEBpQibJxBVCpYyjAX7abJ+7DoYVg==}
     peerDependencies:
-      react: ^16.11.0
+      react: 0.14.x || ^15.0.0 || ^16.0.0 || ^17.0.0
     dependencies:
       '@babel/runtime': 7.23.2
       '@hypnosphi/create-react-context': 0.3.1(prop-types@15.8.1)(react@16.14.0)
@@ -16731,7 +16741,7 @@ packages:
     engines: {node: '>=10'}
     peerDependencies:
       '@types/react': ^16.8.0 || ^17.0.0 || ^18.0.0
-      react: ^16.11.0
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
     peerDependenciesMeta:
       '@types/react':
         optional: true
@@ -16747,7 +16757,7 @@ packages:
     engines: {node: '>=10'}
     peerDependencies:
       '@types/react': ^16.8.0 || ^17.0.0 || ^18.0.0
-      react: ^16.11.0
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
     peerDependenciesMeta:
       '@types/react':
         optional: true
@@ -16764,8 +16774,8 @@ packages:
   /react-select@5.7.4(@types/react@16.14.43)(react-dom@16.14.0)(react@16.14.0):
     resolution: {integrity: sha512-NhuE56X+p9QDFh4BgeygHFIvJJszO1i1KSkg/JPcIJrbovyRtI+GuOEa4XzFCEpZRAEoEI8u/cAHK+jG/PgUzQ==}
     peerDependencies:
-      react: ^16.11.0
-      react-dom: ^16.11.0
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:
       '@babel/runtime': 7.23.2
       '@emotion/cache': 11.11.0
@@ -16786,7 +16796,7 @@ packages:
     resolution: {integrity: sha512-JyCjbp6ZvkH/T0EuVPdceYlC8u5WqWDSJr2KxDvc81H2eJ+7zYUN++IcEycnR2F+HmER8QVgxfotnIx352zi+w==}
     engines: {node: '>=0.10.0'}
     peerDependencies:
-      react: ^16.11.0
+      react: 0.0.0-experimental-c8b778b7f-20220825
       webpack: ^5.59.0
     dependencies:
       acorn: 6.4.2
@@ -16799,7 +16809,7 @@ packages:
   /react-side-effect@1.2.0(react@16.14.0):
     resolution: {integrity: sha512-v1ht1aHg5k/thv56DRcjw+WtojuuDHFUgGfc+bFHOWsF4ZK6C2V57DO0Or0GPsg6+LSTE0M6Ry/gfzhzSwbc5w==}
     peerDependencies:
-      react: ^16.11.0
+      react: ^0.13.0 || ^0.14.0 || ^15.0.0 || ^16.0.0
     dependencies:
       react: 16.14.0
       shallowequal: 1.1.0
@@ -16810,7 +16820,7 @@ packages:
     engines: {node: '>=10'}
     peerDependencies:
       '@types/react': ^16.8.0 || ^17.0.0 || ^18.0.0
-      react: ^16.11.0
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
     peerDependenciesMeta:
       '@types/react':
         optional: true
@@ -16822,10 +16832,23 @@ packages:
       tslib: 2.6.2
     dev: true
 
+  /react-syntax-highlighter@11.0.3(react@16.14.0):
+    resolution: {integrity: sha512-0v0ET2qn9oAam4K/Te9Q/2jtS4R2d6wUFqgk5VcxrCBm+4MB5BE+oQf2CA0RanUHbYaYFuagt/AugICU87ufxQ==}
+    peerDependencies:
+      react: '>= 0.14.0'
+    dependencies:
+      '@babel/runtime': 7.23.2
+      highlight.js: 10.7.3
+      lowlight: 1.11.0
+      prismjs: 1.29.0
+      react: 16.14.0
+      refractor: 2.10.1
+    dev: true
+
   /react-syntax-highlighter@15.5.0(react@16.14.0):
     resolution: {integrity: sha512-+zq2myprEnQmH5yw6Gqc8lD55QHnpKaU8TOcFeC/Lg/MQSs8UknEA0JC4nTZGFAXC2J2Hyj/ijJ7NlabyPi2gg==}
     peerDependencies:
-      react: ^16.11.0
+      react: '>= 0.14.0'
     dependencies:
       '@babel/runtime': 7.23.2
       highlight.js: 10.7.3
@@ -16837,7 +16860,7 @@ packages:
   /react-textarea-autosize@7.1.2(react@16.14.0):
     resolution: {integrity: sha512-uH3ORCsCa3C6LHxExExhF4jHoXYCQwE5oECmrRsunlspaDAbS4mGKNlWZqjLfInWtFQcf0o1n1jC/NGXFdUBCg==}
     peerDependencies:
-      react: ^16.11.0
+      react: '>=0.14.0 <17.0.0'
     dependencies:
       '@babel/runtime': 7.23.2
       prop-types: 15.8.1
@@ -16847,8 +16870,8 @@ packages:
   /react-transition-group@4.4.5(react-dom@16.14.0)(react@16.14.0):
     resolution: {integrity: sha512-pZcd1MCJoiKiBR2NRxeCRg13uCXbydPnmB4EOeRrY7480qNWO8IIgQG6zlDkm6uRMsURXPuKq0GWtiM59a5Q6g==}
     peerDependencies:
-      react: ^16.11.0
-      react-dom: ^16.11.0
+      react: '>=16.6.0'
+      react-dom: '>=16.6.0'
     dependencies:
       '@babel/runtime': 7.23.2
       dom-helpers: 5.2.1
@@ -16997,6 +17020,14 @@ packages:
     dependencies:
       '@babel/runtime': 7.23.2
     dev: false
+
+  /refractor@2.10.1:
+    resolution: {integrity: sha512-Xh9o7hQiQlDbxo5/XkOX6H+x/q8rmlmZKr97Ie1Q8ZM32IRRd3B/UxuA/yXDW79DBSXGWxm2yRTbcTVmAciJRw==}
+    dependencies:
+      hastscript: 5.1.2
+      parse-entities: 1.2.2
+      prismjs: 1.29.0
+    dev: true
 
   /refractor@3.6.0:
     resolution: {integrity: sha512-MY9W41IOWxxk31o+YvFCNyNzdkc9M20NoZK5vq6jkv4I/uh2zkWcfudj0Q1fovjUQJrNewS9NMzeTtqPf+n5EA==}
@@ -17633,12 +17664,11 @@ packages:
     resolution: {integrity: sha512-GX0Ix/CJcHyB8c4ykpHGIAvLyOwOobtM/8d+TQkAd81/bEjgPHrfba41Vpesr7jX/t8Uh+R3EX9eAS5be+jQYg==}
     engines: {node: '>=8'}
     dependencies:
-      semver: 7.5.4
+      semver: 6.3.1
 
   /semver@5.7.2:
     resolution: {integrity: sha512-cBznnQ9KjJqU67B52RMC65CMarK2600WFnbkcaiwWq3xy/5haFJlshgnpjovMVJ+Hff49d8GEn0b87C5pDQ10g==}
     hasBin: true
-    dev: false
 
   /semver@6.3.1:
     resolution: {integrity: sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==}
@@ -17858,8 +17888,8 @@ packages:
   /simplebar-react@1.2.3(react-dom@16.14.0)(react@16.14.0):
     resolution: {integrity: sha512-1EOWJzFC7eqHUp1igD1/tb8GBv5aPQA5ZMvpeDnVkpNJ3jAuvmrL2kir3HuijlxhG7njvw9ssxjjBa89E5DrJg==}
     peerDependencies:
-      react: ^16.11.0
-      react-dom: ^16.11.0
+      react: ^0.14.9 || ^15.3.0 || ^16.0.0-rc || ^16.0
+      react-dom: ^0.14.9 || ^15.3.0 || ^16.0.0-rc || ^16.0
     dependencies:
       prop-types: 15.8.1
       react: 16.14.0
@@ -18448,8 +18478,8 @@ packages:
     resolution: {integrity: sha512-VWNfYYBuXzuLS/QYEeoPgMErP26WL+dX9//rEh80B2mmlS1yRxRxuL5eax4m6ybYEUoHWlTy2XOU32767mlMkg==}
     engines: {node: '>= 16'}
     peerDependencies:
-      react: ^16.11.0
-      react-dom: ^16.11.0
+      react: '>= 16.8.0'
+      react-dom: '>= 16.8.0'
     dependencies:
       '@emotion/is-prop-valid': 1.2.1
       '@emotion/unitless': 0.8.1
@@ -18475,7 +18505,7 @@ packages:
     resolution: {integrity: sha512-sBpcd5Hx7G6seo7b1LkpttvTz7ikD0LlH5RmdcBNb6fFR0Fl7LQwHDFr300q4cwUqi+IYrFGmsIHieMBfnN/Bw==}
     engines: {node: ^10 || ^12 || >=14.0}
     peerDependencies:
-      postcss: '>=8.4.31'
+      postcss: ^8.2.15
     dependencies:
       browserslist: 4.22.1
       postcss: 8.4.31
@@ -18762,7 +18792,7 @@ packages:
     engines: {node: '>=6'}
     dependencies:
       glob: 7.2.3
-      minimatch: 9.0.3
+      minimatch: 3.1.2
       read-pkg-up: 4.0.0
       require-main-filename: 2.0.0
     dev: true
@@ -18985,7 +19015,7 @@ packages:
       make-error: 1.3.6
       mkdirp: 0.5.6
       resolve: 1.22.2
-      semver: 7.5.4
+      semver: 5.7.2
       yargs-parser: 20.2.9
     dev: true
 
@@ -19570,7 +19600,7 @@ packages:
     engines: {node: '>=10'}
     peerDependencies:
       '@types/react': ^16.8.0 || ^17.0.0 || ^18.0.0
-      react: ^16.11.0
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
     peerDependenciesMeta:
       '@types/react':
         optional: true
@@ -19584,7 +19614,7 @@ packages:
     resolution: {integrity: sha512-49L8yCO3iGT/ZF9QttjwLF/ZD9Iwto5LnH5LmEdk/6cFmXddqi2ulF0edxTwjj+7mqvpVVGQWvbXZdn32wRSHA==}
     peerDependencies:
       '@types/react': '*'
-      react: ^16.11.0
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
     peerDependenciesMeta:
       '@types/react':
         optional: true
@@ -19596,8 +19626,8 @@ packages:
   /use-resize-observer@9.1.0(react-dom@16.14.0)(react@16.14.0):
     resolution: {integrity: sha512-R25VqO9Wb3asSD4eqtcxk8sJalvIOYBqS8MNZlpDSQ4l4xMQxC/J7Id9HoTqPq8FwULIn0PVW+OAqF2dyYbjow==}
     peerDependencies:
-      react: ^16.11.0
-      react-dom: ^16.11.0
+      react: 16.8.0 - 18
+      react-dom: 16.8.0 - 18
     dependencies:
       '@juggle/resize-observer': 3.4.0
       react: 16.14.0
@@ -19609,7 +19639,7 @@ packages:
     engines: {node: '>=10'}
     peerDependencies:
       '@types/react': ^16.9.0 || ^17.0.0 || ^18.0.0
-      react: ^16.11.0
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
     peerDependenciesMeta:
       '@types/react':
         optional: true
