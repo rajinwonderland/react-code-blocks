@@ -29,10 +29,9 @@
 > **BREAKING CHANGES**: `VERSION >= ^0.1.0` has not been tested with Node 14 or lower
 
 - [Background](#background)
-  - [✨ Demo](#-demo)
+  - [✨ Storybook](#-storybook)
 - [Install](#install)
 - [Usage](#usage)
-- [Using in Gatsby and MDX](MDX.md)
 - [Components](#components)
   - [CodeBlock](#codeblock)
     - [Props](#props)
@@ -205,10 +204,10 @@ _This README was generated with ❤️ by [readme-md-generator](https://github.c
 
 ## Author
 
-<div style="display:grid">
-<img src="https://avatars3.githubusercontent.com/u/15880596?s=460&v=4" width="175px"/>
-<img src="packages/assets/rajinwonderland.png" height="175px" />
-</div>
+<!-- <div style="display:grid;"> -->
+<!-- <img src="https://avatars3.githubusercontent.com/u/15880596?s=460&v=4" height="100px"/> -->
+<img src="../assets/rajinwonderland.png" height="100px" />
+<!-- </div> --
 
 - Website: https://novvum.io
 - Twitter: [@rajinwonderland](https://twitter.com/rajinwonderland)
