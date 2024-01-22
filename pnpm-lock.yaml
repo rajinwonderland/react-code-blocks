@@ -139,8 +139,8 @@ importers:
         specifier: ^6.1.0
         version: 6.1.0(react-dom@16.14.0)(react@16.14.0)
       styled-system:
-        specifier: ^4.2.2
-        version: 4.2.4
+        specifier: ^5.1.5
+        version: 5.1.5
     devDependencies:
       prettier:
         specifier: ^1.17.0
@@ -5781,6 +5781,83 @@ packages:
       '@types/express': 4.17.20
       file-system-cache: 2.3.0
     dev: true
+
+  /@styled-system/background@5.1.2:
+    resolution: {integrity: sha512-jtwH2C/U6ssuGSvwTN3ri/IyjdHb8W9X/g8Y0JLcrH02G+BW3OS8kZdHphF1/YyRklnrKrBT2ngwGUK6aqqV3A==}
+    dependencies:
+      '@styled-system/core': 5.1.2
+    dev: false
+
+  /@styled-system/border@5.1.5:
+    resolution: {integrity: sha512-JvddhNrnhGigtzWRCVuAHepniyVi6hBlimxWDVAdcTuk7aRn9BYJUwfHslURtwYFsF5FoEs8Zmr1oZq2M1AP0A==}
+    dependencies:
+      '@styled-system/core': 5.1.2
+    dev: false
+
+  /@styled-system/color@5.1.2:
+    resolution: {integrity: sha512-1kCkeKDZkt4GYkuFNKc7vJQMcOmTl3bJY3YBUs7fCNM6mMYJeT1pViQ2LwBSBJytj3AB0o4IdLBoepgSgGl5MA==}
+    dependencies:
+      '@styled-system/core': 5.1.2
+    dev: false
+
+  /@styled-system/core@5.1.2:
+    resolution: {integrity: sha512-XclBDdNIy7OPOsN4HBsawG2eiWfCcuFt6gxKn1x4QfMIgeO6TOlA2pZZ5GWZtIhCUqEPTgIBta6JXsGyCkLBYw==}
+    dependencies:
+      object-assign: 4.1.1
+    dev: false
+
+  /@styled-system/css@5.1.5:
+    resolution: {integrity: sha512-XkORZdS5kypzcBotAMPBoeckDs9aSZVkvrAlq5K3xP8IMAUek+x2O4NtwoSgkYkWWzVBu6DGdFZLR790QWGG+A==}
+    dev: false
+
+  /@styled-system/flexbox@5.1.2:
+    resolution: {integrity: sha512-6hHV52+eUk654Y1J2v77B8iLeBNtc+SA3R4necsu2VVinSD7+XY5PCCEzBFaWs42dtOEDIa2lMrgL0YBC01mDQ==}
+    dependencies:
+      '@styled-system/core': 5.1.2
+    dev: false
+
+  /@styled-system/grid@5.1.2:
+    resolution: {integrity: sha512-K3YiV1KyHHzgdNuNlaw8oW2ktMuGga99o1e/NAfTEi5Zsa7JXxzwEnVSDSBdJC+z6R8WYTCYRQC6bkVFcvdTeg==}
+    dependencies:
+      '@styled-system/core': 5.1.2
+    dev: false
+
+  /@styled-system/layout@5.1.2:
+    resolution: {integrity: sha512-wUhkMBqSeacPFhoE9S6UF3fsMEKFv91gF4AdDWp0Aym1yeMPpqz9l9qS/6vjSsDPF7zOb5cOKC3tcKKOMuDCPw==}
+    dependencies:
+      '@styled-system/core': 5.1.2
+    dev: false
+
+  /@styled-system/position@5.1.2:
+    resolution: {integrity: sha512-60IZfMXEOOZe3l1mCu6sj/2NAyUmES2kR9Kzp7s2D3P4qKsZWxD1Se1+wJvevb+1TP+ZMkGPEYYXRyU8M1aF5A==}
+    dependencies:
+      '@styled-system/core': 5.1.2
+    dev: false
+
+  /@styled-system/shadow@5.1.2:
+    resolution: {integrity: sha512-wqniqYb7XuZM7K7C0d1Euxc4eGtqEe/lvM0WjuAFsQVImiq6KGT7s7is+0bNI8O4Dwg27jyu4Lfqo/oIQXNzAg==}
+    dependencies:
+      '@styled-system/core': 5.1.2
+    dev: false
+
+  /@styled-system/space@5.1.2:
+    resolution: {integrity: sha512-+zzYpR8uvfhcAbaPXhH8QgDAV//flxqxSjHiS9cDFQQUSznXMQmxJegbhcdEF7/eNnJgHeIXv1jmny78kipgBA==}
+    dependencies:
+      '@styled-system/core': 5.1.2
+    dev: false
+
+  /@styled-system/typography@5.1.2:
+    resolution: {integrity: sha512-BxbVUnN8N7hJ4aaPOd7wEsudeT7CxarR+2hns8XCX1zp0DFfbWw4xYa/olA0oQaqx7F1hzDg+eRaGzAJbF+jOg==}
+    dependencies:
+      '@styled-system/core': 5.1.2
+    dev: false
+
+  /@styled-system/variant@5.1.5:
+    resolution: {integrity: sha512-Yn8hXAFoWIro8+Q5J8YJd/mP85Teiut3fsGVR9CAxwgNfIAiqlYxsk5iHU7VHJks/0KjL4ATSjmbtCDC/4l1qw==}
+    dependencies:
+      '@styled-system/core': 5.1.2
+      '@styled-system/css': 5.1.5
+    dev: false
 
   /@swc/core-darwin-arm64@1.3.96:
     resolution: {integrity: sha512-8hzgXYVd85hfPh6mJ9yrG26rhgzCmcLO0h1TIl8U31hwmTbfZLzRitFQ/kqMJNbIBCwmNH1RU2QcJnL3d7f69A==}
@@ -18575,11 +18652,22 @@ packages:
       tslib: 2.6.2
     dev: false
 
-  /styled-system@4.2.4:
-    resolution: {integrity: sha512-44X7n09gDvwx7yjquEXsjiNALK0dxGgAJdpO5cb/PdL+D4mhSLKWig4/EhH4vHJLbwu/kumURHyvKxygaBfg0A==}
+  /styled-system@5.1.5:
+    resolution: {integrity: sha512-7VoD0o2R3RKzOzPK0jYrVnS8iJdfkKsQJNiLRDjikOpQVqQHns/DXWaPZOH4tIKkhAT7I6wIsy9FWTWh2X3q+A==}
     dependencies:
-      '@babel/runtime': 7.23.2
-      prop-types: 15.8.1
+      '@styled-system/background': 5.1.2
+      '@styled-system/border': 5.1.5
+      '@styled-system/color': 5.1.2
+      '@styled-system/core': 5.1.2
+      '@styled-system/flexbox': 5.1.2
+      '@styled-system/grid': 5.1.2
+      '@styled-system/layout': 5.1.2
+      '@styled-system/position': 5.1.2
+      '@styled-system/shadow': 5.1.2
+      '@styled-system/space': 5.1.2
+      '@styled-system/typography': 5.1.2
+      '@styled-system/variant': 5.1.5
+      object-assign: 4.1.1
     dev: false
 
   /stylehacks@5.1.1(postcss@8.4.31):
