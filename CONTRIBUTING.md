@@ -78,4 +78,4 @@ Here's a great article on rebasing, which basically just means getting the lates
 
 ### Questions?
 
-Feel free to contact either [@rajinwonderland](https://github.com/rajinwonderland) or [@thomasmost](https://github.com/thomasmost) if you have any questions about contributing.
+Feel free to contact either [@rajinwonderland](https://github.com/rajinwonderland) if you have any questions about contributing.
