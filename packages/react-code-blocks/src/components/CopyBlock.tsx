@@ -15,7 +15,11 @@ export interface CopyBlockProps extends CodeBlockProps {
   onCopy?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-type CascadedProps = Partial<CopyBlockProps> & { theme: Theme };
+type CascadedProps = Partial<CopyBlockProps> & {
+  theme: Theme;
+  $codeBlock?: boolean;
+  $copied?: boolean;
+};
 
 const Button = styled.button<CascadedProps>`
   position: absolute;
@@ -32,7 +36,7 @@ const Button = styled.button<CascadedProps>`
   max-width: 2rem;
   padding: 0.25rem;
   &:hover {
-    opacity: ${(p: CascadedProps) => (p.copied ? 1 : 0.5)};
+    opacity: ${(p: CascadedProps) => (p.$copied ? 1 : 0.5)};
   }
   &:focus {
     outline: none;
@@ -48,7 +52,8 @@ const Snippet = styled.div<CascadedProps>`
   position: relative;
   background: ${(p: CascadedProps) => p.theme.backgroundColor as string};
   border-radius: 0.25rem;
-  padding: ${(p: CascadedProps) => (p.codeBlock ? `0.25rem 0.5rem 0.25rem 0.25rem` : `0.25rem`)};
+  padding: ${(p: CascadedProps) =>
+    p.$codeBlock ? `0.25rem 0.5rem 0.25rem 0.25rem` : `0.25rem`};
 `;
 
 export default function CopyBlock({
@@ -68,7 +73,7 @@ export default function CopyBlock({
   };
 
   return (
-    <Snippet {...{ codeBlock }} style={customStyle} theme={theme}>
+    <Snippet $codeBlock={codeBlock} style={customStyle} theme={theme}>
       {codeBlock ? (
         // @ts-ignore
         <CodeBlock text={text} theme={theme} {...rest} />
@@ -76,7 +81,13 @@ export default function CopyBlock({
         // @ts-ignore
         <Code text={text} theme={theme} {...rest} />
       )}
-      <Button aria-label="Copy Code" type="button" onClick={handler} {...{ theme, copied }}>
+      <Button
+        aria-label="Copy Code"
+        type="button"
+        onClick={handler}
+        theme={theme}
+        $copied={copied}
+      >
         <Copy
           color={copied ? theme?.stringColor : theme?.textColor}
           copied={copied}
