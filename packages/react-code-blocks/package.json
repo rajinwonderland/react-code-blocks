@@ -9,7 +9,7 @@
   ],
   "author": "rajinwonderland",
   "maintainers": [],
-  "version": "0.1.6",
+  "version": "0.1.7",
   "homepage": "https://react-code-blocks.rajinwonderland.vercel.app",
   "license": "MIT",
   "main": "dist/index.js",

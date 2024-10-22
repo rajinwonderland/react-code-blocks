@@ -15,9 +15,11 @@ export interface CopyBlockProps extends CodeBlockProps {
   onCopy?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-type CascadedProps = Partial<{[P in keyof CopyBlockProps as `\$${P}`]: CopyBlockProps[P]}> & { theme: Theme };
-
-const Button = styled.button<CascadedProps>`
+type ButtonStyledProps = {
+    $copied?: boolean
+    theme: Theme
+};
+const Button = styled.button<ButtonStyledProps>`
   position: absolute;
   top: 0.5em;
   right: 0.75em;
@@ -25,14 +27,14 @@ const Button = styled.button<CascadedProps>`
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  background: ${(p: CascadedProps) => p.theme.backgroundColor as string};
+  background: ${(p: ButtonStyledProps) => p.theme.backgroundColor as string};
   margin-top: 0.15rem;
   border-radius: 0.25rem;
   max-height: 2rem;
   max-width: 2rem;
   padding: 0.25rem;
   &:hover {
-    opacity: ${(p: CascadedProps) => (p.$copied ? 1 : 0.5)};
+    opacity: ${(p: ButtonStyledProps) => (p.$copied ? 1 : 0.5)};
   }
   &:focus {
     outline: none;
@@ -44,11 +46,15 @@ const Button = styled.button<CascadedProps>`
   }
 `;
 
-const Snippet = styled.div<CascadedProps>`
+type SnippetStyledProps = {
+    $codeBlock?: boolean
+    theme: Theme
+};
+const Snippet = styled.div<SnippetStyledProps>`
   position: relative;
-  background: ${(p: CascadedProps) => p.theme.backgroundColor as string};
+  background: ${(p: SnippetStyledProps) => p.theme.backgroundColor as string};
   border-radius: 0.25rem;
-  padding: ${(p: CascadedProps) => (p.$codeBlock ? `0.25rem 0.5rem 0.25rem 0.25rem` : `0.25rem`)};
+  padding: ${(p: SnippetStyledProps) => (p.$codeBlock ? `0.25rem 0.5rem 0.25rem 0.25rem` : `0.25rem`)};
 `;
 
 export default function CopyBlock({
