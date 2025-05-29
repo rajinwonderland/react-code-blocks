@@ -8,3 +8,4 @@ packages/**/dist
 .vercel
 demo/build
 .netlify
+.idea/
